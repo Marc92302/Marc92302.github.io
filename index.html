@@ -1,9 +1,12 @@
+```html
 <!DOCTYPE html> <!--dit is de homepage van mijn site-->
 <html> <!--dit is het html-element-->
+
 <head>
     <title>Het eerste begin</title> <!--titel die in het browsertabblad komt te staan-->
     <meta charset="utf-8"> <!--zorgt dat speciale tekens (zoals é, ë) goed getoond worden-->
 </head>
+
 <body style="font-family: Arial, sans-serif; background-color: #1e1e1e; color: #f0f0f0; text-align: center; margin: 0; padding: 0;">
     <!--body: alles wat je hier zet, is zichtbaar op de pagina-->
     <!--font-family: het lettertype van de tekst-->
@@ -13,6 +16,9 @@
 
     <div style="background-color: #4CAF50; padding: 30px;">
         <!--div: een blok/container om de header een eigen achtergrondkleur te geven-->
+        <!--background-color: groene achtergrondkleur van de header-->
+        <!--padding: zorgt voor ruimte rondom de titel-->
+
         <h1>Mijn Website</h1> <!--h1: grote hoofdtitel bovenaan de pagina-->
     </div>
 
@@ -22,9 +28,92 @@
     <h2 style="color: #4CAF50;">yo yo yo</h2>
     <!--h2: een subkop, hier groen gekleurd om op te vallen-->
 
-    <a href="binairstelsel.html" style="color: #66d9ef; font-size: 18px;">Naar het binair stelsel</a>
+
+    <button onclick="toggleMenu()" style="padding: 15px 30px; font-size: 18px; margin-top: 20px; cursor: pointer;">
+        Onderwerpen ▼
+    </button>
+    <!--button: maakt een knop waarop je kunt klikken-->
+    <!--onclick: zorgt ervoor dat het menu wordt geopend of gesloten als je op de knop klikt-->
+    <!--padding: maakt de knop groter-->
+    <!--cursor: pointer: verandert de muisaanwijzer in een handje bij de knop-->
+
+
+    <div id="menu" style="display: none; margin-top: 15px;">
+        <!--div: bevat alle knoppen met de onderwerpen-->
+        <!--id="menu": geeft dit menu een naam zodat JavaScript het kan vinden-->
+        <!--display: none: zorgt ervoor dat het menu eerst verborgen is-->
+
+        <a href="invoer.html" style="display: block; color: #66d9ef; font-size: 18px; margin: 10px;">
+            Invoer
+        </a>
+        <!--a: link naar de pagina over invoer-->
+        <!--display: block: zorgt ervoor dat de link op een eigen regel staat-->
+
+
+        <a href="verwerking.html" style="display: block; color: #66d9ef; font-size: 18px; margin: 10px;">
+            Verwerking
+        </a>
+        <!--a: link naar de pagina over verwerking-->
+
+
+        <a href="uitvoer.html" style="display: block; color: #66d9ef; font-size: 18px; margin: 10px;">
+            Uitvoer
+        </a>
+        <!--a: link naar de pagina over uitvoer-->
+
+
+        <a href="binairstelsel.html" style="display: block; color: #66d9ef; font-size: 18px; margin: 10px;">
+            Binair stelsel
+        </a>
+        <!--a: link naar de pagina over het binaire stelsel-->
+
+
+        <a href="kleurmodellen.html" style="display: block; color: #66d9ef; font-size: 18px; margin: 10px;">
+            Kleurmodellen
+        </a>
+        <!--a: link naar de pagina over kleurmodellen-->
+
+
+        <a href="compressie.html" style="display: block; color: #66d9ef; font-size: 18px; margin: 10px;">
+            Compressie
+        </a>
+        <!--a: link naar de pagina over compressie-->
+
+
+        <a href="ai.html" style="display: block; color: #66d9ef; font-size: 18px; margin: 10px;">
+            AI
+        </a>
+        <!--a: link naar de pagina over AI-->
+
+    </div>
+    <!--dit is het einde van het menu met de verschillende onderwerpen-->
+
+
+    <a href="binairstelsel.html" style="color: #66d9ef; font-size: 18px;">
+        Naar het binair stelsel
+    </a>
     <!--a: een link naar een andere pagina, href geeft aan welk bestand geopend wordt-->
     <!--style: kleur en tekstgrootte van de link zelf-->
 
+
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById("menu");
+
+            if (menu.style.display === "none") {
+                menu.style.display = "block";
+            } else {
+                menu.style.display = "none";
+            }
+        }
+    </script>
+    <!--script: zorgt ervoor dat het menu met de onderwerpen open en dicht kan gaan-->
+    <!--getElementById("menu"): zoekt het menu met de naam "menu"-->
+    <!--if: controleert of het menu verborgen is-->
+    <!--display = "block": maakt het menu zichtbaar-->
+    <!--else: wordt uitgevoerd als het menu al zichtbaar is-->
+    <!--display = "none": verbergt het menu weer-->
+
 </body> <!--einde van de zichtbare inhoud-->
 </html> <!--einde van het hele HTML-document-->
+```
