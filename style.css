@@ -1,0 +1,71 @@
+```css
+/* De algemene stijl van de hele website */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #1e1e1e;
+    color: white;
+    text-align: center;
+}
+
+/* De groene balk bovenaan */
+.header {
+    background-color: #4CAF50;
+    padding: 25px;
+}
+
+/* Het dropdownmenu */
+.dropdown {
+    display: inline-block;
+    position: relative;
+    margin-top: 15px;
+}
+
+/* De knop van het menu */
+.dropdown-button {
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+/* De inhoud van het menu */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #333;
+    min-width: 220px;
+}
+
+/* De links in het menu */
+.dropdown-content a {
+    display: block;
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+    text-align: left;
+}
+
+/* Kleur wanneer je over een link gaat */
+.dropdown-content a:hover {
+    background-color: #555;
+}
+
+/* Laat het menu zien als je eroverheen gaat */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* De tekst op de pagina */
+.content {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+/* De koppen worden groen */
+h2 {
+    color: #4CAF50;
+}
+```

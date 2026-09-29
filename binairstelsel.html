@@ -1,28 +1,52 @@
+```html
+<!DOCTYPE html>
+<html lang="nl">
 
-<!DOCTYPE html> <!--dit is de 2e pagina van mijn website-->
-<html> <!--dit is het html-element-->
 <head>
-    <title>Binairstelsel</title> <!--titel die in het browsertabblad komt te staan-->
-    <meta charset="utf-8"> <!--zorgt dat speciale tekens (zoals é, ë) goed getoond worden-->
-</head>
-<body style="font-family: Arial, sans-serif; background-color: #fff; color: #f0f0f0; text-align: center; margin: 0; padding: 0;">
-    <!--body: alles wat je hier zet, is zichtbaar op de pagina-->
-    <!--font-family: het lettertype van de tekst-->
-    <!--background-color: donkere achtergrondkleur voor de hele pagina, gelijk aan index.html-->
-    <!--color: lichte tekstkleur, zodat het leesbaar blijft op de donkere achtergrond-->
-    <!--text-align: center: zet alle tekst gecentreerd op de pagina-->
 
-    <div style="background-color: #4CAF50; padding: 30px;">
-        <!--div: een blok/container om de header een eigen achtergrondkleur te geven-->
-        <h1>Binair stelsel</h1> <!--h1: grote hoofdtitel bovenaan de pagina-->
+    <meta charset="UTF-8">
+
+    <!-- Gebruikt dezelfde opmaak als alle andere pagina's -->
+    <link rel="stylesheet" href="style.css">
+
+    <title>Binair stelsel</title>
+
+</head>
+
+<body>
+
+    <div class="header">
+        <h1>Binair stelsel</h1>
     </div>
 
-    <p style="margin-top: 30px; font-size: 18px;">Dit is de 2e pagina.</p>
-    <!--p: een paragraaf tekst, met wat ruimte erboven en iets grotere letters-->
+    <!-- Dropdownmenu -->
+    <div class="dropdown">
 
-    <a href="index.html" style="color: #66d9ef; font-size: 18px;">Terug naar home</a>
-    <!--a: een link terug naar de homepage-->
-    <!--style: kleur en tekstgrootte van de link zelf-->
+        <button class="dropdown-button">Menu ▼</button>
 
-</body> <!--einde van de zichtbare inhoud-->
-</html> <!--einde van het hele HTML-document-->
+        <div class="dropdown-content">
+
+            <a href="index.html">Home</a>
+            <a href="binairstelsel.html">Binair stelsel</a>
+            <a href="kleurmodellen.html">Kleurmodellen</a>
+            <a href="compressie.html">Compressie: Bitmap/vector</a>
+            <a href="ai.html">AI</a>
+
+        </div>
+
+    </div>
+
+    <!-- Inhoud van deze pagina -->
+    <div class="content">
+
+        <h2>Het binaire stelsel</h2>
+
+        <p>
+            Hier komt mijn uitleg over het binaire stelsel.
+        </p>
+
+    </div>
+
+</body>
+</html>
+```
