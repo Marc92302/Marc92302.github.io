@@ -2,19 +2,12 @@
    ALGEMENE OPMAAK
    ========================= */
 
-/* De algemene stijl van de website */
+/* De hele website */
 body {
     margin: 0;
-    /* Verwijdert de standaard marge */
-
     font-family: Arial, sans-serif;
-    /* Bepaalt het lettertype */
-
-    background-color: #1e1e1e;
-    /* Donkere achtergrond */
-
-    color: white;
-    /* Witte tekst */
+    background-color: white;
+    color: black;
 }
 
 
@@ -25,32 +18,27 @@ body {
 /* De groene balk bovenaan */
 .header {
     background-color: #4CAF50;
-    /* Groene achtergrond */
 
-    height: 120px;
-    /* Hoogte van de groene balk */
+    height: 150px;
 
+    /* Hiermee kunnen we de titel in het midden zetten */
     display: flex;
-    /* Hiermee kunnen we de titel centreren */
 
+    /* Titel horizontaal in het midden */
     justify-content: center;
-    /* Zet de titel horizontaal in het midden */
 
+    /* Titel verticaal in het midden */
     align-items: center;
-    /* Zet de titel verticaal in het midden */
 
+    /* Nodig om het menu rechtsboven te plaatsen */
     position: relative;
-    /* Zorgt ervoor dat het menu binnen deze balk geplaatst kan worden */
 }
 
 
 /* De titel */
 .header h1 {
     margin: 0;
-    /* Verwijdert standaard ruimte rondom de titel */
-
     color: black;
-    /* Maakt de titel zwart */
 }
 
 
@@ -58,99 +46,74 @@ body {
    DROPDOWNMENU
    ========================= */
 
-/* Het dropdownmenu */
+/* Het menu */
 .dropdown {
     position: absolute;
-    /* Hiermee kunnen we het menu precies plaatsen */
 
+    /* Afstand vanaf de bovenkant van de groene balk */
     top: 20px;
-    /* 20 pixels vanaf de bovenkant van de groene balk */
 
+    /* Afstand vanaf de rechterkant */
     right: 20px;
-    /* 20 pixels vanaf de rechterkant van de groene balk */
 }
 
 
-/* De knop van het menu */
+/* De knop */
 .dropdown-button {
     background-color: #333;
-    /* Donkere achtergrond */
-
     color: white;
-    /* Witte tekst */
 
     padding: 10px 20px;
-    /* Ruimte rondom de tekst */
 
     border: none;
-    /* Geen rand */
-
     border-radius: 5px;
-    /* Afgeronde hoeken */
 
     cursor: pointer;
-    /* Verandert de muis in een handje */
 
     font-size: 16px;
-    /* Grootte van de tekst */
 }
 
 
 /* De inhoud van het dropdownmenu */
 .dropdown-content {
     display: none;
-    /* Het menu is standaard verborgen */
 
     position: absolute;
-    /* Plaatst het menu onder de knop */
 
+    /* Menu wordt rechts uitgelijnd met de knop */
     right: 0;
-    /* Zorgt ervoor dat de rechterkant gelijk staat met de knop */
 
     background-color: #333;
-    /* Donkere achtergrond */
 
     min-width: 220px;
-    /* Breedte van het menu */
 
     border-radius: 5px;
-    /* Afgeronde hoeken */
 
     overflow: hidden;
-    /* Houdt de afgeronde hoeken netjes */
-
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
-    /* Schaduw onder het menu */
 }
 
 
-/* De links in het dropdownmenu */
+/* De links in het menu */
 .dropdown-content a {
     display: block;
-    /* Iedere link krijgt een eigen regel */
 
     padding: 12px 15px;
-    /* Ruimte rondom de tekst */
 
     color: white;
-    /* Witte tekst */
 
     text-decoration: none;
-    /* Geen onderstreping */
 
     text-align: left;
-    /* Tekst links uitlijnen */
 }
 
 
-/* Wanneer je over een link gaat */
+/* Wanneer je met de muis over een link gaat */
 .dropdown-content a:hover {
     background-color: #555;
-    /* Achtergrond wordt lichter */
 }
 
 
-/* Laat het menu zien wanneer je eroverheen gaat */
+/* Laat het menu zien wanneer je over de knop gaat */
 .dropdown:hover .dropdown-content {
     display: block;
 }
@@ -160,34 +123,27 @@ body {
    INHOUD
    ========================= */
 
-/* Het gedeelte met de tekst */
+/* De tekst onder de header */
 .content {
     max-width: 800px;
-    /* Maximale breedte */
 
     margin: 60px auto;
-    /* Zet de inhoud in het midden */
 
     padding: 20px;
-    /* Ruimte rondom de inhoud */
 
     text-align: center;
-    /* Tekst in het midden */
 }
 
 
-/* Groene tussenkop */
+/* De groene tussenkop */
 .content h2 {
     color: #4CAF50;
-    /* Maakt de kop groen */
 }
 
 
-/* Gewone tekst */
+/* De normale tekst */
 .content p {
     font-size: 18px;
-    /* Maakt de tekst groter */
 
     line-height: 1.6;
-    /* Geeft ruimte tussen tekstregels */
 }
