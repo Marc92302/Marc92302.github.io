@@ -2,19 +2,19 @@
    ALGEMENE OPMAAK
    ========================= */
 
-/* Dit bepaalt de algemene stijl van de website */
+/* De algemene stijl van de website */
 body {
     margin: 0;
-    /* Verwijdert de standaard ruimte rondom de pagina */
+    /* Verwijdert de standaard marge */
 
     font-family: Arial, sans-serif;
     /* Bepaalt het lettertype */
 
     background-color: #1e1e1e;
-    /* Maakt de achtergrond donker */
+    /* Donkere achtergrond */
 
     color: white;
-    /* Maakt de tekst wit */
+    /* Witte tekst */
 }
 
 
@@ -22,26 +22,32 @@ body {
    GROENE HEADER
    ========================= */
 
-/* Dit is de groene balk bovenaan */
+/* De groene balk bovenaan */
 .header {
     background-color: #4CAF50;
-    /* Geeft de header een groene kleur */
+    /* Groene achtergrond */
 
-    padding: 30px;
-    /* Geeft ruimte rondom de titel */
+    height: 120px;
+    /* Hoogte van de groene balk */
 
-    height: 95px;
-    /* Bepaalt de hoogte van de groene balk */
+    display: flex;
+    /* Hiermee kunnen we de titel centreren */
 
-    box-sizing: border-box;
-    /* Zorgt ervoor dat padding binnen de hoogte blijft */
+    justify-content: center;
+    /* Zet de titel horizontaal in het midden */
+
+    align-items: center;
+    /* Zet de titel verticaal in het midden */
+
+    position: relative;
+    /* Zorgt ervoor dat het menu binnen deze balk geplaatst kan worden */
 }
 
 
-/* De titel in de groene balk */
+/* De titel */
 .header h1 {
     margin: 0;
-    /* Verwijdert de standaard marge van de titel */
+    /* Verwijdert standaard ruimte rondom de titel */
 
     color: black;
     /* Maakt de titel zwart */
@@ -52,23 +58,20 @@ body {
    DROPDOWNMENU
    ========================= */
 
-/* Plaatst het menu rechtsboven */
+/* Het dropdownmenu */
 .dropdown {
     position: absolute;
     /* Hiermee kunnen we het menu precies plaatsen */
 
-    top: 25px;
-    /* Afstand vanaf de bovenkant */
+    top: 20px;
+    /* 20 pixels vanaf de bovenkant van de groene balk */
 
-    right: 25px;
-    /* Afstand vanaf de rechterkant */
-
-    z-index: 10;
-    /* Zorgt ervoor dat het menu boven andere onderdelen staat */
+    right: 20px;
+    /* 20 pixels vanaf de rechterkant van de groene balk */
 }
 
 
-/* De knop van het dropdownmenu */
+/* De knop van het menu */
 .dropdown-button {
     background-color: #333;
     /* Donkere achtergrond */
@@ -82,18 +85,18 @@ body {
     border: none;
     /* Geen rand */
 
+    border-radius: 5px;
+    /* Afgeronde hoeken */
+
     cursor: pointer;
-    /* De muis verandert in een handje */
+    /* Verandert de muis in een handje */
 
     font-size: 16px;
     /* Grootte van de tekst */
-
-    border-radius: 5px;
-    /* Maakt de hoeken rond */
 }
 
 
-/* Het gedeelte met de pagina's */
+/* De inhoud van het dropdownmenu */
 .dropdown-content {
     display: none;
     /* Het menu is standaard verborgen */
@@ -102,52 +105,52 @@ body {
     /* Plaatst het menu onder de knop */
 
     right: 0;
-    /* Lijnt het menu aan de rechterkant uit */
+    /* Zorgt ervoor dat de rechterkant gelijk staat met de knop */
 
     background-color: #333;
     /* Donkere achtergrond */
 
     min-width: 220px;
-    /* Bepaalt de minimale breedte van het menu */
+    /* Breedte van het menu */
 
     border-radius: 5px;
-    /* Maakt de hoeken rond */
+    /* Afgeronde hoeken */
 
     overflow: hidden;
-    /* Zorgt ervoor dat de afgeronde hoeken netjes blijven */
+    /* Houdt de afgeronde hoeken netjes */
 
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
-    /* Geeft het menu een schaduw */
+    /* Schaduw onder het menu */
 }
 
 
 /* De links in het dropdownmenu */
 .dropdown-content a {
     display: block;
-    /* Iedere link staat op een eigen regel */
+    /* Iedere link krijgt een eigen regel */
 
     padding: 12px 15px;
     /* Ruimte rondom de tekst */
 
     color: white;
-    /* Maakt de tekst wit */
+    /* Witte tekst */
 
     text-decoration: none;
-    /* Verwijdert de onderstreping */
+    /* Geen onderstreping */
 
     text-align: left;
-    /* Zet de tekst links */
+    /* Tekst links uitlijnen */
 }
 
 
-/* Wat gebeurt wanneer je met de muis over een link gaat */
+/* Wanneer je over een link gaat */
 .dropdown-content a:hover {
     background-color: #555;
-    /* De achtergrond wordt lichter */
+    /* Achtergrond wordt lichter */
 }
 
 
-/* Laat het menu zien wanneer je over de knop/menu gaat */
+/* Laat het menu zien wanneer je eroverheen gaat */
 .dropdown:hover .dropdown-content {
     display: block;
 }
@@ -157,31 +160,34 @@ body {
    INHOUD
    ========================= */
 
-/* Het gedeelte waarin de tekst staat */
+/* Het gedeelte met de tekst */
 .content {
     max-width: 800px;
-    /* Maximale breedte van de tekst */
+    /* Maximale breedte */
 
-    margin: 80px auto;
-    /* Zet de tekst in het midden */
+    margin: 60px auto;
+    /* Zet de inhoud in het midden */
 
     padding: 20px;
-    /* Ruimte rondom de tekst */
+    /* Ruimte rondom de inhoud */
+
+    text-align: center;
+    /* Tekst in het midden */
 }
 
 
-/* De groene tussenkop */
+/* Groene tussenkop */
 .content h2 {
     color: #4CAF50;
     /* Maakt de kop groen */
 }
 
 
-/* De gewone tekst */
+/* Gewone tekst */
 .content p {
     font-size: 18px;
-    /* Maakt de tekst iets groter */
+    /* Maakt de tekst groter */
 
     line-height: 1.6;
-    /* Geeft ruimte tussen de regels */
+    /* Geeft ruimte tussen tekstregels */
 }
