@@ -2,19 +2,11 @@
    ALGEMENE OPMAAK
    ========================= */
 
-/* De algemene stijl van de website */
 body {
     margin: 0;
-    /* Verwijdert de standaard ruimte rondom de pagina */
-
     font-family: Arial, sans-serif;
-    /* Bepaalt het lettertype */
-
     background-color: white;
-    /* Witte achtergrond */
-
     color: black;
-    /* Zwarte tekst */
 }
 
 
@@ -22,35 +14,23 @@ body {
    GROENE BALK
    ========================= */
 
-/* De groene balk bovenaan */
 .header {
     background-color: #4CAF50;
-    /* Groene kleur */
-
     height: 150px;
-    /* Hoogte van de balk */
 
+    /* Zet de titel in het midden */
     display: flex;
-    /* Hiermee kunnen we de titel centreren */
-
     justify-content: center;
-    /* Zet de titel horizontaal in het midden */
-
     align-items: center;
-    /* Zet de titel verticaal in het midden */
 
+    /* Nodig voor het menu rechtsboven */
     position: relative;
-    /* Nodig om het menu rechtsboven te plaatsen */
 }
 
-
-/* De titel */
+/* Titel in de groene balk */
 .header h1 {
     margin: 0;
-    /* Verwijdert de standaard marge */
-
     color: black;
-    /* Zwarte tekst */
 }
 
 
@@ -58,99 +38,63 @@ body {
    DROPDOWNMENU
    ========================= */
 
-/* Plaats van het dropdownmenu */
 .dropdown {
+    /* Zet het menu rechtsboven */
     position: absolute;
-    /* Hiermee kunnen we het menu precies plaatsen */
-
     top: 20px;
-    /* 20 pixels vanaf de bovenkant */
-
     right: 20px;
-    /* 20 pixels vanaf de rechterkant */
 }
 
-
-/* De knop van het menu */
+/* Knop van het menu */
 .dropdown-button {
     background-color: #333;
-    /* Donkere achtergrond */
-
     color: white;
-    /* Witte tekst */
 
     padding: 10px 20px;
-    /* Ruimte rondom de tekst */
 
     border: none;
-    /* Geen rand */
-
     border-radius: 5px;
-    /* Afgeronde hoeken */
 
     cursor: pointer;
-    /* Muis verandert in een handje */
-
     font-size: 16px;
-    /* Grootte van de tekst */
 }
 
-
-/* Het gedeelte met de menu-items */
+/* Het menu dat openklapt */
 .dropdown-content {
     display: none;
-    /* Menu is standaard verborgen */
 
     position: absolute;
-    /* Plaatst het menu onder de knop */
-
     right: 0;
-    /* Lijnt de rechterkant uit met de knop */
 
     background-color: #333;
-    /* Donkere achtergrond */
 
     min-width: 220px;
-    /* Breedte van het menu */
 
     border-radius: 5px;
-    /* Afgeronde hoeken */
-
     overflow: hidden;
-    /* Houdt de afgeronde hoeken netjes */
 
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
     /* Schaduw onder het menu */
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
 }
 
-
-/* De links in het dropdownmenu */
+/* Links in het dropdownmenu */
 .dropdown-content a {
     display: block;
-    /* Iedere link staat op een eigen regel */
 
     padding: 12px 15px;
-    /* Ruimte rondom de tekst */
 
     color: white;
-    /* Witte tekst */
-
     text-decoration: none;
-    /* Geen onderstreping */
 
     text-align: left;
-    /* Tekst links uitlijnen */
 }
 
-
-/* Wanneer je over een link gaat */
+/* Kleur als je met je muis over een link gaat */
 .dropdown-content a:hover {
     background-color: #555;
-    /* De achtergrond wordt lichter */
 }
 
-
-/* Laat het menu zien wanneer je eroverheen gaat */
+/* Laat het menu zien als je eroverheen gaat */
 .dropdown:hover .dropdown-content {
     display: block;
 }
@@ -160,81 +104,98 @@ body {
    TWEE BLOKKEN NAAST ELKAAR
    ========================= */
 
-/* Dit is de container van de twee blokken */
 .blokken {
-    display: flex;
     /* Zet de blokken naast elkaar */
+    display: flex;
 
+    /* Richting van de blokken is horizontaal */
     flex-direction: row;
-    /* Zorgt ervoor dat ze horizontaal staan */
 
+    /* Ruimte tussen de blokken */
     gap: 30px;
-    /* Ruimte tussen de twee blokken */
 
+    /* Breedte van het geheel */
     width: 90%;
-    /* Gebruikt 90% van de beschikbare breedte */
-
     max-width: 1000px;
-    /* De blokken worden niet breder dan 1000 pixels */
 
+    /* Ruimte boven en onder */
     margin: 60px auto;
-    /* Zet het geheel in het midden */
 
     box-sizing: border-box;
+}
+
+
+/* Eén groen blok */
+.blok {
+    /* Beide blokken krijgen ongeveer de helft */
+    width: 50%;
+
+    /* Minimale hoogte */
+    min-height: 250px;
+
+    /* Ruimte binnen het blok */
+    padding: 30px;
+
+    /* Groene kleur */
+    background-color: #4CAF50;
+
+    /* Zwarte tekst */
+    color: black;
+
+    /* Ronde hoeken */
+    border-radius: 15px;
+
+    /* Donkere schaduw */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.45);
+
+    /* Zorgt ervoor dat padding goed wordt meegerekend */
+    box-sizing: border-box;
+
+    /* Tekst links uitlijnen */
+    text-align: left;
+}
+
+
+/* Titel in een blok */
+.blok h2 {
+    margin-top: 0;
+    color: black;
+}
+
+
+/* Tekst in een blok */
+.blok p {
+    font-size: 17px;
+    line-height: 1.6;
 }
 
 
 /* =========================
-   EERSTE EN TWEEDE BLOK
+   INHOUD VAN ANDERE PAGINA'S
    ========================= */
 
-.blok {
-    width: 50%;
-    /* Ieder blok neemt de helft van de ruimte */
+.content {
+    width: 90%;
+    max-width: 1000px;
 
-    min-height: 250px;
-    /* Zorgt ervoor dat het echt een groot blok is */
+    margin: 50px auto;
 
     padding: 30px;
-    /* Ruimte binnen het blok */
-
-    background-color: #4CAF50;
-    /* Zelfde groene kleur als de bovenste balk */
-
-    color: black;
-    /* Zwarte tekst */
-
-    border-radius: 15px;
-    /* Ronde hoeken */
-
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.45);
-    /* Donkere schaduw */
 
     box-sizing: border-box;
-    /* Houdt de padding binnen de breedte */
-
-    text-align: left;
-    /* Tekst links uitlijnen */
 }
 
 
-/* Titel van het blok */
-.blok h2 {
-    margin-top: 0;
-    /* Geen extra ruimte boven de titel */
-
-    color: black;
-    /* Zwarte titel */
+/* Titels op andere pagina's */
+.content h2 {
+    color: #4CAF50;
 }
 
 
-/* Tekst in het blok */
-.blok p {
+/* Tekst op andere pagina's */
+.content p {
     font-size: 17px;
-    /* Tekstgrootte */
-
     line-height: 1.6;
-    /* Ruimte tussen regels */
 }
 
 
@@ -242,7 +203,7 @@ body {
    TELEFOONS
    ========================= */
 
-/* Op een klein scherm komen de blokken onder elkaar */
+/* Op kleine schermen komen de blokken onder elkaar */
 @media (max-width: 700px) {
 
     .blokken {
