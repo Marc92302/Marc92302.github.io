@@ -157,34 +157,46 @@ body {
 
 
 /* =========================
-   TWEE BLOKKEN
+   TWEE BLOKKEN NAAST ELKAAR
    ========================= */
 
-/* Dit bevat de twee blokken */
+/* Dit is de container van de twee blokken */
 .blokken {
     display: flex;
     /* Zet de blokken naast elkaar */
 
+    flex-direction: row;
+    /* Zorgt ervoor dat ze horizontaal staan */
+
     gap: 30px;
-    /* Ruimte tussen de blokken */
+    /* Ruimte tussen de twee blokken */
+
+    width: 90%;
+    /* Gebruikt 90% van de beschikbare breedte */
 
     max-width: 1000px;
-    /* Maximale breedte */
+    /* De blokken worden niet breder dan 1000 pixels */
 
     margin: 60px auto;
-    /* Zet de blokken in het midden */
-
-    padding: 20px;
-    /* Ruimte rondom de blokken */
+    /* Zet het geheel in het midden */
 
     box-sizing: border-box;
 }
 
 
-/* Een tekstblok */
+/* =========================
+   EERSTE EN TWEEDE BLOK
+   ========================= */
+
 .blok {
-    flex: 1;
-    /* Beide blokken krijgen dezelfde breedte */
+    width: 50%;
+    /* Ieder blok neemt de helft van de ruimte */
+
+    min-height: 250px;
+    /* Zorgt ervoor dat het echt een groot blok is */
+
+    padding: 30px;
+    /* Ruimte binnen het blok */
 
     background-color: #4CAF50;
     /* Zelfde groene kleur als de bovenste balk */
@@ -192,53 +204,53 @@ body {
     color: black;
     /* Zwarte tekst */
 
-    padding: 25px;
-    /* Ruimte binnen het blok */
+    border-radius: 15px;
+    /* Ronde hoeken */
 
-    border-radius: 10px;
-    /* Afgeronde hoeken */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.45);
+    /* Donkere schaduw */
+
+    box-sizing: border-box;
+    /* Houdt de padding binnen de breedte */
 
     text-align: left;
     /* Tekst links uitlijnen */
-
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.35);
-    /* Donkere schaduw onder het blok */
-
-    box-sizing: border-box;
-    /* Zorgt dat padding binnen de breedte blijft */
 }
 
 
-/* Titel van een tekstblok */
+/* Titel van het blok */
 .blok h2 {
-    color: black;
-    /* Zwarte titel */
-
     margin-top: 0;
     /* Geen extra ruimte boven de titel */
+
+    color: black;
+    /* Zwarte titel */
 }
 
 
-/* Tekst in een tekstblok */
+/* Tekst in het blok */
 .blok p {
     font-size: 17px;
-    /* Grootte van de tekst */
+    /* Tekstgrootte */
 
     line-height: 1.6;
-    /* Ruimte tussen de regels */
+    /* Ruimte tussen regels */
 }
 
 
 /* =========================
-   VOOR KLEINERE SCHERMEN
+   TELEFOONS
    ========================= */
 
-/* Wanneer het scherm klein is */
+/* Op een klein scherm komen de blokken onder elkaar */
 @media (max-width: 700px) {
 
     .blokken {
         flex-direction: column;
-        /* Zet de blokken onder elkaar */
+    }
+
+    .blok {
+        width: 100%;
     }
 
 }
