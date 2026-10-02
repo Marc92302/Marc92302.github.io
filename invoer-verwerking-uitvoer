@@ -1,0 +1,83 @@
+<!DOCTYPE html> <!--pagina over invoer, verwerking en uitvoer-->
+<html lang="nl">
+<head>
+    <title>Invoer - Verwerking - Uitvoer</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Zelfde navigatiebalk als op elke andere pagina, zodat het menu overal werkt -->
+    <nav>
+        <a href="index.html">Home</a>
+        <div class="dropdown">
+            <a href="#">Onderwerpen ▾</a>
+            <div class="dropdown-content">
+                <a href="invoer-verwerking-uitvoer.html">Invoer - Verwerking - Uitvoer</a>
+                <a href="binairstelsel.html">Binair stelsel</a>
+                <a href="kleurmodellen.html">Kleurmodellen</a>
+                <a href="compressie.html">Compressie</a>
+                <a href="ai.html">AI</a>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <h1>Invoer - Verwerking - Uitvoer</h1>
+
+        <p>
+            Elke computer werkt volgens hetzelfde basisprincipe: er komt iets
+            binnen (invoer), de computer doet er iets mee (verwerking), en er
+            komt een resultaat uit (uitvoer).
+        </p>
+
+        <div class="afbeelding-blok">
+            <img src="ivu-schema.png" alt="Schema van invoer, verwerking en uitvoer">
+            <!-- Vervang "ivu-schema.png" door een eigen afbeelding of zelfgemaakt schema -->
+            <p>Invoer → Verwerking → Uitvoer</p>
+        </div>
+
+        <h2>Invoer</h2>
+        <p>
+            Dit is alles wat je in de computer stopt: bijvoorbeeld typen op een
+            toetsenbord, klikken met een muis, of een foto uploaden.
+        </p>
+
+        <h2>Verwerking</h2>
+        <p>
+            De processor (CPU) verwerkt de invoer volgens een programma of
+            instructie, bijvoorbeeld: een berekening maken of een bestand openen.
+        </p>
+
+        <h2>Uitvoer</h2>
+        <p>
+            Dit is het resultaat dat je terugziet: bijvoorbeeld tekst op je
+            scherm, geluid uit de speakers, of een geprint document.
+        </p>
+
+        <!-- Video-inbedding: dit stukje toont een YouTube-video netjes op de pagina -->
+        <div class="video-container">
+            <iframe
+                src="https://www.youtube.com/embed/VIDEO_ID_HIER"
+                title="Uitleg invoer verwerking uitvoer"
+                allowfullscreen>
+            </iframe>
+        </div>
+        <!--
+            Vervang VIDEO_ID_HIER door het ID van een YouTube-video die je zelf
+            hebt bekeken. Dat ID staat achter "v=" in de YouTube-link, bijv.
+            bij https://www.youtube.com/watch?v=ABC123 is het ID "ABC123".
+        -->
+        <p class="video-uitleg">
+            Ik heb deze video gekozen omdat... [leg hier zelf uit waarom deze
+            video invoer/verwerking/uitvoer goed uitlegt, en wat je ervan hebt
+            geleerd].
+        </p>
+    </main>
+
+    <footer>
+        &copy; [jouw naam] - 2026
+    </footer>
+
+</body>
+</html>
