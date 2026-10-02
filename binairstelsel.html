@@ -1,51 +1,85 @@
-<!DOCTYPE html>
+<!DOCTYPE html> <!--dit is de pagina over het binair stelsel-->
 <html lang="nl">
-
 <head>
-
-    <meta charset="UTF-8">
-
-    <!-- Gebruikt dezelfde opmaak als alle andere pagina's -->
+    <title>Binairstelsel</title>
+    <meta charset="utf-8">
     <link rel="stylesheet" href="style.css">
-
-    <title>Binair stelsel</title>
-
 </head>
-
 <body>
 
-    <div class="header">
-        <h1>Binair stelsel</h1>
-    </div>
+    <nav>
+        <a href="index.html">Home</a>
+        <div class="dropdown">
+            <a href="#">Onderwerpen ▾</a>
+            <div class="dropdown-content">
+                <a href="invoer-verwerking-uitvoer.html">Invoer - Verwerking - Uitvoer</a>
+                <a href="binairstelsel.html">Binair stelsel</a>
+                <a href="kleurmodellen.html">Kleurmodellen</a>
+                <a href="compressie.html">Compressie</a>
+                <a href="ai.html">AI</a>
+            </div>
+        </div>
+    </nav>
 
-    <!-- Dropdownmenu -->
-    <div class="dropdown">
+    <main>
+        <h1 style="color: #4CAF50;">yo yo yo</h1>
 
-        <button class="dropdown-button">Menu ▼</button>
+        <p>Dit is de 2e pagina.</p>
 
-        <div class="dropdown-content">
+        <!-- ===== Deelonderwerp 1: Wat is het binaire stelsel? ===== -->
+        <div class="rij">
+            <div class="tekstbox">
+                <h2>Wat is het binaire stelsel?</h2>
+                <p>
+                    Het binaire stelsel is een telsysteem met maar twee cijfers:
+                    0 en 1. Computers gebruiken dit omdat elektronica maar twee
+                    standen kent: aan (1) en uit (0).
+                </p>
+            </div>
 
-            <a href="index.html">Home</a>
-            <a href="binairstelsel.html">Binair stelsel</a>
-            <a href="kleurmodellen.html">Kleurmodellen</a>
-            <a href="compressie.html">Compressie: Bitmap/vector</a>
-            <a href="ai.html">AI</a>
-
+            <a href="https://games.penjee.com/binary-bonanza/">
+                <div class="afbeelding-blok">
+                    <img src="binary-bonanza.jpg" alt="Binary Bonanza">
+                    <p>Klik om Binary Bonanza te spelen</p>
+                </div>
+            </a>
         </div>
 
-    </div>
+        <!-- ===== Deelonderwerp 2: Voorbeeld ===== -->
+        <div class="rij omgekeerd">
+            <div class="tekstbox">
+                <h2>Voorbeeld</h2>
+                <p>
+                    Het decimale getal 5 schrijf je in binair als 101.
+                    Dat komt doordat 101 staat voor: (1×4) + (0×2) + (1×1) = 5.
+                </p>
+            </div>
 
-    <!-- Inhoud van deze pagina -->
-    <div class="content">
+            <div class="afbeelding-blok">
+                <img src="binair stelsel.jpg" alt="Foto van binaire code">
+                <p>Binaire code</p>
+            </div>
+        </div>
 
-        <h2>Het binaire stelsel</h2>
+        <a href="index.html" class="knop">Terug naar home</a>
 
-        <p>
-            Hier komt mijn uitleg over het binaire stelsel.
+        <h2>Video</h2>
+        <div class="video-container">
+            <iframe
+                src="https://www.youtube.com/embed/VIDEO_ID_HIER"
+                title="Uitleg binair stelsel"
+                allowfullscreen>
+            </iframe>
+        </div>
+        <p class="video-uitleg">
+            Ik heb deze video gekozen omdat... [leg hier zelf uit waarom deze
+            video het binaire stelsel goed uitlegt].
         </p>
+    </main>
 
-    </div>
+    <footer>
+        &copy; [Marc] - 2026
+    </footer>
 
 </body>
 </html>
-```
