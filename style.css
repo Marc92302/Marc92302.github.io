@@ -1,192 +1,217 @@
-/* ===========================================================
-   style.css
-   Dit bestand bevat ALLE opmaak (kleuren, lettertypes, vormen)
-   voor de hele website. Elke pagina (.html) linkt naar dit
-   bestand met: <link rel="stylesheet" href="style.css">
-   Zo hoef je kleuren/lettertypes maar op 1 plek aan te passen.
-   =========================================================== */
+/* =========================
+   ALGEMENE OPMAAK
+   ========================= */
 
-/* Algemene opmaak voor de hele pagina (geldt voor elke pagina) */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #1e1e1e;
-    color: #f0f0f0;
     margin: 0;
-    padding: 0;
-    line-height: 1.5;
+    font-family: Arial, sans-serif;
+    background-color: white;
+    color: black;
 }
 
-/* ---------- NAVIGATIEBALK BOVENIN ---------- */
-nav {
+
+/* =========================
+   GROENE BALK
+   ========================= */
+
+.header {
     background-color: #4CAF50;
+    height: 150px;
+
+    /* Zet de titel in het midden */
     display: flex;
+    justify-content: center;
     align-items: center;
-    padding: 15px 30px;
-}
 
-nav a {
-    color: white;
-    text-decoration: none;
-    margin-right: 20px;
-    font-weight: bold;
-}
-
-nav a:hover {
-    text-decoration: underline;
-}
-
-/* ---------- DROPDOWNMENU (uitklapmenu) ---------- */
-.dropdown {
+    /* Nodig voor het menu rechtsboven */
     position: relative;
-    display: inline-block;
 }
 
+/* Titel in de groene balk */
+.header h1 {
+    margin: 0;
+    color: black;
+}
+
+
+/* =========================
+   DROPDOWNMENU
+   ========================= */
+
+.dropdown {
+    /* Zet het menu rechtsboven */
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+/* Knop van het menu */
+.dropdown-button {
+    background-color: #333;
+    color: white;
+
+    padding: 10px 20px;
+
+    border: none;
+    border-radius: 5px;
+
+    cursor: pointer;
+    font-size: 16px;
+}
+
+/* Het menu dat openklapt */
 .dropdown-content {
     display: none;
+
     position: absolute;
+    right: 0;
+
     background-color: #333;
+
     min-width: 220px;
-    z-index: 1;
-    border-radius: 0 0 8px 8px;
+
+    border-radius: 5px;
     overflow: hidden;
+
+    /* Schaduw onder het menu */
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
 }
 
+/* Links in het dropdownmenu */
 .dropdown-content a {
-    color: white;
-    padding: 10px 15px;
     display: block;
-    margin: 0;
-    font-weight: normal;
+
+    padding: 12px 15px;
+
+    color: white;
+    text-decoration: none;
+
+    text-align: left;
 }
 
+/* Kleur als je met je muis over een link gaat */
 .dropdown-content a:hover {
     background-color: #555;
 }
 
+/* Laat het menu zien als je eroverheen gaat */
 .dropdown:hover .dropdown-content {
     display: block;
 }
 
-/* ---------- HOOFDINHOUD ---------- */
-main {
-    padding: 40px;
-    max-width: 800px;
-    margin: 0 auto;
-}
 
-h1 {
-    color: #4CAF50;
-}
+/* =========================
+   TWEE BLOKKEN NAAST ELKAAR
+   ========================= */
 
-h2 {
-    color: #4CAF50;
-    margin-top: 40px;
-}
-
-p {
-    font-size: 17px;
-}
-
-/* ---------- KNOPPEN ---------- */
-.knop {
-    display: inline-block;
-    background-color: #4CAF50;
-    color: white;
-    padding: 12px 24px;
-    margin: 10px 5px 10px 0;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.knop:hover {
-    background-color: #3e8e41;
-}
-
-/* ---------- AFBEELDINGSBLOK ---------- */
-.afbeelding-blok {
-    background-color: #2a2a2a;
-    padding: 15px;
-    border-radius: 12px;
-    display: inline-block;
-    margin: 20px 0;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
-}
-
-.afbeelding-blok img {
-    max-width: 100%;
-    border-radius: 8px;
-    display: block;
-}
-
-.afbeelding-blok p {
-    font-size: 14px;
-    color: #cccccc;
-    margin: 8px 0 0 0;
-    text-align: center;
-}
-
-/* ---------- TEKSTBOX NAAST AFBEELDING ---------- */
-.rij {
+.blokken {
+    /* Zet de blokken naast elkaar */
     display: flex;
-    align-items: center;
+
+    /* Richting van de blokken is horizontaal */
+    flex-direction: row;
+
+    /* Ruimte tussen de blokken */
     gap: 30px;
-    margin: 30px 0;
-    flex-wrap: wrap;
+
+    /* Breedte van het geheel */
+    width: 90%;
+    max-width: 1000px;
+
+    /* Ruimte boven en onder */
+    margin: 60px auto;
+
+    box-sizing: border-box;
 }
 
-.rij.omgekeerd {
-    flex-direction: row-reverse;
+
+/* Eén groen blok */
+.blok {
+    /* Beide blokken krijgen ongeveer de helft */
+    width: 50%;
+
+    /* Minimale hoogte */
+    min-height: 250px;
+
+    /* Ruimte binnen het blok */
+    padding: 30px;
+
+    /* Groene kleur */
+    background-color: #4CAF50;
+
+    /* Zwarte tekst */
+    color: black;
+
+    /* Ronde hoeken */
+    border-radius: 15px;
+
+    /* Donkere schaduw */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.45);
+
+    /* Zorgt ervoor dat padding goed wordt meegerekend */
+    box-sizing: border-box;
+
+    /* Tekst links uitlijnen */
+    text-align: left;
 }
 
-.tekstbox {
-    background-color: #2a2a2a;
-    padding: 20px 25px;
-    border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
-    flex: 1;
-    min-width: 250px;
-}
 
-.tekstbox h2 {
+/* Titel in een blok */
+.blok h2 {
     margin-top: 0;
+    color: black;
 }
 
-.rij .afbeelding-blok {
-    flex: 1;
-    min-width: 200px;
-    margin: 0;
+
+/* Tekst in een blok */
+.blok p {
+    font-size: 17px;
+    line-height: 1.6;
 }
 
-/* ---------- VIDEO ---------- */
-.video-container {
-    position: relative;
-    width: 100%;
-    max-width: 560px;
-    aspect-ratio: 16 / 9;
-    margin: 20px auto;
+
+/* =========================
+   INHOUD VAN ANDERE PAGINA'S
+   ========================= */
+
+.content {
+    width: 90%;
+    max-width: 1000px;
+
+    margin: 50px auto;
+
+    padding: 30px;
+
+    box-sizing: border-box;
 }
 
-.video-container iframe {
-    width: 100%;
-    height: 100%;
-    border-radius: 8px;
-    border: none;
+
+/* Titels op andere pagina's */
+.content h2 {
+    color: #4CAF50;
 }
 
-.video-uitleg {
-    max-width: 560px;
-    margin: 0 auto 30px auto;
-    font-size: 15px;
-    color: #cccccc;
+
+/* Tekst op andere pagina's */
+.content p {
+    font-size: 17px;
+    line-height: 1.6;
 }
 
-/* ---------- FOOTER ---------- */
-footer {
-    text-align: center;
-    padding: 20px;
-    font-size: 13px;
-    color: #999999;
-    border-top: 1px solid #333;
-    margin-top: 50px;
+
+/* =========================
+   TELEFOONS
+   ========================= */
+
+/* Op kleine schermen komen de blokken onder elkaar */
+@media (max-width: 700px) {
+
+    .blokken {
+        flex-direction: column;
+    }
+
+    .blok {
+        width: 100%;
+    }
+
 }
