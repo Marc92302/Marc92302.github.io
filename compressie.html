@@ -1,30 +1,252 @@
 <!DOCTYPE html>
 <html lang="nl">
-
 <head>
-
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compressie: Bitmap en Vector</title>
 
-    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: white;
+            color: black;
+        }
 
-    <title>Compressie</title>
+        /* HEADER */
+        .header {
+            background-color: #4CAF50;
+            height: 150px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            padding: 0 20px;
+            box-sizing: border-box;
+        }
 
+        .header h1 {
+            margin: 0;
+            color: black;
+        }
+
+        /* HOME KNOP */
+        .home-button {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background-color: #333;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+        .home-button:hover {
+            background-color: #555;
+        }
+
+        /* DROPDOWN */
+        .dropdown {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+
+        .dropdown-button {
+            background-color: #333;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            right: 0;
+            top: 100%;
+            background-color: #333;
+            min-width: 240px;
+            border-radius: 5px;
+            overflow: hidden;
+            box-shadow: 0 5px 10px rgba(0,0,0,0.4);
+            z-index: 100;
+        }
+
+        .dropdown-content a {
+            display: block;
+            padding: 12px 15px;
+            color: white;
+            text-decoration: none;
+            text-align: left;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #555;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        /* GROENE BLOKKEN */
+        .compressie-blok {
+            width: 90%;
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 30px;
+            background-color: #4CAF50;
+            color: black;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.45);
+            box-sizing: border-box;
+        }
+
+        .compressie-blok h2 {
+            font-size: 28px;
+            margin-top: 0;
+        }
+
+        .compressie-blok p {
+            font-size: 17px;
+            line-height: 1.7;
+        }
+
+        /* BITMAP / VECTOR KAARTEN */
+        .vergelijking {
+            display: flex;
+            gap: 20px;
+            margin-top: 25px;
+        }
+
+        .vergelijking-item {
+            flex: 1;
+            background-color: rgba(255,255,255,0.3);
+            padding: 25px;
+            border-radius: 12px;
+        }
+
+        .vergelijking-item h3 {
+            margin-top: 0;
+            font-size: 23px;
+        }
+
+        .vergelijking-item ul {
+            line-height: 1.8;
+            padding-left: 20px;
+        }
+
+        /* FOTO */
+        .foto-blok {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+        }
+
+        .foto-tekst {
+            flex: 1;
+        }
+
+        .foto {
+            width: 45%;
+            text-align: center;
+        }
+
+        .foto img {
+            max-width: 100%;
+            max-height: 350px;
+            border-radius: 10px;
+        }
+
+        .foto-bijschrift {
+            margin-top: 10px;
+            font-size: 14px;
+        }
+
+        /* UITLEG */
+        .uitleg {
+            background-color: rgba(255,255,255,0.25);
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+
+        .uitleg h3 {
+            margin-top: 0;
+        }
+
+        /* VIDEO */
+        .video-container {
+            width: 100%;
+            max-width: 850px;
+            margin: 25px auto;
+        }
+
+        .video-container iframe {
+            width: 100%;
+            height: 480px;
+            border: none;
+            border-radius: 10px;
+            display: block;
+            background-color: white;
+        }
+
+        /* SAMENVATTING */
+        .samenvatting {
+            background-color: rgba(255,255,255,0.3);
+            padding: 25px;
+            border-radius: 12px;
+            margin-top: 25px;
+        }
+
+        .samenvatting h3 {
+            margin-top: 0;
+        }
+
+        /* FOOTER */
+        footer {
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+
+        /* MOBIEL */
+        @media (max-width: 700px) {
+
+            .vergelijking {
+                flex-direction: column;
+            }
+
+            .foto-blok {
+                flex-direction: column;
+            }
+
+            .foto {
+                width: 100%;
+            }
+
+            .video-container iframe {
+                height: 300px;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
-    <!-- Titel bovenaan de pagina -->
-    <div class="header">
+    <!-- HEADER -->
+    <header class="header">
 
-        <!-- Home linksboven -->
         <a href="index.html" class="home-button">
             Home
         </a>
 
-        <!-- Titel in het midden -->
-        <h1>Compressie: Bitmap/vector</h1>
+        <h1>Compressie: Bitmap & Vector</h1>
 
-        <!-- Onderwerpen rechtsboven -->
         <div class="dropdown">
 
             <button class="dropdown-button">
@@ -32,69 +254,217 @@
             </button>
 
             <div class="dropdown-content">
-
-                <a href="binairstelsel.html">
-                    Binair stelsel
-                </a>
-
-                <a href="kleurmodellen.html">
-                    Kleurmodellen
-                </a>
-
-                <a href="compressie.html">
-                    Compressie: Bitmap/vector
-                </a>
-
-                <a href="ai.html">
-                    AI
-                </a>
-
+                <a href="binairstelsel.html">Binair stelsel</a>
+                <a href="kleurmodellen.html">Kleurmodellen</a>
+                <a href="compressie.html">Compressie: Bitmap/vector</a>
+                <a href="ai.html">AI</a>
                 <a href="invoer-verwerking-uitvoer.html">
                     Invoer - Verwerking - Uitvoer
                 </a>
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- WAT IS COMPRESSIE? -->
+    <section class="compressie-blok">
+
+        <h2>🗜️ Wat is compressie?</h2>
+
+        <p>
+            Compressie is het verkleinen van de hoeveelheid gegevens die
+            nodig is om een bestand op te slaan. Hierdoor neemt een bestand
+            minder opslagruimte in en kan het sneller worden verstuurd.
+        </p>
+
+        <p>
+            Bij afbeeldingen is het belangrijk om een goede balans te vinden
+            tussen <strong>bestandsgrootte</strong> en
+            <strong>beeldkwaliteit</strong>. Er zijn verschillende manieren
+            om afbeeldingen op te slaan en te comprimeren.
+        </p>
+
+    </section>
+
+
+    <!-- BITMAP EN VECTOR -->
+    <section class="compressie-blok">
+
+        <h2>🖼️ Bitmap en vector</h2>
+
+        <p>
+            Afbeeldingen kunnen onder andere worden opgeslagen als
+            bitmapafbeelding of als vectorafbeelding. Het belangrijkste
+            verschil is de manier waarop de afbeelding wordt opgebouwd.
+        </p>
+
+        <div class="vergelijking">
+
+            <div class="vergelijking-item">
+
+                <h3>📸 Bitmap</h3>
+
+                <p>
+                    Een bitmapafbeelding bestaat uit een groot aantal kleine
+                    <strong>pixels</strong>. Iedere pixel bevat informatie
+                    over de kleur.
+                </p>
+
+                <ul>
+                    <li>Bestaat uit pixels</li>
+                    <li>Goed geschikt voor foto's</li>
+                    <li>Veel details en kleuren mogelijk</li>
+                    <li>Kan onscherp worden bij sterk vergroten</li>
+                </ul>
+
+            </div>
+
+
+            <div class="vergelijking-item">
+
+                <h3>📐 Vector</h3>
+
+                <p>
+                    Een vectorafbeelding bestaat uit lijnen, vormen en
+                    andere objecten die wiskundig worden beschreven.
+                </p>
+
+                <ul>
+                    <li>Bestaat uit vormen en lijnen</li>
+                    <li>Goed geschikt voor logo's</li>
+                    <li>Kan zonder kwaliteitsverlies worden vergroot</li>
+                    <li>Vaak geschikt voor eenvoudige afbeeldingen</li>
+                </ul>
 
             </div>
 
         </div>
 
-    </div>
+    </section>
 
 
-    <!-- Inhoud van de pagina -->
-    <div class="content">
+    <!-- EIGEN FOTO -->
+    <section class="compressie-blok foto-blok">
 
-        <h2>Compressie</h2>
+        <div class="foto-tekst">
+
+            <h2>🔍 Mijn eigen voorbeeld</h2>
+
+            <p>
+                Hieronder staat mijn eigen afbeelding. Deze afbeelding is
+                een voorbeeld van een bitmapafbeelding. Een bitmap bestaat
+                uit pixels. Wanneer je ver genoeg inzoomt, kun je deze
+                pixels uiteindelijk zichtbaar maken.
+            </p>
+
+            <p>
+                Dit laat zien waarom bitmapafbeeldingen vooral geschikt zijn
+                voor foto's en afbeeldingen met veel details.
+            </p>
+
+        </div>
+
+        <div class="foto">
+
+            <img src="fotos/bitmap,vector.png" alt="Mijn eigen bitmap afbeelding">
+
+            <div class="foto-bijschrift">
+                Mijn eigen afbeelding
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- VIDEO -->
+    <section class="compressie-blok">
+
+        <h2>🎥 Video: Bitmap vs Vector</h2>
 
         <p>
-            Compressie is het kleiner maken van een bestand.
-            Hierdoor neemt het bestand minder opslagruimte in.
+            Deze video van <strong>Craig 'n' Dave</strong> legt het verschil
+            tussen bitmap- en vectorafbeeldingen uit. De video bespreekt
+            ook wanneer je welke soort afbeelding het beste kunt gebruiken.
         </p>
 
-        <h2>Bitmap</h2>
+        <div class="video-container">
 
-        <p>
-            Een bitmapafbeelding bestaat uit allemaal kleine pixels.
-            Foto's zijn meestal bitmapafbeeldingen.
-        </p>
+            <iframe
+                src="https://www.youtube.com/embed/9i_0cLdJE-s"
+                title="Bitmap vs vectors - Craig 'n' Dave"
+                allowfullscreen>
+            </iframe>
 
-        <h2>Vector</h2>
+        </div>
 
-        <p>
-            Een vectorafbeelding wordt opgebouwd met lijnen,
-            vormen en wiskundige berekeningen.
-            Hierdoor kan een vectorafbeelding groter of kleiner worden
-            gemaakt zonder dat de afbeelding wazig wordt.
-        </p>
+        <div class="samenvatting">
 
-    </div>
+            <h3>📝 Samenvatting van de video</h3>
+
+            <p>
+                In de video wordt uitgelegd dat een bitmapafbeelding uit
+                pixels bestaat. Iedere pixel bevat informatie over de kleur
+                en samen vormen alle pixels de afbeelding.
+            </p>
+
+            <p>
+                Bij een vectorafbeelding worden juist lijnen, vormen en
+                objecten wiskundig beschreven. Hierdoor kan een
+                vectorafbeelding groter of kleiner worden gemaakt zonder
+                dat de kwaliteit minder wordt.
+            </p>
+
+            <p>
+                Bitmapafbeeldingen zijn daarom vooral handig voor
+                <strong>foto's en afbeeldingen met veel details</strong>.
+                Vectorafbeeldingen zijn bijvoorbeeld handig voor
+                <strong>logo's, pictogrammen en eenvoudige tekeningen</strong>.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- VERSCHIL -->
+    <section class="compressie-blok">
+
+        <h2>⚖️ Wanneer gebruik je bitmap of vector?</h2>
+
+        <div class="uitleg">
+
+            <h3>📸 Bitmap</h3>
+
+            <p>
+                Gebruik bitmap wanneer je werkt met foto's of afbeeldingen
+                met veel verschillende kleuren en details.
+                Voorbeelden zijn foto's van mensen, landschappen en
+                producten.
+            </p>
+
+        </div>
+
+        <div class="uitleg">
+
+            <h3>📐 Vector</h3>
+
+            <p>
+                Gebruik vector wanneer je werkt met logo's, pictogrammen,
+                diagrammen of andere afbeeldingen die uit duidelijke vormen
+                bestaan. Deze afbeeldingen kunnen groot worden gemaakt zonder
+                kwaliteitsverlies.
+            </p>
+
+        </div>
+
+    </section>
 
 
     <footer>
-
-        <p>
-            © Marc
-        </p>
-
+        <p>© 2026 Mijn website</p>
     </footer>
 
 </body>
