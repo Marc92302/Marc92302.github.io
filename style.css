@@ -27,7 +27,9 @@ body {
 
 .header h1 {
     margin: 0;
-    color: black;
+    color: white;
+    font-size: 30px;
+    text-align: center;
 }
 
 
@@ -39,16 +41,22 @@ body {
     position: absolute;
     top: 20px;
     left: 20px;
-    background-color: #333;
+
     color: white;
-    padding: 10px 20px;
-    border-radius: 5px;
+    background-color: transparent;
+
+    padding: 10px 16px;
+    border-radius: 8px;
+
     text-decoration: none;
-    font-size: 16px;
+    font-size: 15px;
+    font-weight: 600;
+
+    transition: background-color 0.2s ease;
 }
 
 .home-button:hover {
-    background-color: #555;
+    background-color: rgba(255, 255, 255, 0.18);
 }
 
 
@@ -63,42 +71,70 @@ body {
 }
 
 .dropdown-button {
-    background-color: #333;
+    background-color: transparent;
     color: white;
-    padding: 10px 20px;
+
+    padding: 10px 16px;
+
     border: none;
-    border-radius: 5px;
+    border-radius: 8px;
+
     cursor: pointer;
-    font-size: 16px;
+
+    font-size: 15px;
+    font-weight: 600;
+
+    transition: background-color 0.2s ease;
 }
 
 .dropdown-button:hover {
-    background-color: #555;
+    background-color: rgba(255, 255, 255, 0.18);
 }
+
+
+/* =========================
+   DROPDOWN INHOUD
+========================= */
 
 .dropdown-content {
     display: none;
+
     position: absolute;
     right: 0;
-    top: 100%;
-    background-color: #333;
+    top: calc(100% + 8px);
+
+    background-color: white;
+
     min-width: 240px;
-    border-radius: 5px;
+
+    border-radius: 12px;
+
     overflow: hidden;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.18);
+
     z-index: 100;
 }
 
 .dropdown-content a {
     display: block;
-    padding: 12px 15px;
-    color: white;
+
+    padding: 13px 16px;
+
+    color: #333;
     text-decoration: none;
+
     text-align: left;
+
+    font-size: 15px;
+
+    transition: background-color 0.2s ease,
+                color 0.2s ease;
 }
 
 .dropdown-content a:hover {
-    background-color: #555;
+    background-color: #eaf5eb;
+    color: #369b3b;
 }
 
 .dropdown:hover .dropdown-content {
@@ -114,21 +150,30 @@ body {
     display: flex;
     flex-direction: row;
     gap: 30px;
+
     width: 90%;
     max-width: 1000px;
+
     margin: 60px auto;
+
     box-sizing: border-box;
 }
 
 .blok {
     width: 50%;
     min-height: 250px;
+
     padding: 30px;
+
     background-color: #4CAF50;
     color: black;
+
     border-radius: 15px;
+
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.45);
+
     box-sizing: border-box;
+
     text-align: left;
 }
 
@@ -150,8 +195,10 @@ body {
 .content {
     width: 90%;
     max-width: 1000px;
+
     margin: 50px auto;
     padding: 30px;
+
     box-sizing: border-box;
 }
 
@@ -217,8 +264,10 @@ body {
 .binair-game iframe {
     width: 100%;
     height: 350px;
+
     border: none;
     border-radius: 10px;
+
     background-color: white;
 }
 
@@ -231,7 +280,9 @@ body {
     max-width: 100%;
     height: auto;
     max-height: 350px;
+
     object-fit: contain;
+
     border-radius: 10px;
 }
 
@@ -312,8 +363,11 @@ body {
 .ivo-foto img {
     max-width: 100%;
     max-height: 350px;
+
     height: auto;
+
     object-fit: contain;
+
     border-radius: 10px;
 }
 
@@ -357,13 +411,16 @@ body {
 .ivo-video {
     width: 100%;
     max-width: 700px;
+
     margin: 25px auto;
+
     aspect-ratio: 16 / 9;
 }
 
 .ivo-video iframe {
     width: 100%;
     height: 100%;
+
     border: none;
     border-radius: 10px;
 }
@@ -375,7 +432,9 @@ body {
 
 footer {
     text-align: center;
+
     padding: 20px;
+
     margin-top: 40px;
 }
 
@@ -386,32 +445,45 @@ footer {
 
 @media (max-width: 700px) {
 
+    /* Header */
+
     .header {
         height: 130px;
     }
 
     .header h1 {
         font-size: 23px;
-        margin-top: 35px;
-    }
 
-    .home-button,
-    .dropdown {
-        top: 12px;
+        /* zorgt dat de titel niet tegen de knoppen komt */
+        max-width: 55%;
     }
 
     .home-button {
+        top: 12px;
         left: 12px;
+
         padding: 8px 12px;
+
+        font-size: 14px;
     }
 
     .dropdown {
+        top: 12px;
         right: 12px;
     }
 
     .dropdown-button {
         padding: 8px 12px;
+
+        font-size: 14px;
     }
+
+    .dropdown-content {
+        min-width: 210px;
+    }
+
+
+    /* Home */
 
     .blokken {
         flex-direction: column;
@@ -420,6 +492,9 @@ footer {
     .blok {
         width: 100%;
     }
+
+
+    /* Binair */
 
     .binair-blok {
         flex-direction: column;
@@ -435,6 +510,9 @@ footer {
     .binair-game iframe {
         height: 300px;
     }
+
+
+    /* IVO */
 
     .ivo-blok {
         flex-direction: column;
