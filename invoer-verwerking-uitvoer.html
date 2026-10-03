@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="nl">
 
@@ -36,9 +37,19 @@
             color: black;
         }
 
+        .ivo-tekst h2 {
+            font-size: 28px;
+            margin-top: 0;
+        }
+
+        .ivo-tekst h3 {
+            font-size: 21px;
+            margin-bottom: 5px;
+        }
+
         .ivo-tekst p {
             font-size: 17px;
-            line-height: 1.6;
+            line-height: 1.7;
         }
 
         .ivo-foto {
@@ -64,6 +75,15 @@
             box-sizing: border-box;
         }
 
+        .ivo-video-blok h2 {
+            font-size: 28px;
+        }
+
+        .ivo-video-blok p {
+            font-size: 17px;
+            line-height: 1.7;
+        }
+
         .ivo-video {
             width: 100%;
             max-width: 700px;
@@ -76,6 +96,24 @@
             height: 100%;
             border: none;
             border-radius: 10px;
+        }
+
+        .stap {
+            background: rgba(255,255,255,0.25);
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 10px;
+        }
+
+        .stap h3 {
+            margin-top: 0;
+        }
+
+        .voorbeeld {
+            background: rgba(255,255,255,0.25);
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 20px;
         }
 
         @media (max-width: 700px) {
@@ -109,22 +147,10 @@
 
             <div class="dropdown-content">
 
-                <a href="binairstelsel.html">
-                    Binair stelsel
-                </a>
-
-                <a href="kleurmodellen.html">
-                    Kleurmodellen
-                </a>
-
-                <a href="compressie.html">
-                    Compressie: Bitmap/vector
-                </a>
-
-                <a href="ai.html">
-                    AI
-                </a>
-
+                <a href="binairstelsel.html">Binair stelsel</a>
+                <a href="kleurmodellen.html">Kleurmodellen</a>
+                <a href="compressie.html">Compressie: Bitmap/vector</a>
+                <a href="ai.html">AI</a>
                 <a href="invoer-verwerking-uitvoer.html">
                     Invoer - Verwerking - Uitvoer
                 </a>
@@ -142,26 +168,28 @@
 
         <div class="ivo-tekst">
 
-            <h2>Wat is Invoer - Verwerking - Uitvoer?</h2>
+            <h2>💻 Hoe werkt een computer eigenlijk?</h2>
 
             <p>
-                Een computer krijgt voortdurend gegevens binnen.
-                Deze gegevens worden verwerkt door de computer en daarna
-                komt er een resultaat uit. Dit noemen we het
-                <strong>invoer-verwerking-uitvoerproces</strong>.
+                Je typt iets op je toetsenbord, klikt met je muis en
+                binnen een paar seconden verschijnt er een resultaat.
+                Maar wat gebeurt er eigenlijk tussen die twee momenten?
             </p>
 
             <p>
-                In het Engels wordt dit vaak
-                <strong>Input - Process - Output</strong> genoemd,
-                oftewel IPO.
+                Computers werken hierbij met drie belangrijke stappen:
+                <strong>invoer → verwerking → uitvoer.</strong>
             </p>
 
             <p>
-                Je kunt het zien als een stappenplan:
-                eerst krijgt de computer informatie binnen,
-                daarna verwerkt de computer deze informatie
-                en uiteindelijk geeft de computer een resultaat.
+                Dit wordt ook wel het
+                <strong>IPO-model</strong> genoemd:
+                <em>Input, Process, Output.</em>
+            </p>
+
+            <p>
+                Eigenlijk is bijna alles wat je met een computer doet
+                hierop terug te brengen.
             </p>
 
         </div>
@@ -175,33 +203,57 @@
 
         <div class="ivo-tekst">
 
-            <h2>De drie stappen</h2>
+            <h2>🔄 De 3 stappen</h2>
 
-            <h3>1. Invoer</h3>
+            <div class="stap">
 
-            <p>
-                Invoer is de informatie die je aan een computer geeft.
-                Dit kan bijvoorbeeld door een toetsenbord, muis,
-                microfoon, camera of touchscreen.
-            </p>
+                <h3>⌨️ 1. Invoer</h3>
+
+                <p>
+                    Eerst moet de computer informatie krijgen.
+                    Dat noemen we <strong>invoer</strong>.
+                </p>
+
+                <p>
+                    Denk bijvoorbeeld aan een toetsenbord, muis,
+                    microfoon, camera of touchscreen.
+                </p>
+
+            </div>
 
 
-            <h3>2. Verwerking</h3>
+            <div class="stap">
 
-            <p>
-                Tijdens de verwerking doet de computer iets met de
-                ingevoerde gegevens. De processor voert bijvoorbeeld
-                berekeningen en opdrachten uit.
-            </p>
+                <h3>⚙️ 2. Verwerking</h3>
+
+                <p>
+                    Daarna gaat de computer met deze informatie aan
+                    de slag. De processor voert berekeningen en
+                    opdrachten uit.
+                </p>
+
+                <p>
+                    Dit gebeurt vaak zo snel dat je het nauwelijks merkt.
+                </p>
+
+            </div>
 
 
-            <h3>3. Uitvoer</h3>
+            <div class="stap">
 
-            <p>
-                Uitvoer is het resultaat dat de computer geeft.
-                Dit kan bijvoorbeeld op een beeldscherm,
-                via een luidspreker of met een printer worden weergegeven.
-            </p>
+                <h3>🖥️ 3. Uitvoer</h3>
+
+                <p>
+                    Uiteindelijk krijg je een resultaat.
+                    Dit noemen we <strong>uitvoer</strong>.
+                </p>
+
+                <p>
+                    Bijvoorbeeld een afbeelding op je scherm,
+                    geluid uit je speakers of een document uit de printer.
+                </p>
+
+            </div>
 
         </div>
 
@@ -223,32 +275,40 @@
 
         <div class="ivo-tekst">
 
-            <h2>Een voorbeeld uit het dagelijks leven</h2>
+            <h2>🔎 Zie je het overal?</h2>
 
             <p>
-                Stel dat je een zoekopdracht uitvoert op Google.
+                Het IPO-model klinkt misschien ingewikkeld,
+                maar je gebruikt het waarschijnlijk iedere dag.
             </p>
 
-            <p>
-                <strong>Invoer:</strong>
-                je typt een zoekterm in op het toetsenbord.
-            </p>
+            <div class="voorbeeld">
+
+                <h3>📱 Voorbeeld: een bericht versturen</h3>
+
+                <p>
+                    <strong>1. Invoer:</strong>
+                    je typt een bericht op je telefoon.
+                </p>
+
+                <p>
+                    <strong>2. Verwerking:</strong>
+                    je telefoon verwerkt de tekst en verstuurt
+                    de gegevens via het internet.
+                </p>
+
+                <p>
+                    <strong>3. Uitvoer:</strong>
+                    het bericht verschijnt op het scherm van
+                    de ontvanger.
+                </p>
+
+            </div>
 
             <p>
-                <strong>Verwerking:</strong>
-                de computer en de zoekmachine verwerken je zoekopdracht
-                en zoeken naar passende informatie.
-            </p>
-
-            <p>
-                <strong>Uitvoer:</strong>
-                de zoekresultaten verschijnen op je scherm.
-            </p>
-
-            <p>
-                Op deze manier kun je het
-                invoer-verwerking-uitvoerproces herkennen in veel
-                verschillende situaties waarbij je een computer gebruikt.
+                Zo werkt het dus niet alleen bij computers,
+                maar bij heel veel apparaten die informatie
+                ontvangen, verwerken en een resultaat geven.
             </p>
 
         </div>
@@ -260,7 +320,13 @@
 
     <div class="ivo-video-blok">
 
-        <h2>Video: Invoer, verwerking en uitvoer</h2>
+        <h2>🎥 Bekijk het zelf</h2>
+
+        <p>
+            Wil je zien hoe invoer, verwerking en uitvoer
+            samenkomen in een computersysteem?
+            Bekijk dan deze korte uitlegvideo.
+        </p>
 
         <div class="ivo-video">
 
@@ -273,18 +339,19 @@
         </div>
 
 
-        <h2>Waarom heb ik deze video gekozen?</h2>
+        <h2>💡 Waarom deze video?</h2>
 
         <p>
-            Ik heb deze video gekozen omdat hij duidelijk uitlegt hoe
-            een computer gegevens verwerkt. De video behandelt de drie
-            stappen van invoer, verwerking en uitvoer.
+            Ik heb deze video gekozen omdat de uitleg goed aansluit
+            bij het IPO-model. De drie stappen worden duidelijk
+            uitgelegd en je krijgt een beter beeld van wat er
+            achter de schermen van een computer gebeurt.
         </p>
 
         <p>
-            Dit sluit goed aan bij de uitleg op deze pagina.
-            Hierdoor kun je de informatie niet alleen lezen,
-            maar ook in een video zien en horen.
+            De video is in het Engels, maar de uitleg is duidelijk
+            te volgen. Hierdoor is het een goede aanvulling op
+            de Nederlandse tekst op deze pagina.
         </p>
 
     </div>
@@ -292,9 +359,7 @@
 
     <footer>
 
-        <p>
-            © Marc
-        </p>
+        <p>© Marc</p>
 
     </footer>
 
@@ -302,3 +367,4 @@
 </body>
 
 </html>
+```
