@@ -1,35 +1,232 @@
+```html
 <!DOCTYPE html>
 <html lang="nl">
 
 <head>
-
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="style.css">
 
     <title>Binair stelsel</title>
 
+    <style>
+
+        /* =========================
+           BINAIR BLOKKEN
+        ========================= */
+
+        .binair-blok {
+            width: 90%;
+            max-width: 1000px;
+
+            margin: 40px auto;
+            padding: 30px;
+
+            background-color: #4CAF50 !important;
+            color: black;
+
+            border-radius: 15px;
+
+            box-shadow: 0 10px 20px rgba(0,0,0,0.45);
+
+            box-sizing: border-box;
+        }
+
+
+        .binair-blok h2 {
+            font-size: 28px;
+            margin-top: 0;
+        }
+
+
+        .binair-blok p {
+            font-size: 17px;
+            line-height: 1.7;
+        }
+
+
+        /* =========================
+           VOORBEELD
+        ========================= */
+
+        .binair-voorbeeld {
+            background-color: rgba(255,255,255,0.25);
+
+            padding: 20px;
+
+            margin-top: 20px;
+
+            border-radius: 10px;
+        }
+
+
+        .binair-voorbeeld h3 {
+            margin-top: 0;
+        }
+
+
+        .binair-getal {
+            font-size: 28px;
+
+            text-align: center;
+
+            margin: 20px 0;
+
+            font-weight: bold;
+        }
+
+
+        /* =========================
+           SPEL
+        ========================= */
+
+        .binair-game-blok {
+            width: 90%;
+            max-width: 1000px;
+
+            margin: 40px auto;
+            padding: 30px;
+
+            background-color: #4CAF50 !important;
+
+            border-radius: 15px;
+
+            box-shadow: 0 10px 20px rgba(0,0,0,0.45);
+
+            box-sizing: border-box;
+
+            text-align: center;
+        }
+
+
+        .binair-game-blok h2 {
+            margin-top: 0;
+
+            font-size: 28px;
+        }
+
+
+        .binair-game-blok p {
+            font-size: 17px;
+
+            line-height: 1.7;
+        }
+
+
+        /* De game krijgt een vaste,
+           nette grootte */
+
+        .binair-game {
+            width: 100%;
+
+            max-width: 800px;
+
+            margin: 25px auto;
+        }
+
+
+        .binair-game iframe {
+            width: 100%;
+
+            height: 500px;
+
+            border: none;
+
+            border-radius: 10px;
+
+            background-color: white;
+
+            display: block;
+        }
+
+
+        /* =========================
+           FOTO
+        ========================= */
+
+        .binair-foto-blok {
+            display: flex;
+
+            align-items: center;
+
+            gap: 40px;
+        }
+
+
+        .binair-foto-tekst {
+            flex: 1;
+        }
+
+
+        .binair-foto {
+            width: 40%;
+
+            text-align: center;
+        }
+
+
+        .binair-foto img {
+            max-width: 100%;
+
+            max-height: 350px;
+
+            height: auto;
+
+            border-radius: 10px;
+        }
+
+
+        /* =========================
+           TELEFOON
+        ========================= */
+
+        @media (max-width: 700px) {
+
+            .binair-foto-blok {
+                flex-direction: column;
+            }
+
+            .binair-foto {
+                width: 100%;
+            }
+
+            .binair-game iframe {
+                height: 400px;
+            }
+
+        }
+
+    </style>
+
 </head>
+
 
 <body>
 
-    <!-- Bovenste groene balk -->
+
+    <!-- =========================
+         BOVENBALK
+    ========================= -->
+
     <div class="header">
 
-        <!-- Home linksboven -->
         <a href="index.html" class="home-button">
             Home
         </a>
 
-        <!-- Titel in het midden -->
-        <h1>Binair stelsel</h1>
 
-        <!-- Onderwerpen rechtsboven -->
+        <h1>
+            Binair stelsel
+        </h1>
+
+
         <div class="dropdown">
 
             <button class="dropdown-button">
                 Onderwerpen ▼
             </button>
+
 
             <div class="dropdown-content">
 
@@ -60,36 +257,206 @@
     </div>
 
 
+
     <!-- =========================
-         BOVENSTE BLOK
+         BLOK 1
     ========================= -->
 
     <div class="binair-blok">
 
-        <!-- Tekst -->
-        <div class="binair-tekst">
+        <h2>
+            💻 Wat is het binaire stelsel?
+        </h2>
 
-            <h2>Wat is het binaire stelsel?</h2>
 
-            <p>
-                Het binaire stelsel is een talstelsel dat alleen gebruikmaakt
-                van de cijfers 0 en 1. Computers gebruiken het binaire stelsel
-                om informatie op te slaan en te verwerken.
+        <p>
+            Wanneer wij tellen, gebruiken we meestal het
+            <strong>decimale stelsel</strong>. Dit stelsel heeft
+            tien cijfers: 0 tot en met 9.
+        </p>
+
+
+        <p>
+            Computers werken anders. Zij gebruiken het
+            <strong>binaire stelsel</strong>. Dit stelsel gebruikt
+            maar twee cijfers:
+            <strong>0 en 1</strong>.
+        </p>
+
+
+        <p>
+            Een computer kan met deze twee cijfers allerlei soorten
+            informatie opslaan en verwerken. Denk bijvoorbeeld aan
+            tekst, foto's, video's en programma's.
+        </p>
+
+
+        <p>
+            Een enkele 0 of 1 noemen we een
+            <strong>bit</strong>. De naam bit komt van
+            <em>binary digit</em>.
+        </p>
+
+    </div>
+
+
+
+    <!-- =========================
+         BLOK 2
+    ========================= -->
+
+    <div class="binair-blok">
+
+        <h2>
+            🔢 Hoe werkt het binaire stelsel?
+        </h2>
+
+
+        <p>
+            In het binaire stelsel heeft iedere positie een waarde.
+            Deze waarden zijn machten van 2.
+        </p>
+
+
+        <p>
+            Als je van rechts naar links kijkt, krijg je bijvoorbeeld:
+        </p>
+
+
+        <div class="binair-voorbeeld">
+
+            <p class="binair-getal">
+                16 &nbsp;&nbsp; 8 &nbsp;&nbsp; 4 &nbsp;&nbsp; 2 &nbsp;&nbsp; 1
             </p>
 
             <p>
-                Elke 0 of 1 wordt een bit genoemd. Met meerdere bits kunnen
-                computers bijvoorbeeld getallen, letters, afbeeldingen en
-                andere informatie opslaan.
+                Elke positie vertegenwoordigt dus een bepaalde waarde.
+                Door sommige posities op <strong>1</strong> te zetten
+                en andere op <strong>0</strong>, kun je verschillende
+                getallen maken.
             </p>
 
         </div>
 
 
-        <!-- Binary Bonanza -->
-        <div class="binair-game">
+        <p>
+            Bijvoorbeeld het getal <strong>5</strong>.
+            In het binaire stelsel schrijf je 5 als
+            <strong>101</strong>.
+        </p>
 
-            <h2>Binary Bonanza</h2>
+
+        <div class="binair-voorbeeld">
+
+            <h3>
+                Voorbeeld: 101
+            </h3>
+
+            <p>
+                De eerste 1 staat voor 4, de 0 staat voor 2
+                en de laatste 1 staat voor 1.
+            </p>
+
+            <p>
+                Dus:
+            </p>
+
+            <p class="binair-getal">
+                1 × 4 + 0 × 2 + 1 × 1 = 5
+            </p>
+
+            <p>
+                Daarom is <strong>101 in het binaire stelsel
+                hetzelfde als 5 in het decimale stelsel.</strong>
+            </p>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =========================
+         BLOK 3
+    ========================= -->
+
+    <div class="binair-blok binair-foto-blok">
+
+        <div class="binair-foto-tekst">
+
+            <h2>
+                🧩 Waarom gebruiken computers 0 en 1?
+            </h2>
+
+
+            <p>
+                Computers bestaan uit elektronische onderdelen.
+                Deze onderdelen kunnen bijvoorbeeld een signaal
+                <strong>aan</strong> of <strong>uit</strong> hebben.
+            </p>
+
+
+            <p>
+                Dit kan worden voorgesteld met twee waarden:
+                <strong>1 voor aan</strong> en
+                <strong>0 voor uit</strong>.
+            </p>
+
+
+            <p>
+                Hierdoor is het binaire stelsel erg geschikt voor
+                computers. Door heel veel bits met elkaar te combineren,
+                kunnen computers uiteindelijk enorme hoeveelheden
+                informatie opslaan.
+            </p>
+
+
+            <p>
+                Een computer werkt dus niet alleen met getallen.
+                Met binaire gegevens kunnen ook letters, afbeeldingen,
+                geluiden en video's worden weergegeven.
+            </p>
+
+        </div>
+
+
+        <div class="binair-foto">
+
+            <img
+                src="images/binair.jpg"
+                alt="Uitleg over het binaire stelsel">
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =========================
+         BLOK 4 - GAME
+    ========================= -->
+
+    <div class="binair-game-blok">
+
+        <h2>
+            🎮 Zelf proberen: Binary Bonanza
+        </h2>
+
+
+        <p>
+            Nu je weet hoe het binaire stelsel werkt, kun je het
+            zelf oefenen met <strong>Binary Bonanza</strong>.
+        </p>
+
+
+        <p>
+            In het spel leer je op een interactieve manier omgaan
+            met binaire getallen. Probeer de opdrachten zo snel
+            mogelijk op te lossen!
+        </p>
+
+
+        <div class="binair-game">
 
             <iframe
                 src="https://games.penjee.com/binary-bonanza/"
@@ -102,46 +469,21 @@
     </div>
 
 
+
     <!-- =========================
-         ONDERSTE BLOK
+         FOOTER
     ========================= -->
 
-    <div class="binair-blok">
-
-        <!-- Tekst -->
-        <div class="binair-tekst">
-
-            <h2>Hoe werkt het binaire stelsel?</h2>
-
-            <p>
-                In het binaire stelsel heeft elke positie een waarde die een
-                macht van 2 is. Van rechts naar links zijn de waarden
-                bijvoorbeeld 1, 2, 4, 8 en 16.
-            </p>
-
-            <p>
-                Het getal 5 wordt bijvoorbeeld geschreven als 101.
-                Dit betekent 1 × 4 + 0 × 2 + 1 × 1 = 5.
-            </p>
-
-        </div>
-
-
-        <!-- Foto -->
-        <div class="binair-foto">
-
-            <img src="fotos/binair stelsel.jpg" alt="Afbeelding van het binaire stelsel">
-
-        </div>
-
-    </div>
-
-
-    <!-- Footer -->
     <footer>
-        <p>© Marc</p>
+
+        <p>
+            © Marc
+        </p>
+
     </footer>
+
 
 </body>
 
 </html>
+```
