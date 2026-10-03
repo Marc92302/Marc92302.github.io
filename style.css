@@ -25,9 +25,6 @@ body {
     box-sizing: border-box;
 }
 
-
-/* Titel in het midden */
-
 .header h1 {
     margin: 0;
     color: black;
@@ -35,7 +32,7 @@ body {
 
 
 /* =========================
-   HOME-KNOP LINKS
+   HOME-KNOP
 ========================= */
 
 .home-button {
@@ -56,7 +53,7 @@ body {
 
 
 /* =========================
-   DROPDOWNMENU RECHTS
+   DROPDOWNMENU
 ========================= */
 
 .dropdown {
@@ -64,9 +61,6 @@ body {
     top: 20px;
     right: 20px;
 }
-
-
-/* Knop van het menu */
 
 .dropdown-button {
     background-color: #333;
@@ -82,9 +76,6 @@ body {
     background-color: #555;
 }
 
-
-/* Het menu dat openklapt */
-
 .dropdown-content {
     display: none;
     position: absolute;
@@ -98,9 +89,6 @@ body {
     z-index: 100;
 }
 
-
-/* Links in het dropdownmenu */
-
 .dropdown-content a {
     display: block;
     padding: 12px 15px;
@@ -113,17 +101,13 @@ body {
     background-color: #555;
 }
 
-
-/* Menu openen bij hover */
-
 .dropdown:hover .dropdown-content {
     display: block;
 }
 
 
 /* =========================
-   TWEE BLOKKEN NAAST ELKAAR
-   (HOME PAGINA)
+   HOME PAGINA
 ========================= */
 
 .blokken {
@@ -135,9 +119,6 @@ body {
     margin: 60px auto;
     box-sizing: border-box;
 }
-
-
-/* Eén groen blok */
 
 .blok {
     width: 50%;
@@ -151,16 +132,10 @@ body {
     text-align: left;
 }
 
-
-/* Titel in een blok */
-
 .blok h2 {
     margin-top: 0;
     color: black;
 }
-
-
-/* Tekst in een blok */
 
 .blok p {
     font-size: 17px;
@@ -169,7 +144,7 @@ body {
 
 
 /* =========================
-   INHOUD VAN ANDERE PAGINA'S
+   ANDERE PAGINA'S
 ========================= */
 
 .content {
@@ -241,30 +216,30 @@ footer {
 }
 
 
-/* =========================
+/* ==================================================
    BINAIR STELSEL
-========================= */
-
-
-/* Groen tekstblok */
+================================================== */
 
 .binair-blok {
     display: flex;
     align-items: center;
     gap: 40px;
+
     width: 90%;
     max-width: 1000px;
+
     margin: 40px auto;
     padding: 30px;
+
     background-color: #4CAF50;
     color: black;
+
     border-radius: 15px;
+
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.45);
+
     box-sizing: border-box;
 }
-
-
-/* Tekst aan de linkerkant */
 
 .binair-tekst {
     width: 50%;
@@ -282,7 +257,7 @@ footer {
 
 
 /* =========================
-   BINARY BONANZA GAME
+   BINARY BONANZA
 ========================= */
 
 .binair-game {
@@ -295,9 +270,6 @@ footer {
     color: black;
 }
 
-
-/* Game zelf */
-
 .binair-game iframe {
     width: 100%;
     height: 350px;
@@ -308,7 +280,7 @@ footer {
 
 
 /* =========================
-   FOTO BINair STELSEL
+   FOTO BINair
 ========================= */
 
 .binair-foto {
@@ -325,81 +297,14 @@ footer {
 }
 
 
-/* =========================
-   TELEFOONS
-========================= */
-
-@media (max-width: 700px) {
-
-    .header {
-        height: 130px;
-    }
-
-    .header h1 {
-        font-size: 23px;
-        margin-top: 35px;
-    }
-
-
-    /* Home en menu */
-
-    .home-button,
-    .dropdown {
-        top: 12px;
-    }
-
-    .home-button {
-        left: 12px;
-        padding: 8px 12px;
-    }
-
-    .dropdown {
-        right: 12px;
-    }
-
-    .dropdown-button {
-        padding: 8px 12px;
-    }
-
-
-    /* Homepagina */
-
-    .blokken {
-        flex-direction: column;
-    }
-
-    .blok {
-        width: 100%;
-    }
-
-
-    /* Binair stelsel */
-
-    .binair-blok {
-        flex-direction: column;
-        align-items: stretch;
-    }
-
-    .binair-tekst,
-    .binair-game,
-    .binair-foto {
-        width: 100%;
-    }
-
-
-    /* Game op telefoon */
-
-    .binair-game iframe {
-        height: 300px;
-    }
-
-}
-```css
-/* =========================
+/* ==================================================
    INVOER - VERWERKING - UITVOER
-========================= */
+================================================== */
 
-/* Alle groene tekstblokken */
+
+/* =========================
+   GROENE TEKSTBLOKKEN
+========================= */
 
 .ivo-blok {
     display: flex;
@@ -423,7 +328,7 @@ footer {
 }
 
 
-/* Tekst in de blokken */
+/* Tekst */
 
 .ivo-tekst {
     width: 100%;
@@ -505,7 +410,7 @@ footer {
 
 
 /* =========================
-   VIDEO
+   VIDEO IN HET BLOK
 ========================= */
 
 .ivo-video {
@@ -526,11 +431,73 @@ footer {
 }
 
 
-/* =========================
+/* ==================================================
    TELEFOON
-========================= */
+================================================== */
 
 @media (max-width: 700px) {
+
+    .header {
+        height: 130px;
+    }
+
+    .header h1 {
+        font-size: 23px;
+        margin-top: 35px;
+    }
+
+
+    /* Home en menu */
+
+    .home-button,
+    .dropdown {
+        top: 12px;
+    }
+
+    .home-button {
+        left: 12px;
+        padding: 8px 12px;
+    }
+
+    .dropdown {
+        right: 12px;
+    }
+
+    .dropdown-button {
+        padding: 8px 12px;
+    }
+
+
+    /* Homepagina */
+
+    .blokken {
+        flex-direction: column;
+    }
+
+    .blok {
+        width: 100%;
+    }
+
+
+    /* Binair */
+
+    .binair-blok {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .binair-tekst,
+    .binair-game,
+    .binair-foto {
+        width: 100%;
+    }
+
+    .binair-game iframe {
+        height: 300px;
+    }
+
+
+    /* Invoer-Verwerking-Uitvoer */
 
     .ivo-blok {
         flex-direction: column;
