@@ -2,34 +2,284 @@
 <html lang="nl">
 
 <head>
-
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="style.css">
 
     <title>Kleurmodellen</title>
 
+    <style>
+
+        /* =========================
+           ALGEMENE BLOKKEN
+        ========================= */
+
+        .kleur-blok {
+            width: 90%;
+            max-width: 1000px;
+
+            margin: 40px auto;
+            padding: 30px;
+
+            background-color: #4CAF50 !important;
+            color: black;
+
+            border-radius: 15px;
+
+            box-shadow: 0 10px 20px rgba(0,0,0,0.45);
+
+            box-sizing: border-box;
+        }
+
+
+        .kleur-blok h2 {
+            font-size: 28px;
+            margin-top: 0;
+        }
+
+
+        .kleur-blok p {
+            font-size: 17px;
+            line-height: 1.7;
+        }
+
+
+        /* =========================
+           FOTO BLOK
+        ========================= */
+
+        .kleur-foto-blok {
+            display: flex;
+
+            align-items: center;
+
+            gap: 40px;
+        }
+
+
+        .kleur-tekst {
+            flex: 1;
+        }
+
+
+        .kleur-foto {
+            width: 45%;
+
+            text-align: center;
+        }
+
+
+        .kleur-foto img {
+            max-width: 100%;
+
+            max-height: 350px;
+
+            height: auto;
+
+            border-radius: 10px;
+        }
+
+
+        /* =========================
+           KLEUREN IN BLOKKEN
+        ========================= */
+
+        .kleur-uitleg {
+            background-color: rgba(255,255,255,0.25);
+
+            padding: 20px;
+
+            margin-top: 20px;
+
+            border-radius: 10px;
+        }
+
+
+        .kleur-uitleg h3 {
+            margin-top: 0;
+        }
+
+
+        /* =========================
+           RGB VOORBEELD
+        ========================= */
+
+        .rgb-voorbeeld {
+            display: flex;
+
+            gap: 15px;
+
+            margin: 25px 0;
+        }
+
+
+        .rgb-kleur {
+            flex: 1;
+
+            padding: 20px;
+
+            border-radius: 10px;
+
+            text-align: center;
+
+            font-weight: bold;
+        }
+
+
+        .rood {
+            background-color: #ff5555;
+        }
+
+
+        .groen {
+            background-color: #55cc55;
+        }
+
+
+        .blauw {
+            background-color: #5555ff;
+
+            color: white;
+        }
+
+
+        /* =========================
+           RGB WAARDEN
+        ========================= */
+
+        .rgb-waarden {
+            background-color: rgba(255,255,255,0.25);
+
+            padding: 20px;
+
+            border-radius: 10px;
+
+            margin-top: 20px;
+        }
+
+
+        .rgb-waarden p {
+            margin: 8px 0;
+        }
+
+
+        /* =========================
+           CMYK BLOK
+        ========================= */
+
+        .cmyk-lijst {
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            gap: 15px;
+
+            margin-top: 20px;
+        }
+
+
+        .cmyk-item {
+            padding: 15px;
+
+            border-radius: 10px;
+
+            background-color: rgba(255,255,255,0.25);
+        }
+
+
+        .cmyk-item strong {
+            font-size: 20px;
+        }
+
+
+        /* =========================
+           RGB VS CMYK
+        ========================= */
+
+        .vergelijking {
+            display: flex;
+
+            gap: 20px;
+
+            margin-top: 20px;
+        }
+
+
+        .vergelijking-item {
+            flex: 1;
+
+            background-color: rgba(255,255,255,0.25);
+
+            padding: 20px;
+
+            border-radius: 10px;
+        }
+
+
+        .vergelijking-item h3 {
+            margin-top: 0;
+        }
+
+
+        /* =========================
+           TELEFOON
+        ========================= */
+
+        @media (max-width: 700px) {
+
+            .kleur-foto-blok {
+                flex-direction: column;
+            }
+
+            .kleur-foto {
+                width: 100%;
+            }
+
+            .rgb-voorbeeld {
+                flex-direction: column;
+            }
+
+            .cmyk-lijst {
+                grid-template-columns: 1fr;
+            }
+
+            .vergelijking {
+                flex-direction: column;
+            }
+
+        }
+
+    </style>
+
 </head>
+
 
 <body>
 
-    <!-- Titel bovenaan de pagina -->
+
+    <!-- =========================
+         BOVENBALK
+    ========================= -->
+
     <div class="header">
 
-        <!-- Home linksboven -->
         <a href="index.html" class="home-button">
             Home
         </a>
 
-        <!-- Titel in het midden -->
-        <h1>Kleurmodellen</h1>
 
-        <!-- Onderwerpen rechtsboven -->
+        <h1>
+            Kleurmodellen
+        </h1>
+
+
         <div class="dropdown">
 
             <button class="dropdown-button">
                 Onderwerpen ▼
             </button>
+
 
             <div class="dropdown-content">
 
@@ -60,35 +310,323 @@
     </div>
 
 
-    <!-- Inhoud van de pagina -->
-    <div class="content">
 
-        <h2>Kleurmodellen</h2>
+    <!-- =========================
+         BLOK 1
+    ========================= -->
+
+    <div class="kleur-blok">
+
+        <h2>
+            🎨 Wat zijn kleurmodellen?
+        </h2>
+
 
         <p>
-            Hier komt mijn uitleg over kleurmodellen.
+            Een computer moet kleuren op een bepaalde manier kunnen
+            opslaan en weergeven. Hiervoor worden
+            <strong>kleurmodellen</strong> gebruikt.
         </p>
 
+
         <p>
-            Een kleurmodel is een manier om kleuren digitaal te beschrijven.
+            Een kleurmodel beschrijft hoe verschillende kleuren
+            kunnen worden opgebouwd uit een aantal basiskleuren.
+            Door deze kleuren met elkaar te combineren, kunnen
+            computers en andere apparaten veel verschillende kleuren
+            maken.
         </p>
 
-        <h2>RGB</h2>
 
         <p>
-            RGB staat voor rood, groen en blauw.
-            Met deze drie kleuren kunnen verschillende kleuren worden gemaakt.
-        </p>
-
-        <h2>CMYK</h2>
-
-        <p>
-            CMYK staat voor cyaan, magenta, geel en zwart.
-            Dit kleurmodel wordt vooral gebruikt bij het afdrukken.
+            Twee belangrijke kleurmodellen die je vaak tegenkomt
+            zijn <strong>RGB</strong> en <strong>CMYK</strong>.
+            Ze worden voor verschillende soorten apparaten en
+            toepassingen gebruikt.
         </p>
 
     </div>
 
+
+
+    <!-- =========================
+         BLOK 2 - RGB
+    ========================= -->
+
+    <div class="kleur-blok">
+
+        <h2>
+            💻 RGB: kleuren op een scherm
+        </h2>
+
+
+        <p>
+            Het <strong>RGB-kleurmodel</strong> wordt gebruikt bij
+            apparaten die licht geven, zoals computerschermen,
+            telefoons, televisies en tablets.
+        </p>
+
+
+        <p>
+            RGB staat voor:
+            <strong>Red, Green, Blue</strong>.
+            In het Nederlands zijn dat rood, groen en blauw.
+        </p>
+
+
+        <p>
+            Door rood, groen en blauw licht in verschillende
+            hoeveelheden te combineren, kan een scherm heel veel
+            verschillende kleuren maken.
+        </p>
+
+
+        <div class="rgb-voorbeeld">
+
+            <div class="rgb-kleur rood">
+                Rood<br>
+                Red
+            </div>
+
+            <div class="rgb-kleur groen">
+                Groen<br>
+                Green
+            </div>
+
+            <div class="rgb-kleur blauw">
+                Blauw<br>
+                Blue
+            </div>
+
+        </div>
+
+
+        <div class="rgb-waarden">
+
+            <h3>
+                🔢 RGB-waarden
+            </h3>
+
+            <p>
+                Elke kleur heeft bij RGB een waarde voor rood,
+                groen en blauw. Deze waarden lopen meestal van
+                <strong>0 tot 255</strong>.
+            </p>
+
+            <p>
+                Bijvoorbeeld:
+                <strong>RGB(255, 0, 0)</strong> betekent
+                volledig rood, omdat rood op 255 staat en
+                groen en blauw op 0.
+            </p>
+
+            <p>
+                <strong>RGB(0, 0, 0)</strong> is zwart en
+                <strong>RGB(255, 255, 255)</strong> is wit.
+            </p>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =========================
+         BLOK 3 - FOTO
+    ========================= -->
+
+    <div class="kleur-blok kleur-foto-blok">
+
+        <div class="kleur-tekst">
+
+            <h2>
+                🌈 Hoe ontstaan andere kleuren?
+            </h2>
+
+
+            <p>
+                Bij RGB worden kleuren gemaakt door
+                <strong>lichtkleuren op te tellen</strong>.
+                Dit noemen we <strong>additieve kleurmenging</strong>.
+            </p>
+
+
+            <p>
+                Als je rood en groen licht combineert, krijg je geel.
+                Rood en blauw geven magenta en groen en blauw geven
+                cyaan.
+            </p>
+
+
+            <p>
+                Wanneer rood, groen en blauw allemaal volledig
+                aanwezig zijn, ontstaat wit licht.
+            </p>
+
+
+            <p>
+                De afbeelding hiernaast laat zien hoe de verschillende
+                kleuren bij RGB met elkaar worden gecombineerd.
+            </p>
+
+        </div>
+
+
+        <div class="kleur-foto">
+
+            <!--
+            VERVANG DE BESTANDSNAAM HIER
+            ALS JOUW FOTO ANDERS HEET
+            -->
+
+            <img
+                src="fotos/kleurmodellen.png"
+                alt="RGB kleurmodel">
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =========================
+         BLOK 4 - CMYK
+    ========================= -->
+
+    <div class="kleur-blok">
+
+        <h2>
+            🖨️ CMYK: kleuren voor drukwerk
+        </h2>
+
+
+        <p>
+            Voor printers wordt meestal een ander kleurmodel gebruikt:
+            <strong>CMYK</strong>.
+        </p>
+
+
+        <p>
+            CMYK staat voor:
+            <strong>Cyan, Magenta, Yellow en Key (Black)</strong>.
+        </p>
+
+
+        <div class="cmyk-lijst">
+
+            <div class="cmyk-item">
+                <strong>C</strong><br>
+                Cyan
+            </div>
+
+            <div class="cmyk-item">
+                <strong>M</strong><br>
+                Magenta
+            </div>
+
+            <div class="cmyk-item">
+                <strong>Y</strong><br>
+                Yellow
+            </div>
+
+            <div class="cmyk-item">
+                <strong>K</strong><br>
+                Key / Black
+            </div>
+
+        </div>
+
+
+        <p>
+            CMYK werkt anders dan RGB. Bij een printer wordt er
+            juist met inkt gewerkt. De inkt absorbeert een deel
+            van het licht dat op het papier valt.
+        </p>
+
+
+        <p>
+            Daarom is CMYK geschikt voor bijvoorbeeld folders,
+            posters, tijdschriften en andere dingen die worden
+            afgedrukt.
+        </p>
+
+    </div>
+
+
+
+    <!-- =========================
+         BLOK 5 - VERSCHIL
+    ========================= -->
+
+    <div class="kleur-blok">
+
+        <h2>
+            ⚖️ RGB of CMYK?
+        </h2>
+
+
+        <p>
+            RGB en CMYK hebben allebei hetzelfde doel:
+            kleuren maken. Toch worden ze voor verschillende
+            situaties gebruikt.
+        </p>
+
+
+        <div class="vergelijking">
+
+            <div class="vergelijking-item">
+
+                <h3>
+                    💻 RGB
+                </h3>
+
+                <p>
+                    <strong>Voor:</strong> schermen en digitale
+                    afbeeldingen.
+                </p>
+
+                <p>
+                    Gebruikt rood, groen en blauw licht.
+                </p>
+
+            </div>
+
+
+            <div class="vergelijking-item">
+
+                <h3>
+                    🖨️ CMYK
+                </h3>
+
+                <p>
+                    <strong>Voor:</strong> printers en drukwerk.
+                </p>
+
+                <p>
+                    Gebruikt cyaan, magenta, geel en zwart als
+                    inktkleuren.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <p>
+            Het is daarom belangrijk om het juiste kleurmodel te
+            gebruiken. Een afbeelding die bedoeld is voor een
+            computerscherm wordt bijvoorbeeld meestal in RGB gemaakt,
+            terwijl een ontwerp voor een printer vaak naar CMYK
+            wordt omgezet.
+        </p>
+
+    </div>
+
+
+
+    <!-- =========================
+         FOOTER
+    ========================= -->
 
     <footer>
 
@@ -96,7 +634,9 @@
             © Marc
         </p>
 
-    </footer>    
+    </footer>
+
 
 </body>
+
 </html>
