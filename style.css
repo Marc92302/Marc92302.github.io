@@ -1,6 +1,7 @@
+
 /* =========================
    ALGEMENE OPMAAK
-   ========================= */
+========================= */
 
 body {
     margin: 0;
@@ -9,202 +10,252 @@ body {
     color: black;
 }
 
-
 /* =========================
    GROENE BALK
-   ========================= */
+========================= */
 
 .header {
     background-color: #4CAF50;
     height: 150px;
-
-    /* Zet de titel in het midden */
     display: flex;
     justify-content: center;
     align-items: center;
-
-    /* Nodig voor het menu rechtsboven */
     position: relative;
+    padding: 0 20px;
+    box-sizing: border-box;
 }
 
-/* Titel in de groene balk */
+/* Titel in het midden */
+
 .header h1 {
     margin: 0;
     color: black;
 }
 
+/* =========================
+   HOME-KNOP LINKS
+========================= */
+
+.home-button {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.home-button:hover {
+    background-color: #555;
+}
 
 /* =========================
-   DROPDOWNMENU
-   ========================= */
+   DROPDOWNMENU RECHTS
+========================= */
 
 .dropdown {
-    /* Zet het menu rechtsboven */
     position: absolute;
     top: 20px;
     right: 20px;
 }
 
 /* Knop van het menu */
+
 .dropdown-button {
     background-color: #333;
     color: white;
-
     padding: 10px 20px;
-
     border: none;
     border-radius: 5px;
-
     cursor: pointer;
     font-size: 16px;
 }
 
+.dropdown-button:hover {
+    background-color: #555;
+}
+
 /* Het menu dat openklapt */
+
 .dropdown-content {
     display: none;
-
     position: absolute;
     right: 0;
-
+    top: 100%;
     background-color: #333;
-
-    min-width: 220px;
-
+    min-width: 240px;
     border-radius: 5px;
     overflow: hidden;
-
-    /* Schaduw onder het menu */
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
+    z-index: 100;
 }
 
 /* Links in het dropdownmenu */
+
 .dropdown-content a {
     display: block;
-
     padding: 12px 15px;
-
     color: white;
     text-decoration: none;
-
     text-align: left;
 }
 
-/* Kleur als je met je muis over een link gaat */
 .dropdown-content a:hover {
     background-color: #555;
 }
 
-/* Laat het menu zien als je eroverheen gaat */
+/* Menu openen bij hover */
+
 .dropdown:hover .dropdown-content {
     display: block;
 }
 
-
 /* =========================
    TWEE BLOKKEN NAAST ELKAAR
-   ========================= */
+========================= */
 
 .blokken {
-    /* Zet de blokken naast elkaar */
     display: flex;
-
-    /* Richting van de blokken is horizontaal */
     flex-direction: row;
-
-    /* Ruimte tussen de blokken */
     gap: 30px;
-
-    /* Breedte van het geheel */
     width: 90%;
     max-width: 1000px;
-
-    /* Ruimte boven en onder */
     margin: 60px auto;
-
     box-sizing: border-box;
 }
 
-
 /* Eén groen blok */
+
 .blok {
-    /* Beide blokken krijgen ongeveer de helft */
     width: 50%;
-
-    /* Minimale hoogte */
     min-height: 250px;
-
-    /* Ruimte binnen het blok */
     padding: 30px;
-
-    /* Groene kleur */
     background-color: #4CAF50;
-
-    /* Zwarte tekst */
     color: black;
-
-    /* Ronde hoeken */
     border-radius: 15px;
-
-    /* Donkere schaduw */
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.45);
-
-    /* Zorgt ervoor dat padding goed wordt meegerekend */
     box-sizing: border-box;
-
-    /* Tekst links uitlijnen */
     text-align: left;
 }
 
-
 /* Titel in een blok */
+
 .blok h2 {
     margin-top: 0;
     color: black;
 }
 
-
 /* Tekst in een blok */
+
 .blok p {
     font-size: 17px;
     line-height: 1.6;
 }
 
-
 /* =========================
    INHOUD VAN ANDERE PAGINA'S
-   ========================= */
+========================= */
 
 .content {
     width: 90%;
     max-width: 1000px;
-
     margin: 50px auto;
-
     padding: 30px;
-
     box-sizing: border-box;
 }
 
-
-/* Titels op andere pagina's */
 .content h2 {
     color: #4CAF50;
 }
 
-
-/* Tekst op andere pagina's */
 .content p {
     font-size: 17px;
     line-height: 1.6;
 }
 
+/* =========================
+   AFBEELDINGEN
+========================= */
+
+.afbeelding-blok {
+    text-align: center;
+    margin: 30px auto;
+}
+
+.afbeelding-blok img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* =========================
+   VIDEO
+========================= */
+
+.video-container {
+    position: relative;
+    width: 100%;
+    max-width: 700px;
+    margin: 30px auto;
+    aspect-ratio: 16 / 9;
+}
+
+.video-container iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 10px;
+}
+
+.video-uitleg {
+    line-height: 1.6;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
 
 /* =========================
    TELEFOONS
-   ========================= */
+========================= */
 
-/* Op kleine schermen komen de blokken onder elkaar */
 @media (max-width: 700px) {
+
+    .header {
+        height: 130px;
+    }
+
+    .header h1 {
+        font-size: 23px;
+        margin-top: 35px;
+    }
+
+    .home-button,
+    .dropdown {
+        top: 12px;
+    }
+
+    .home-button {
+        left: 12px;
+        padding: 8px 12px;
+    }
+
+    .dropdown {
+        right: 12px;
+    }
+
+    .dropdown-button {
+        padding: 8px 12px;
+    }
 
     .blokken {
         flex-direction: column;
@@ -213,5 +264,4 @@ body {
     .blok {
         width: 100%;
     }
-
 }
