@@ -1,34 +1,107 @@
+```html
 <!DOCTYPE html>
 <html lang="nl">
 
 <head>
-
     <meta charset="UTF-8">
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
 
     <title>Invoer - Verwerking - Uitvoer</title>
 
+    <style>
+        .ivo-blok {
+            width: 90%;
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 30px;
+            background: #4CAF50 !important;
+            color: black;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.45);
+            box-sizing: border-box;
+        }
+
+        .ivo-blok-met-foto {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+        }
+
+        .ivo-tekst {
+            flex: 1;
+        }
+
+        .ivo-tekst h2,
+        .ivo-tekst h3 {
+            color: black;
+        }
+
+        .ivo-tekst p {
+            font-size: 17px;
+            line-height: 1.6;
+        }
+
+        .ivo-foto {
+            width: 45%;
+            text-align: center;
+        }
+
+        .ivo-foto img {
+            max-width: 100%;
+            max-height: 350px;
+            border-radius: 10px;
+        }
+
+        .ivo-video-blok {
+            width: 90%;
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 30px;
+            background: #4CAF50 !important;
+            color: black;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.45);
+            box-sizing: border-box;
+        }
+
+        .ivo-video {
+            width: 100%;
+            max-width: 700px;
+            aspect-ratio: 16 / 9;
+            margin: 25px auto;
+        }
+
+        .ivo-video iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+            border-radius: 10px;
+        }
+
+        @media (max-width: 700px) {
+            .ivo-blok-met-foto {
+                flex-direction: column;
+            }
+
+            .ivo-foto {
+                width: 100%;
+            }
+        }
+    </style>
 </head>
+
 
 <body>
 
-
-    <!-- =========================
-         GROENE BOVENBALK
-    ========================= -->
-
     <div class="header">
 
-        <!-- Home linksboven -->
         <a href="index.html" class="home-button">
             Home
         </a>
 
-        <!-- Titel in het midden -->
         <h1>Invoer - Verwerking - Uitvoer</h1>
 
-        <!-- Onderwerpen rechtsboven -->
         <div class="dropdown">
 
             <button class="dropdown-button">
@@ -64,9 +137,7 @@
     </div>
 
 
-    <!-- =========================
-         BLOK 1
-    ========================= -->
+    <!-- BLOK 1 -->
 
     <div class="ivo-blok">
 
@@ -78,7 +149,7 @@
                 Een computer krijgt voortdurend gegevens binnen.
                 Deze gegevens worden verwerkt door de computer en daarna
                 komt er een resultaat uit. Dit noemen we het
-                <strong>invoer - verwerking - uitvoerproces</strong>.
+                <strong>invoer-verwerking-uitvoerproces</strong>.
             </p>
 
             <p>
@@ -88,10 +159,10 @@
             </p>
 
             <p>
-                Je kunt het zien als een soort stappenplan:
-                eerst krijgt de computer informatie binnen, daarna
-                verwerkt de computer deze informatie en uiteindelijk
-                laat de computer een resultaat zien.
+                Je kunt het zien als een stappenplan:
+                eerst krijgt de computer informatie binnen,
+                daarna verwerkt de computer deze informatie
+                en uiteindelijk geeft de computer een resultaat.
             </p>
 
         </div>
@@ -99,13 +170,10 @@
     </div>
 
 
-    <!-- =========================
-         BLOK 2 MET FOTO
-    ========================= -->
+    <!-- BLOK 2 -->
 
     <div class="ivo-blok ivo-blok-met-foto">
 
-        <!-- Tekst links -->
         <div class="ivo-tekst">
 
             <h2>De drie stappen</h2>
@@ -118,6 +186,7 @@
                 microfoon, camera of touchscreen.
             </p>
 
+
             <h3>2. Verwerking</h3>
 
             <p>
@@ -126,29 +195,19 @@
                 berekeningen en opdrachten uit.
             </p>
 
+
             <h3>3. Uitvoer</h3>
 
             <p>
                 Uitvoer is het resultaat dat de computer geeft.
-                Dit kan bijvoorbeeld op een beeldscherm, via een
-                luidspreker of met een printer worden weergegeven.
+                Dit kan bijvoorbeeld op een beeldscherm,
+                via een luidspreker of met een printer worden weergegeven.
             </p>
 
         </div>
 
 
-        <!-- Foto rechts -->
         <div class="ivo-foto">
-
-            <!--
-            VERANDER HIER DE NAAM VAN JE FOTO.
-
-            Bijvoorbeeld:
-            images/invoer-verwerking-uitvoer.jpg
-
-            of:
-            images/ivo.png
-            -->
 
             <img
                 src="fotos/invoer-verwerking-uitvoer.jpg"
@@ -159,9 +218,7 @@
     </div>
 
 
-    <!-- =========================
-         BLOK 3
-    ========================= -->
+    <!-- BLOK 3 -->
 
     <div class="ivo-blok">
 
@@ -174,25 +231,25 @@
             </p>
 
             <p>
-                <strong>Invoer:</strong> je typt een zoekterm in op
-                het toetsenbord.
+                <strong>Invoer:</strong>
+                je typt een zoekterm in op het toetsenbord.
             </p>
 
             <p>
-                <strong>Verwerking:</strong> de computer en de
-                zoekmachine verwerken je zoekopdracht en zoeken naar
-                passende informatie.
+                <strong>Verwerking:</strong>
+                de computer en de zoekmachine verwerken je zoekopdracht
+                en zoeken naar passende informatie.
             </p>
 
             <p>
-                <strong>Uitvoer:</strong> de zoekresultaten verschijnen
-                op je scherm.
+                <strong>Uitvoer:</strong>
+                de zoekresultaten verschijnen op je scherm.
             </p>
 
             <p>
-                Op deze manier kun je het invoer-verwerking-uitvoerproces
-                herkennen in veel verschillende situaties waarbij je
-                een computer gebruikt.
+                Op deze manier kun je het
+                invoer-verwerking-uitvoerproces herkennen in veel
+                verschillende situaties waarbij je een computer gebruikt.
             </p>
 
         </div>
@@ -200,9 +257,7 @@
     </div>
 
 
-    <!-- =========================
-         VIDEO
-    ========================= -->
+    <!-- VIDEO -->
 
     <div class="ivo-video-blok">
 
@@ -219,29 +274,22 @@
         </div>
 
 
-        <!-- Uitleg waarom deze video -->
         <h2>Waarom heb ik deze video gekozen?</h2>
 
         <p>
             Ik heb deze video gekozen omdat hij duidelijk uitlegt hoe
             een computer gegevens verwerkt. De video behandelt de drie
-            stappen van invoer, verwerking en uitvoer en legt ook uit
-            welke rol de processor hierbij speelt.
+            stappen van invoer, verwerking en uitvoer.
         </p>
 
         <p>
-            Dit sluit goed aan bij de uitleg op deze pagina. Hierdoor
-            kun je de informatie niet alleen lezen, maar ook in een
-            video zien en horen. De video is bovendien gericht op het
-            uitleggen van het gegevensverwerkende proces.
+            Dit sluit goed aan bij de uitleg op deze pagina.
+            Hierdoor kun je de informatie niet alleen lezen,
+            maar ook in een video zien en horen.
         </p>
 
     </div>
 
-
-    <!-- =========================
-         FOOTER
-    ========================= -->
 
     <footer>
 
