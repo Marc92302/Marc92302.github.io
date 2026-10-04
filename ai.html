@@ -10,10 +10,6 @@
 
     <style>
 
-        /* =========================
-           ALGEMENE OPMAAK
-        ========================= */
-
         body {
             margin: 0;
             font-family: Arial, sans-serif;
@@ -21,147 +17,85 @@
             color: black;
         }
 
-
         /* =========================
-           GROENE BOVENBALK
+           HEADER
         ========================= */
 
         .header {
             background-color: #4CAF50;
             height: 150px;
-
             display: flex;
             justify-content: center;
             align-items: center;
-
             position: relative;
-
             padding: 0 20px;
             box-sizing: border-box;
         }
 
         .header h1 {
             margin: 0;
-
-            color: white;
-
-            font-size: 30px;
-
-            text-align: center;
+            color: black;
         }
 
-
-        /* =========================
-           HOME-KNOP
-        ========================= */
+        /* HOME KNOP */
 
         .home-button {
             position: absolute;
-
             top: 20px;
             left: 20px;
-
+            background-color: #333;
             color: white;
-            background-color: transparent;
-
-            padding: 10px 16px;
-
-            border-radius: 8px;
-
+            padding: 10px 20px;
+            border-radius: 5px;
             text-decoration: none;
-
-            font-size: 15px;
-            font-weight: 600;
-
-            transition: background-color 0.2s ease;
+            font-size: 16px;
         }
 
         .home-button:hover {
-            background-color: rgba(255, 255, 255, 0.18);
+            background-color: #555;
         }
 
-
-        /* =========================
-           DROPDOWNMENU
-        ========================= */
+        /* DROPDOWN */
 
         .dropdown {
             position: absolute;
-
             top: 20px;
             right: 20px;
         }
 
         .dropdown-button {
-            background-color: transparent;
-
+            background-color: #333;
             color: white;
-
-            padding: 10px 16px;
-
+            padding: 10px 20px;
             border: none;
-
-            border-radius: 8px;
-
+            border-radius: 5px;
             cursor: pointer;
-
-            font-size: 15px;
-            font-weight: 600;
-
-            transition: background-color 0.2s ease;
+            font-size: 16px;
         }
-
-        .dropdown-button:hover {
-            background-color: rgba(255, 255, 255, 0.18);
-        }
-
-
-        /* =========================
-           DROPDOWN INHOUD
-        ========================= */
 
         .dropdown-content {
             display: none;
-
             position: absolute;
-
             right: 0;
-            top: calc(100% + 8px);
-
-            background-color: white;
-
+            top: 100%;
+            background-color: #333;
             min-width: 240px;
-
-            border-radius: 12px;
-
+            border-radius: 5px;
             overflow: hidden;
-
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.18);
-
+            box-shadow: 0 5px 10px rgba(0,0,0,0.4);
             z-index: 100;
         }
 
         .dropdown-content a {
             display: block;
-
-            padding: 13px 16px;
-
-            color: #333;
-
+            padding: 12px 15px;
+            color: white;
             text-decoration: none;
-
             text-align: left;
-
-            font-size: 15px;
-
-            transition: background-color 0.2s ease,
-                        color 0.2s ease;
         }
 
         .dropdown-content a:hover {
-            background-color: #eaf5eb;
-
-            color: #369b3b;
+            background-color: #555;
         }
 
         .dropdown:hover .dropdown-content {
@@ -169,129 +103,74 @@
         }
 
 
-        /* ==================================================
+        /* =========================
            AI BLOKKEN
-        ================================================== */
+        ========================= */
 
-        .compressie-blok {
-
+        .ai-blok {
             width: 90%;
             max-width: 1000px;
-
             margin: 40px auto;
-
             padding: 30px;
-
             background-color: #4CAF50;
-
             color: black;
-
             border-radius: 15px;
-
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.45);
-
+            box-shadow: 0 10px 20px rgba(0,0,0,0.45);
             box-sizing: border-box;
         }
 
-        .compressie-blok h2 {
-
+        .ai-blok h2 {
             font-size: 28px;
-
             margin-top: 0;
-
-            margin-bottom: 20px;
-        }
-
-        .compressie-blok p {
-
-            font-size: 17px;
-
-            line-height: 1.7;
-
             margin-bottom: 18px;
         }
 
-
-        /* =========================
-           HIGHLIGHT
-        ========================= */
-
-        .highlight {
-
-            background-color: rgba(255, 255, 255, 0.45);
-
-            padding: 3px 8px;
-
-            border-radius: 6px;
-
-            font-weight: bold;
-        }
-
-
-        /* =========================
-           EXTRA UITLEG
-        ========================= */
-
-        .uitleg {
-
-            background-color: rgba(255, 255, 255, 0.35);
-
-            padding: 20px;
-
-            border-radius: 10px;
-
-            margin-top: 20px;
-        }
-
-        .uitleg h3 {
-
-            margin-top: 0;
-
-            margin-bottom: 10px;
-
+        .ai-blok h3 {
             font-size: 21px;
+            margin-top: 0;
         }
 
-        .uitleg p:last-child {
-            margin-bottom: 0;
+        .ai-blok p {
+            font-size: 17px;
+            line-height: 1.7;
         }
 
 
         /* =========================
-           ARTIKEL
+           WITTE INFO KAARTEN
         ========================= */
 
-        .artikel {
-
-            background-color: rgba(255, 255, 255, 0.3);
-
-            padding: 25px;
-
+        .info-kaart {
+            background-color: rgba(255,255,255,0.3);
+            padding: 22px;
             border-radius: 12px;
+            margin-top: 22px;
+        }
 
+        .info-kaart h3 {
+            margin-bottom: 10px;
+        }
+
+
+        /* =========================
+           AI GEBRUIK
+        ========================= */
+
+        .ai-punten {
+            display: flex;
+            gap: 20px;
             margin-top: 25px;
         }
 
-        .artikel h3 {
-
-            margin-top: 0;
-
-            margin-bottom: 10px;
-
-            font-size: 24px;
-
-            line-height: 1.4;
+        .ai-punt {
+            flex: 1;
+            background-color: rgba(255,255,255,0.3);
+            padding: 22px;
+            border-radius: 12px;
         }
 
-        .artikel-info {
-
-            font-size: 14px !important;
-
-            color: #333;
-
-            font-style: italic;
-
-            margin-bottom: 25px !important;
+        .ai-punt h3 {
+            margin-bottom: 10px;
         }
 
 
@@ -300,46 +179,51 @@
         ========================= */
 
         .foto-blok {
-
             display: flex;
-
             align-items: center;
-
             gap: 40px;
-
-            margin-top: 20px;
         }
 
         .foto-tekst {
-
             flex: 1;
         }
 
         .foto {
-
-            width: 45%;
-
+            width: 40%;
             text-align: center;
         }
 
         .foto img {
-
             max-width: 100%;
-
             max-height: 350px;
-
-            border-radius: 10px;
-
-            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+            border-radius: 12px;
         }
 
         .foto-bijschrift {
-
             margin-top: 10px;
-
             font-size: 14px;
+        }
 
-            font-style: italic;
+
+        /* =========================
+           ARTIKEL
+        ========================= */
+
+        .artikel-info {
+            background-color: rgba(255,255,255,0.3);
+            padding: 22px;
+            border-radius: 12px;
+            margin-top: 20px;
+        }
+
+        .artikel-titel {
+            font-size: 20px;
+            font-weight: bold;
+            line-height: 1.4;
+        }
+
+        .artikel-info p {
+            margin-bottom: 8px;
         }
 
 
@@ -348,91 +232,31 @@
         ========================= */
 
         .samenvatting {
-
-            background-color: rgba(255, 255, 255, 0.55);
-
+            background-color: rgba(255,255,255,0.3);
             padding: 25px;
-
             border-radius: 12px;
-
-            margin-top: 25px;
+            margin-top: 20px;
         }
 
-        .samenvatting h3 {
-
+        .samenvatting p {
             margin-top: 0;
+            margin-bottom: 18px;
+        }
 
-            font-size: 21px;
+        .samenvatting p:last-child {
+            margin-bottom: 0;
         }
 
 
         /* =========================
-           MENING
+           MIJN MENING
         ========================= */
 
         .mening {
-
-            background-color: rgba(255, 255, 255, 0.55);
-
+            background-color: rgba(255,255,255,0.3);
             padding: 25px;
-
             border-radius: 12px;
-
-            margin-top: 25px;
-
-            border-left: 5px solid #333;
-        }
-
-        .mening h3 {
-
-            margin-top: 0;
-
-            font-size: 21px;
-        }
-
-
-        /* =========================
-           ARTIKEL LINK
-        ========================= */
-
-        .artikel-link {
-
-            background-color: rgba(255, 255, 255, 0.35);
-
-            padding: 20px;
-
-            border-radius: 10px;
-
-            margin-top: 25px;
-        }
-
-        .artikel-link p {
-
-            margin-top: 0;
-        }
-
-        .artikel-link a {
-
-            display: inline-block;
-
-            background-color: #333;
-
-            color: white;
-
-            padding: 10px 16px;
-
-            border-radius: 7px;
-
-            text-decoration: none;
-
-            font-weight: bold;
-
-            transition: 0.2s;
-        }
-
-        .artikel-link a:hover {
-
-            background-color: #555;
+            border-left: 6px solid #333;
         }
 
 
@@ -441,82 +265,28 @@
         ========================= */
 
         footer {
-
             text-align: center;
-
             padding: 20px;
-
             margin-top: 40px;
         }
 
 
-        /* ==================================================
-           TELEFOON
-        ================================================== */
+        /* =========================
+           MOBIEL
+        ========================= */
 
         @media (max-width: 700px) {
 
-            /* Header */
-
-            .header {
-                height: 130px;
-            }
-
-            .header h1 {
-                font-size: 23px;
-
-                max-width: 55%;
-            }
-
-            .home-button {
-                top: 12px;
-                left: 12px;
-
-                padding: 8px 12px;
-
-                font-size: 14px;
-            }
-
-            .dropdown {
-                top: 12px;
-                right: 12px;
-            }
-
-            .dropdown-button {
-                padding: 8px 12px;
-
-                font-size: 14px;
-            }
-
-            .dropdown-content {
-                min-width: 210px;
-            }
-
-
-            /* AI */
-
-            .compressie-blok {
-
-                width: 90%;
-
-                padding: 25px;
+            .ai-punten {
+                flex-direction: column;
             }
 
             .foto-blok {
-
                 flex-direction: column;
-
-                gap: 25px;
             }
 
             .foto {
-
                 width: 100%;
-            }
-
-            .foto img {
-
-                max-height: 300px;
             }
 
         }
@@ -529,9 +299,7 @@
 <body>
 
 
-    <!-- =========================
-         HEADER
-    ========================= -->
+    <!-- HEADER -->
 
     <header class="header">
 
@@ -576,34 +344,65 @@
     </header>
 
 
-    <!-- =========================
-         AI GEBRUIK
-    ========================= -->
+    <!-- WAAR GEBRUIK IK AI VOOR? -->
 
-    <section class="compressie-blok">
+    <section class="ai-blok">
 
         <h2>🤖 Waar gebruik ik AI voor?</h2>
 
         <p>
-            Ik gebruik AI vooral voor <span class="highlight">school</span>.
-            Bijvoorbeeld wanneer ik een onderwerp niet helemaal begrijp,
-            kan AI het op een andere en duidelijke manier uitleggen.
+            Ik gebruik AI vooral voor school. Het helpt mij bijvoorbeeld
+            wanneer ik een onderwerp niet goed begrijp of wanneer ik
+            ideeën nodig heb voor een opdracht.
         </p>
 
-        <p>
-            Daarnaast gebruik ik AI om ideeën te bedenken en om teksten
-            te verbeteren. Hierdoor kan ik verschillende voorbeelden zien
-            en leer ik nieuwe manieren om een probleem aan te pakken.
-        </p>
+        <div class="ai-punten">
 
-        <div class="uitleg">
+            <div class="ai-punt">
 
-            <h3>💡 Wat leer ik ervan?</h3>
+                <h3>📚 Uitleg</h3>
+
+                <p>
+                    AI kan moeilijke onderwerpen stap voor stap uitleggen.
+                    Hierdoor kan ik de stof op een andere manier bekijken.
+                </p>
+
+            </div>
+
+            <div class="ai-punt">
+
+                <h3>💡 Ideeën</h3>
+
+                <p>
+                    Ik gebruik AI ook om ideeën te bedenken voor opdrachten
+                    en om verschillende mogelijkheden te vergelijken.
+                </p>
+
+            </div>
+
+            <div class="ai-punt">
+
+                <h3>✏️ Teksten</h3>
+
+                <p>
+                    Daarnaast gebruik ik AI om teksten te verbeteren of
+                    duidelijker te maken.
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="info-kaart">
+
+            <h3>🧠 Wat leer ik ervan?</h3>
 
             <p>
-                Door AI te gebruiken leer ik vooral hoe ik betere vragen kan
-                stellen en hoe ik informatie kan controleren. Ik neem niet
-                zomaar alles over, omdat AI ook fouten kan maken.
+                Ik leer vooral van AI doordat ik vragen kan stellen en
+                meteen uitleg krijg. Ik probeer de antwoorden niet zomaar
+                over te nemen, maar eerst te begrijpen wat er wordt uitgelegd.
+                Ook controleer ik belangrijke informatie, omdat AI fouten
+                kan maken.
             </p>
 
         </div>
@@ -611,231 +410,43 @@
     </section>
 
 
-    <!-- =========================
-         AI IN MOBIEL
-    ========================= -->
+    <!-- AI IN MIJN TELEFOON -->
 
-    <section class="compressie-blok">
+    <section class="ai-blok foto-blok">
 
-        <h2>📱 AI in mijn mobiel</h2>
+        <div class="foto-tekst">
 
-        <p>
-            Ik heb een <span class="highlight">iPhone 12 Pro Max</span>.
-            Ook in deze telefoon wordt slimme technologie gebruikt.
-        </p>
-
-        <div class="uitleg">
-
-            <h3>📸 Camera</h3>
+            <h2>📱 AI in mijn telefoon</h2>
 
             <p>
-                Op mijn iPhone merk je dit bijvoorbeeld bij de camera.
-                Foto's kunnen automatisch worden verbeterd en de telefoon
-                kan herkennen wat er op een foto staat.
+                Ik heb een <strong>iPhone 12 Pro Max</strong>. Op deze
+                telefoon merk je slimme technologie vooral aan de dingen
+                die het toestel automatisch voor je regelt.
+            </p>
+
+            <p>
+                De telefoon kan foto's automatisch verbeteren, bijvoorbeeld
+                wanneer het donker is. Ook kan hij tekst uit foto's herkennen
+                en kopiëren en herkennen wat er op foto's staat.
+            </p>
+
+            <p>
+                Daarnaast helpt de iPhone bij het typen en bij
+                spraakopdrachten. Ook leert de telefoon wanneer ik hem
+                meestal oplaad, zodat de batterij zo lang mogelijk gezond
+                blijft.
             </p>
 
         </div>
 
-        <div class="uitleg">
 
-            <h3>⌨️ Slimme functies</h3>
+        <div class="foto">
 
-            <p>
-                AI wordt ook gebruikt bij het herkennen van tekst in foto's,
-                spraakherkenning en autocorrectie tijdens het typen.
-                Hierdoor kan de telefoon steeds beter voorspellen wat je
-                bedoelt.
-            </p>
+            <img src="wordt nog toegevoegd.jpg"
+                 alt="Mijn iPhone 12 Pro Max">
 
-        </div>
-
-        <div class="uitleg">
-
-            <h3>🔋 Batterij</h3>
-
-            <p>
-                De iPhone kan ook leren wanneer je meestal je telefoon
-                oplaadt. Hierdoor kan het opladen worden aangepast om de
-                batterij zo lang mogelijk gezond te houden.
-            </p>
-
-        </div>
-
-        <p>
-            Hierdoor gebruik je AI soms zonder dat je het zelf merkt.
-            Het zit tegenwoordig in veel functies van smartphones.
-        </p>
-
-    </section>
-
-
-    <!-- =========================
-         ARTIKEL
-    ========================= -->
-
-    <section class="compressie-blok">
-
-        <h2>📰 Artikel over AI</h2>
-
-        <div class="artikel">
-
-            <h3>
-                AI-slop vindt zijn weg naar databanken voor vogelfoto's,
-                en dat heeft gevolgen voor de wetenschap
-            </h3>
-
-            <p class="artikel-info">
-                Door Kasper Goossens · De Morgen · 20 juli 2026
-            </p>
-
-
-            <!-- FOTO + INTRO -->
-
-            <div class="foto-blok">
-
-                <div class="foto-tekst">
-
-                    <p>
-                        Het artikel gaat over het toenemende gebruik van
-                        AI bij natuurfoto's.
-                    </p>
-
-                    <p>
-                        Mensen kunnen met AI foto's maken of bestaande foto's
-                        aanpassen. Dat lijkt misschien onschuldig, maar deze
-                        foto's kunnen terechtkomen in databanken die
-                        wetenschappers gebruiken voor onderzoek.
-                    </p>
-
-                </div>
-
-
-                <div class="foto">
-
-                    <img
-                        src="fotos/ai-vogelfoto.jpg"
-                        alt="Vogelfoto bij het AI-artikel">
-
-                    <div class="foto-bijschrift">
-                        AI en natuurfotografie
-                    </div>
-
-                </div>
-
-            </div>
-
-
-            <!-- WAAR GAAT HET OVER? -->
-
-            <div class="uitleg">
-
-                <h3>🔎 Waar gaat het artikel over?</h3>
-
-                <p>
-                    AI-bewerkte foto's komen steeds vaker terecht in
-                    natuurfotodatabanken zoals iNaturalist en de
-                    Macaulay Library.
-                </p>
-
-                <p>
-                    Wetenschappers gebruiken deze databanken om te onderzoeken
-                    waar dieren leven en hoe hun verspreiding verandert.
-                </p>
-
-                <p>
-                    Wanneer een AI-bewerkte foto voor echte informatie wordt
-                    aangezien, kunnen wetenschappers daardoor verkeerde
-                    conclusies trekken.
-                </p>
-
-            </div>
-
-
-            <!-- SAMENVATTING -->
-
-            <div class="samenvatting">
-
-                <h3>📝 Samenvatting</h3>
-
-                <p>
-                    Het artikel gaat over het steeds vaker gebruiken van AI
-                    bij natuurfoto's. Mensen kunnen foto's maken of bestaande
-                    foto's aanpassen met AI. Sommige van deze foto's komen
-                    vervolgens terecht in databanken die wetenschappers
-                    gebruiken.
-                </p>
-
-                <p>
-                    Wetenschappers gebruiken deze foto's om te onderzoeken
-                    waar vogelsoorten voorkomen en hoe hun leefgebieden
-                    veranderen. Een verkeerde AI-bewerkte foto kan er daarom
-                    voor zorgen dat wetenschappers verkeerde conclusies trekken.
-                </p>
-
-                <p>
-                    In het artikel wordt bijvoorbeeld verteld over een
-                    roodboegtroepiaal. Een fotograaf had AI gebruikt om de
-                    foto mooier te maken. Daarbij werden kenmerken van een
-                    epauletspreeuw toegevoegd. Hierdoor leek het alsof deze
-                    vogelsoort op een verkeerde plek voorkwam.
-                </p>
-
-                <p>
-                    Op iNaturalist zijn ongeveer 1.400 van de meer dan
-                    610 miljoen foto's gemarkeerd als met AI bewerkt.
-                    De onderzoekers vinden daarom dat natuurfotodatabanken
-                    goed moeten controleren of foto's betrouwbaar zijn.
-                </p>
-
-            </div>
-
-
-            <!-- MENING -->
-
-            <div class="mening">
-
-                <h3>💭 Mijn mening</h3>
-
-                <p>
-                    Ik vind het een interessant artikel, omdat je normaal
-                    gesproken misschien niet nadenkt over de gevolgen van
-                    een AI-bewerkte foto. Een foto lijkt betrouwbaar, maar
-                    dat hoeft dus niet altijd zo te zijn.
-                </p>
-
-                <p>
-                    Ik vind dat AI best gebruikt mag worden om foto's mooier
-                    te maken. Wel vind ik dat duidelijk moet worden aangegeven
-                    wanneer een foto met AI is aangepast.
-                </p>
-
-                <p>
-                    Vooral bij foto's die voor wetenschappelijk onderzoek
-                    worden gebruikt vind ik dit belangrijk. Anders kunnen
-                    onderzoekers verkeerde informatie gebruiken en daardoor
-                    verkeerde conclusies trekken.
-                </p>
-
-            </div>
-
-
-            <!-- ARTIKEL LINK -->
-
-            <div class="artikel-link">
-
-                <p>
-                    <strong>Het volledige artikel lezen?</strong>
-                </p>
-
-                <a
-                    href="https://www.demorgen.be/"
-                    target="_blank"
-                    rel="noopener noreferrer">
-
-                    Lees het artikel →
-
-                </a>
-
+            <div class="foto-bijschrift">
+                Mijn iPhone 12 Pro Max
             </div>
 
         </div>
@@ -843,15 +454,121 @@
     </section>
 
 
-    <!-- =========================
-         FOOTER
-    ========================= -->
+    <!-- ARTIKEL -->
+
+    <section class="ai-blok">
+
+        <h2>📰 AI in vogelfoto-databanken</h2>
+
+        <p>
+            Voor deze opdracht heb ik een artikel van
+            <strong>De Morgen</strong> gelezen over AI-bewerkte foto's
+            in databanken voor vogelfoto's.
+        </p>
+
+        <div class="artikel-info">
+
+            <p class="artikel-titel">
+                "AI-slop vindt zijn weg naar databanken voor vogelfoto's,
+                en dat heeft gevolgen voor de wetenschap"
+            </p>
+
+            <p>
+                <strong>Schrijver:</strong> Kasper Goossens
+            </p>
+
+            <p>
+                <strong>Datum:</strong> 20 juli 2026
+            </p>
+
+            <p>
+                In het artikel wordt uitgelegd dat AI-gemaakte en
+                AI-bewerkte foto's steeds vaker terechtkomen in
+                databanken die door wetenschappers worden gebruikt.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- SAMENVATTING -->
+
+    <section class="ai-blok">
+
+        <h2>📝 Samenvatting van het artikel</h2>
+
+        <div class="samenvatting">
+
+            <p>
+                Steeds meer AI-gemaakte of AI-bewerkte afbeeldingen komen
+                terecht in databanken met foto's van vogels en natuur.
+                Voorbeelden hiervan zijn iNaturalist en de Macaulay Library.
+            </p>
+
+            <p>
+                Wetenschappers gebruiken deze databanken om bijvoorbeeld
+                te onderzoeken waar bepaalde vogelsoorten voorkomen en
+                welke leefgebieden ze hebben. Als een foto verkeerde
+                informatie bevat, kan dit dus ook leiden tot verkeerde
+                conclusies in onderzoek.
+            </p>
+
+            <p>
+                In het artikel wordt een voorbeeld uit centraal Brazilië
+                genoemd. Een foto waarop eigenlijk een redboegtroepiaal
+                stond, was door AI aangepast. De AI had kenmerken van een
+                epauletspreeuw toegevoegd, waardoor de foto misleidend werd.
+            </p>
+
+            <p>
+                Onderzoekers waarschuwen daarom dat mensen goed moeten
+                opletten met AI-afbeeldingen. Hoewel er op dit moment maar
+                een klein deel van de foto's als AI-bewerkt wordt herkend,
+                kan het probleem in de toekomst groter worden.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- MENING -->
+
+    <section class="ai-blok">
+
+        <h2>💭 Mijn mening</h2>
+
+        <div class="mening">
+
+            <p>
+                Ik vind het artikel interessant, omdat ik zelf ook regelmatig
+                AI gebruik. Ik wist niet dat AI-bewerkte foto's zelfs invloed
+                kunnen hebben op wetenschappelijk onderzoek.
+            </p>
+
+            <p>
+                Ik vind AI erg handig, maar dit artikel laat ook zien waarom
+                je niet alles wat AI maakt zomaar moet geloven. Vooral bij
+                wetenschappelijk onderzoek kunnen fouten grote gevolgen hebben.
+            </p>
+
+            <p>
+                Daarom vind ik het belangrijk om informatie van AI te
+                controleren en kritisch te blijven kijken naar afbeeldingen
+                en informatie die je online tegenkomt.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
 
     <footer>
 
-        <p>
-            © 2026 Mijn website
-        </p>
+        <p>© 2026 Mijn website</p>
 
     </footer>
 
