@@ -1,138 +1,323 @@
-```html
 <!DOCTYPE html>
 <html lang="nl">
-
 <head>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <link rel="stylesheet" href="style.css">
-
     <title>Binair stelsel</title>
 
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: white;
+            color: black;
+        }
+
+        /* HEADER */
+        .header {
+            background-color: #4CAF50;
+            height: 150px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            padding: 0 20px;
+            box-sizing: border-box;
+        }
+
+        .header h1 {
+            margin: 0;
+            color: black;
+        }
+
+        /* HOME KNOP */
+        .home-button {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background-color: #333;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+        .home-button:hover {
+            background-color: #555;
+        }
+
+        /* DROPDOWN */
+        .dropdown {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+
+        .dropdown-button {
+            background-color: #333;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            right: 0;
+            top: 100%;
+            background-color: #333;
+            min-width: 240px;
+            border-radius: 5px;
+            overflow: hidden;
+            box-shadow: 0 5px 10px rgba(0,0,0,0.4);
+            z-index: 100;
+        }
+
+        .dropdown-content a {
+            display: block;
+            padding: 12px 15px;
+            color: white;
+            text-decoration: none;
+            text-align: left;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #555;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        /* GROENE BLOKKEN */
+        .binair-blok {
+            width: 90%;
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 30px;
+            background-color: #4CAF50;
+            color: black;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.45);
+            box-sizing: border-box;
+        }
+
+        .binair-blok h2 {
+            font-size: 28px;
+            margin-top: 0;
+        }
+
+        .binair-blok p {
+            font-size: 17px;
+            line-height: 1.7;
+        }
+
+        /* BINARIE PLAATSWAARDEN */
+        .plaatswaarden {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            margin: 30px 0;
+            flex-wrap: wrap;
+        }
+
+        .plaatswaarde {
+            background-color: white;
+            border-radius: 12px;
+            width: 120px;
+            padding: 18px 10px;
+            text-align: center;
+            box-shadow: 0 5px 10px rgba(0,0,0,0.25);
+            box-sizing: border-box;
+        }
+
+        .plaatswaarde .getal {
+            font-size: 30px;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .plaatswaarde .macht {
+            font-size: 14px;
+            color: #444;
+        }
+
+        /* VOORBEELD */
+        .binair-voorbeeld {
+            background-color: rgba(255,255,255,0.25);
+            padding: 25px;
+            border-radius: 12px;
+            margin-top: 25px;
+            text-align: center;
+        }
+
+        .binair-voorbeeld h3 {
+            margin-top: 0;
+            font-size: 22px;
+        }
+
+        .binair-getal {
+            font-size: 34px;
+            font-weight: bold;
+            letter-spacing: 8px;
+            margin: 20px 0;
+        }
+
+        .uitleg-voorbeeld {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .uitleg-vak {
+            background-color: white;
+            padding: 12px 18px;
+            border-radius: 8px;
+            font-weight: bold;
+            box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+        }
+
+        /* FOTO */
+        .foto-blok {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+        }
+
+        .foto-tekst {
+            flex: 1;
+        }
+
+        .foto {
+            width: 45%;
+            text-align: center;
+        }
+
+        .foto img {
+            max-width: 100%;
+            max-height: 350px;
+            border-radius: 10px;
+        }
+
+        /* GAME */
+        .binair-game {
+            width: 100%;
+            max-width: 800px;
+            margin: 25px auto;
+        }
+
+        .binair-game iframe {
+            width: 100%;
+            height: 500px;
+            border: none;
+            border-radius: 10px;
+            background-color: white;
+            display: block;
+        }
+
+        /* FOOTER */
+        footer {
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+
+        /* MOBIEL */
+        @media (max-width: 700px) {
+
+            .foto-blok {
+                flex-direction: column;
+            }
+
+            .foto {
+                width: 100%;
+            }
+
+            .plaatswaarden {
+                gap: 8px;
+            }
+
+            .plaatswaarde {
+                width: 100px;
+            }
+
+            .binair-getal {
+                font-size: 28px;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
-    <!-- =========================
-         HEADER
-    ========================== -->
-
+    <!-- HEADER -->
     <header class="header">
 
-        <!-- Witte navigatiebalk -->
-        <nav class="top-nav">
+        <a href="index.html" class="home-button">
+            Home
+        </a>
 
-            <!-- Home -->
-            <a href="index.html" class="home-button">
-                ← Home
-            </a>
+        <h1>Binair stelsel</h1>
 
-            <!-- Naam website -->
-            <a href="index.html" class="site-name">
-                Marc's website
-            </a>
+        <div class="dropdown">
 
-            <!-- Dropdown -->
-            <div class="dropdown">
+            <button class="dropdown-button">
+                Onderwerpen ▼
+            </button>
 
-                <button class="dropdown-button">
-                    Onderwerpen ⌄
-                </button>
-
-                <div class="dropdown-content">
-
-                    <a href="invoer-verwerking-uitvoer.html">
-                        Invoer - Verwerking - Uitvoer
-                    </a>
-
-                    <a href="binairstelsel.html">
-                        Binair stelsel
-                    </a>
-
-                    <a href="kleurmodellen.html">
-                        Kleurmodellen
-                    </a>
-
-                    <a href="compressie.html">
-                        Compressie: Bitmap/vector
-                    </a>
-
-                    <a href="ai.html">
-                        AI
-                    </a>
-
-                </div>
-
+            <div class="dropdown-content">
+                <a href="binairstelsel.html">Binair stelsel</a>
+                <a href="kleurmodellen.html">Kleurmodellen</a>
+                <a href="compressie.html">Compressie: Bitmap/vector</a>
+                <a href="ai.html">AI</a>
+                <a href="invoer-verwerking-uitvoer.html">
+                    Invoer - Verwerking - Uitvoer
+                </a>
             </div>
-
-        </nav>
-
-
-        <!-- Groene titelbalk -->
-        <div class="hero">
-
-            <h1>Binair stelsel</h1>
-
-            <p>
-                Ontdek hoe computers werken met alleen nullen en enen.
-            </p>
 
         </div>
 
     </header>
 
 
-    <!-- =========================
-         BLOK 1
-    ========================== -->
-
+    <!-- BLOK 1 -->
     <section class="binair-blok">
 
-        <div class="binair-tekst">
+        <h2>🔢 Wat is het binaire stelsel?</h2>
 
-            <h2>🔢 Wat is het binaire stelsel?</h2>
+        <p>
+            Het binaire stelsel is een getallenstelsel dat alleen gebruikmaakt
+            van de cijfers <strong>0 en 1</strong>. Computers gebruiken het
+            binaire stelsel omdat elektronische schakelingen gemakkelijk twee
+            toestanden kunnen hebben: aan of uit.
+        </p>
 
-            <p>
-                Het binaire stelsel is een getallenstelsel dat alleen gebruikmaakt
-                van de cijfers <strong>0 en 1</strong>. Computers gebruiken het
-                binaire stelsel omdat elektronische schakelingen gemakkelijk twee
-                toestanden kunnen hebben: aan of uit.
-            </p>
-
-            <p>
-                Een <strong>1</strong> staat meestal voor aan en een
-                <strong>0</strong> voor uit. Door heel veel nullen en enen
-                achter elkaar te combineren, kunnen computers informatie opslaan
-                en verwerken.
-            </p>
-
-        </div>
+        <p>
+            Een <strong>1</strong> staat meestal voor aan en een
+            <strong>0</strong> voor uit. Door heel veel nullen en enen
+            achter elkaar te combineren, kunnen computers informatie opslaan
+            en verwerken.
+        </p>
 
     </section>
 
 
-    <!-- =========================
-         BLOK 2
-    ========================== -->
-
+    <!-- NIEUW BLOK 2 -->
     <section class="binair-blok">
 
-        <div class="binair-tekst">
+        <h2>💡 Hoe werkt het?</h2>
 
-            <h2>💡 Hoe werkt het?</h2>
-
-            <p>
-                In het binaire stelsel heeft iedere positie een eigen waarde.
-                Deze waarden zijn machten van 2. Van rechts naar links worden
-                de waarden steeds twee keer zo groot.
-            </p>
-
-        </div>
-
-
-        <!-- Plaatswaarden -->
+        <p>
+            In het binaire stelsel heeft iedere positie een eigen waarde.
+            Deze waarden zijn machten van 2. Van rechts naar links worden
+            de waarden steeds twee keer zo groot.
+        </p>
 
         <div class="plaatswaarden">
 
@@ -163,9 +348,6 @@
 
         </div>
 
-
-        <!-- Voorbeeld -->
-
         <div class="binair-voorbeeld">
 
             <h3>🧮 Voorbeeld: 10101</h3>
@@ -177,7 +359,6 @@
             <p>
                 We kijken welke waarden bij de enen horen:
             </p>
-
 
             <div class="uitleg-voorbeeld">
 
@@ -203,7 +384,6 @@
 
             </div>
 
-
             <p>
                 <strong>16 + 4 + 1 = 21</strong>
             </p>
@@ -218,13 +398,10 @@
     </section>
 
 
-    <!-- =========================
-         BLOK 3 - FOTO
-    ========================== -->
+    <!-- BLOK 3 -->
+    <section class="binair-blok foto-blok">
 
-    <section class="binair-blok">
-
-        <div class="binair-tekst">
+        <div class="foto-tekst">
 
             <h2>💻 Waarom gebruiken computers 0 en 1?</h2>
 
@@ -247,35 +424,24 @@
 
         </div>
 
+        <div class="foto">
 
-        <div class="binair-foto">
-
-            <img
-                src="fotos/binair stelsel.jpg"
-                alt="Binair stelsel"
-            >
+            <!-- Zet hier je eigen foto -->
+            <img src="fotos/binair stelsel.jpg" alt="Binair stelsel">
 
         </div>
 
     </section>
 
 
-    <!-- =========================
-         GAME
-    ========================== -->
-
+    <!-- GAME -->
     <section class="binair-blok">
 
-        <div class="binair-tekst">
+        <h2>🎮 Oefenen met binair</h2>
 
-            <h2>🎮 Oefenen met binair</h2>
-
-            <p>
-                Probeer hieronder zelf met binaire getallen te oefenen!
-            </p>
-
-        </div>
-
+        <p>
+            Probeer hieronder zelf met binaire getallen te oefenen!
+        </p>
 
         <div class="binair-game">
 
@@ -289,18 +455,9 @@
     </section>
 
 
-    <!-- =========================
-         FOOTER
-    ========================== -->
-
     <footer>
-
-        <p>
-            © 2026 Marc's website
-        </p>
-
+        <p>© 2026 Mijn website</p>
     </footer>
 
 </body>
-
 </html>
