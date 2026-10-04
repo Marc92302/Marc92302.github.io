@@ -4,173 +4,448 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <link rel="stylesheet" href="style.css">
 
     <title>Invoer - Verwerking - Uitvoer</title>
+
+    <style>
+      body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: white;
+            color: black;
+        }
+
+        /* HEADER */
+        .header {
+            background-color: #4CAF50;
+            height: 150px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            padding: 0 20px;
+            box-sizing: border-box;
+        }
+
+        .header h1 {
+            margin: 0;
+            color: black;
+        }
+
+        /* HOME KNOP */
+        .home-button {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background-color: #333;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+        .home-button:hover {
+            background-color: #555;
+        }
+
+        /* DROPDOWN */
+        .dropdown {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+
+        .dropdown-button {
+            background-color: #333;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            right: 0;
+            top: 100%;
+            background-color: #333;
+            min-width: 240px;
+            border-radius: 5px;
+            overflow: hidden;
+            box-shadow: 0 5px 10px rgba(0,0,0,0.4);
+            z-index: 100;
+        }
+
+        .dropdown-content a {
+            display: block;
+            padding: 12px 15px;
+            color: white;
+            text-decoration: none;
+            text-align: left;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #555;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        /* GROENE BLOKKEN */
+        .binair-blok {
+            width: 90%;
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 30px;
+            background-color: #4CAF50;
+            color: black;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.45);
+            box-sizing: border-box;
+        }
+
+        .binair-blok h2 {
+            font-size: 28px;
+            margin-top: 0;
+        }
+
+        .binair-blok p {
+            font-size: 17px;
+            line-height: 1.7;
+        }
+
+        /* BINARIE PLAATSWAARDEN */
+        .plaatswaarden {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            margin: 30px 0;
+            flex-wrap: wrap;
+        }
+
+        .plaatswaarde {
+            background-color: white;
+            border-radius: 12px;
+            width: 120px;
+            padding: 18px 10px;
+            text-align: center;
+            box-shadow: 0 5px 10px rgba(0,0,0,0.25);
+            box-sizing: border-box;
+        }
+
+        .plaatswaarde .getal {
+            font-size: 30px;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .plaatswaarde .macht {
+            font-size: 14px;
+            color: #444;
+        }
+
+        /* VOORBEELD */
+        .binair-voorbeeld {
+            background-color: rgba(255,255,255,0.25);
+            padding: 25px;
+            border-radius: 12px;
+            margin-top: 25px;
+            text-align: center;
+        }
+
+        .binair-voorbeeld h3 {
+            margin-top: 0;
+            font-size: 22px;
+        }
+
+        .binair-getal {
+            font-size: 34px;
+            font-weight: bold;
+            letter-spacing: 8px;
+            margin: 20px 0;
+        }
+
+        .uitleg-voorbeeld {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .uitleg-vak {
+            background-color: white;
+            padding: 12px 18px;
+            border-radius: 8px;
+            font-weight: bold;
+            box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+        }
+
+        /* FOTO */
+        .foto-blok {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+        }
+
+        .foto-tekst {
+            flex: 1;
+        }
+
+        .foto {
+            width: 45%;
+            text-align: center;
+        }
+
+        .foto img {
+            max-width: 100%;
+            max-height: 350px;
+            border-radius: 10px;
+        }
+
+        /* GAME */
+        .binair-game {
+            width: 100%;
+            max-width: 800px;
+            margin: 25px auto;
+        }
+
+        .binair-game iframe {
+            width: 100%;
+            height: 500px;
+            border: none;
+            border-radius: 10px;
+            background-color: white;
+            display: block;
+        }
+
+        /* FOOTER */
+        footer {
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+
+        /* MOBIEL */
+        @media (max-width: 700px) {
+
+            .foto-blok {
+                flex-direction: column;
+            }
+
+            .foto {
+                width: 100%;
+            }
+
+            .plaatswaarden {
+                gap: 8px;
+            }
+
+            .plaatswaarde {
+                width: 100px;
+            }
+
+            .binair-getal {
+                font-size: 28px;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
+    <!-- HEADER -->
     <header class="header">
 
-        <nav class="top-nav">
+        <a href="index.html" class="home-button">
+            Home
+        </a>
 
-            <a href="index.html" class="home-button">
-                ← Home
-            </a>
+        <h1>Binair stelsel</h1>
 
-            <a href="index.html" class="site-name">
-                Marc's website
-            </a>
+        <div class="dropdown">
 
-            <div class="dropdown">
+            <button class="dropdown-button">
+                Onderwerpen ▼
+            </button>
 
-                <button class="dropdown-button">
-                    Onderwerpen ⌄
-                </button>
-
-                <div class="dropdown-content">
-
-                    <a href="invoer-verwerking-uitvoer.html">
-                        Invoer - Verwerking - Uitvoer
-                    </a>
-
-                    <a href="binairstelsel.html">
-                        Binair stelsel
-                    </a>
-
-                    <a href="kleurmodellen.html">
-                        Kleurmodellen
-                    </a>
-
-                    <a href="compressie.html">
-                        Compressie: Bitmap/vector
-                    </a>
-
-                    <a href="ai.html">
-                        AI
-                    </a>
-
-                </div>
-
+            <div class="dropdown-content">
+                <a href="binairstelsel.html">Binair stelsel</a>
+                <a href="kleurmodellen.html">Kleurmodellen</a>
+                <a href="compressie.html">Compressie: Bitmap/vector</a>
+                <a href="ai.html">AI</a>
+                <a href="invoer-verwerking-uitvoer.html">
+                    Invoer - Verwerking - Uitvoer
+                </a>
             </div>
-
-        </nav>
-
-        <div class="hero">
-
-            <h1>Invoer - Verwerking - Uitvoer</h1>
-
-            <p>
-                Ontdek hoe computers informatie ontvangen, verwerken en uitvoeren.
-            </p>
 
         </div>
 
     </header>
 
 
-    <div class="content">
+    <!-- BLOK 1 -->
 
-        <h2>💻 Hoe werkt een computer eigenlijk?</h2>
+    <div class="ivo-blok">
 
-        <p>
-            Je typt iets op je toetsenbord, klikt met je muis en
-            binnen een paar seconden verschijnt er een resultaat.
-            Maar wat gebeurt er eigenlijk tussen die twee momenten?
-        </p>
+        <div class="ivo-tekst">
 
-        <p>
-            Computers werken hierbij met drie belangrijke stappen:
-            <strong>invoer → verwerking → uitvoer.</strong>
-        </p>
+            <h2>💻 Hoe werkt een computer eigenlijk?</h2>
 
-        <p>
-            Dit wordt ook wel het
-            <strong>IPO-model</strong> genoemd:
-            <em>Input, Process, Output.</em>
-        </p>
+            <p>
+                Je typt iets op je toetsenbord, klikt met je muis en
+                binnen een paar seconden verschijnt er een resultaat.
+                Maar wat gebeurt er eigenlijk tussen die twee momenten?
+            </p>
 
-        <p>
-            Eigenlijk is bijna alles wat je met een computer doet
-            hierop terug te brengen.
-        </p>
+            <p>
+                Computers werken hierbij met drie belangrijke stappen:
+                <strong>invoer → verwerking → uitvoer.</strong>
+            </p>
 
+            <p>
+                Dit wordt ook wel het
+                <strong>IPO-model</strong> genoemd:
+                <em>Input, Process, Output.</em>
+            </p>
 
-        <h2>🔄 De 3 stappen</h2>
+            <p>
+                Eigenlijk is bijna alles wat je met een computer doet
+                hierop terug te brengen.
+            </p>
 
-        <h3>⌨️ 1. Invoer</h3>
+        </div>
 
-        <p>
-            Eerst moet de computer informatie krijgen.
-            Dat noemen we <strong>invoer</strong>.
-        </p>
-
-        <p>
-            Denk bijvoorbeeld aan een toetsenbord, muis,
-            microfoon, camera of touchscreen.
-        </p>
+    </div>
 
 
-        <h3>⚙️ 2. Verwerking</h3>
+    <!-- BLOK 2 -->
 
-        <p>
-            Daarna gaat de computer met deze informatie aan
-            de slag. De processor voert berekeningen en
-            opdrachten uit.
-        </p>
+    <div class="ivo-blok ivo-blok-met-foto">
 
-        <p>
-            Dit gebeurt vaak zo snel dat je het nauwelijks merkt.
-        </p>
+        <div class="ivo-tekst">
+
+            <h2>🔄 De 3 stappen</h2>
+
+            <div class="stap">
+
+                <h3>⌨️ 1. Invoer</h3>
+
+                <p>
+                    Eerst moet de computer informatie krijgen.
+                    Dat noemen we <strong>invoer</strong>.
+                </p>
+
+                <p>
+                    Denk bijvoorbeeld aan een toetsenbord, muis,
+                    microfoon, camera of touchscreen.
+                </p>
+
+            </div>
 
 
-        <h3>🖥️ 3. Uitvoer</h3>
+            <div class="stap">
 
-        <p>
-            Uiteindelijk krijg je een resultaat.
-            Dit noemen we <strong>uitvoer</strong>.
-        </p>
+                <h3>⚙️ 2. Verwerking</h3>
 
-        <p>
-            Bijvoorbeeld een afbeelding op je scherm,
-            geluid uit je speakers of een document uit de printer.
-        </p>
+                <p>
+                    Daarna gaat de computer met deze informatie aan
+                    de slag. De processor voert berekeningen en
+                    opdrachten uit.
+                </p>
+
+                <p>
+                    Dit gebeurt vaak zo snel dat je het nauwelijks merkt.
+                </p>
+
+            </div>
 
 
-        <h2>🔎 Zie je het overal?</h2>
+            <div class="stap">
 
-        <p>
-            Het IPO-model klinkt misschien ingewikkeld,
-            maar je gebruikt het waarschijnlijk iedere dag.
-        </p>
+                <h3>🖥️ 3. Uitvoer</h3>
 
-        <h3>📱 Voorbeeld: een bericht versturen</h3>
+                <p>
+                    Uiteindelijk krijg je een resultaat.
+                    Dit noemen we <strong>uitvoer</strong>.
+                </p>
 
-        <p>
-            <strong>1. Invoer:</strong>
-            je typt een bericht op je telefoon.
-        </p>
+                <p>
+                    Bijvoorbeeld een afbeelding op je scherm,
+                    geluid uit je speakers of een document uit de printer.
+                </p>
 
-        <p>
-            <strong>2. Verwerking:</strong>
-            je telefoon verwerkt de tekst en verstuurt
-            de gegevens via het internet.
-        </p>
+            </div>
 
-        <p>
-            <strong>3. Uitvoer:</strong>
-            het bericht verschijnt op het scherm van
-            de ontvanger.
-        </p>
+        </div>
 
-        <p>
-            Zo werkt het dus niet alleen bij computers,
-            maar bij heel veel apparaten die informatie
-            ontvangen, verwerken en een resultaat geven.
-        </p>
 
+        <div class="ivo-foto">
+
+            <img
+                src="fotos/invoer-verwerking-uitvoer.jpg"
+                alt="Invoer, verwerking en uitvoer">
+
+        </div>
+
+    </div>
+
+
+    <!-- BLOK 3 -->
+
+    <div class="ivo-blok">
+
+        <div class="ivo-tekst">
+
+            <h2>🔎 Zie je het overal?</h2>
+
+            <p>
+                Het IPO-model klinkt misschien ingewikkeld,
+                maar je gebruikt het waarschijnlijk iedere dag.
+            </p>
+
+            <div class="voorbeeld">
+
+                <h3>📱 Voorbeeld: een bericht versturen</h3>
+
+                <p>
+                    <strong>1. Invoer:</strong>
+                    je typt een bericht op je telefoon.
+                </p>
+
+                <p>
+                    <strong>2. Verwerking:</strong>
+                    je telefoon verwerkt de tekst en verstuurt
+                    de gegevens via het internet.
+                </p>
+
+                <p>
+                    <strong>3. Uitvoer:</strong>
+                    het bericht verschijnt op het scherm van
+                    de ontvanger.
+                </p>
+
+            </div>
+
+            <p>
+                Zo werkt het dus niet alleen bij computers,
+                maar bij heel veel apparaten die informatie
+                ontvangen, verwerken en een resultaat geven.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- VIDEO -->
+
+    <div class="ivo-video-blok">
 
         <h2>🎥 Bekijk het zelf</h2>
 
@@ -214,6 +489,7 @@
         <p>© Marc</p>
 
     </footer>
+
 
 </body>
 
