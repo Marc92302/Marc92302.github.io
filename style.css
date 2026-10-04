@@ -535,3 +535,39 @@ footer {
         width: 90%;
     }
 }
+/* =========================
+   ARTIKEL KNOP
+========================= */
+
+.artikel-info {
+    background-color: rgba(255,255,255,0.3);
+    padding: 25px;
+    border-radius: 12px;
+    margin-top: 20px;
+}
+
+.artikel-titel {
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 1.4;
+}
+
+.artikel-info p {
+    margin-bottom: 10px;
+}
+
+.artikel-knop {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 12px 20px;
+    background-color: #333;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.artikel-knop:hover {
+    background-color: #555;
+}

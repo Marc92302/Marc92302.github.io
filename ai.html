@@ -137,22 +137,6 @@
 
 
         /* =========================
-           WITTE INFO KAARTEN
-        ========================= */
-
-        .info-kaart {
-            background-color: rgba(255,255,255,0.3);
-            padding: 22px;
-            border-radius: 12px;
-            margin-top: 22px;
-        }
-
-        .info-kaart h3 {
-            margin-bottom: 10px;
-        }
-
-
-        /* =========================
            AI GEBRUIK
         ========================= */
 
@@ -170,6 +154,22 @@
         }
 
         .ai-punt h3 {
+            margin-bottom: 10px;
+        }
+
+
+        /* =========================
+           EXTRA UITLEG
+        ========================= */
+
+        .info-kaart {
+            background-color: rgba(255,255,255,0.3);
+            padding: 22px;
+            border-radius: 12px;
+            margin-top: 22px;
+        }
+
+        .info-kaart h3 {
             margin-bottom: 10px;
         }
 
@@ -211,19 +211,35 @@
 
         .artikel-info {
             background-color: rgba(255,255,255,0.3);
-            padding: 22px;
+            padding: 25px;
             border-radius: 12px;
             margin-top: 20px;
         }
 
         .artikel-titel {
-            font-size: 20px;
+            font-size: 20px !important;
             font-weight: bold;
-            line-height: 1.4;
+            line-height: 1.4 !important;
         }
 
         .artikel-info p {
-            margin-bottom: 8px;
+            margin-bottom: 10px;
+        }
+
+        .artikel-knop {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 12px 20px;
+            background-color: #333;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        .artikel-knop:hover {
+            background-color: #555;
         }
 
 
@@ -249,7 +265,7 @@
 
 
         /* =========================
-           MIJN MENING
+           MENING
         ========================= */
 
         .mening {
@@ -299,7 +315,9 @@
 <body>
 
 
-    <!-- HEADER -->
+    <!-- =========================
+         HEADER
+    ========================= -->
 
     <header class="header">
 
@@ -344,7 +362,9 @@
     </header>
 
 
-    <!-- WAAR GEBRUIK IK AI VOOR? -->
+    <!-- =========================
+         WAAR GEBRUIK IK AI VOOR?
+    ========================= -->
 
     <section class="ai-blok">
 
@@ -364,10 +384,12 @@
 
                 <p>
                     AI kan moeilijke onderwerpen stap voor stap uitleggen.
-                    Hierdoor kan ik de stof op een andere manier bekijken.
+                    Hierdoor kan ik de stof op een andere manier bekijken
+                    en beter begrijpen.
                 </p>
 
             </div>
+
 
             <div class="ai-punt">
 
@@ -380,18 +402,20 @@
 
             </div>
 
+
             <div class="ai-punt">
 
                 <h3>✏️ Teksten</h3>
 
                 <p>
-                    Daarnaast gebruik ik AI om teksten te verbeteren of
-                    duidelijker te maken.
+                    Daarnaast gebruik ik AI om teksten te verbeteren,
+                    duidelijker te maken en fouten te vinden.
                 </p>
 
             </div>
 
         </div>
+
 
         <div class="info-kaart">
 
@@ -410,7 +434,9 @@
     </section>
 
 
-    <!-- AI IN MIJN TELEFOON -->
+    <!-- =========================
+         AI IN MIJN TELEFOON
+    ========================= -->
 
     <section class="ai-blok foto-blok">
 
@@ -442,7 +468,7 @@
 
         <div class="foto">
 
-            <img src="wordt nog toegevoegd.jpg"
+            <img src="fotos/iphone 12 pro max Background Removed.png"
                  alt="Mijn iPhone 12 Pro Max">
 
             <div class="foto-bijschrift">
@@ -454,7 +480,9 @@
     </section>
 
 
-    <!-- ARTIKEL -->
+    <!-- =========================
+         ARTIKEL
+    ========================= -->
 
     <section class="ai-blok">
 
@@ -465,6 +493,7 @@
             <strong>De Morgen</strong> gelezen over AI-bewerkte foto's
             in databanken voor vogelfoto's.
         </p>
+
 
         <div class="artikel-info">
 
@@ -482,17 +511,30 @@
             </p>
 
             <p>
-                In het artikel wordt uitgelegd dat AI-gemaakte en
-                AI-bewerkte foto's steeds vaker terechtkomen in
-                databanken die door wetenschappers worden gebruikt.
+                Het artikel gaat over AI-gemaakte en AI-bewerkte foto's
+                die terechtkomen in databanken die door wetenschappers
+                worden gebruikt.
             </p>
+
+            <!-- VERVANG DE LINK HIERONDER DOOR DE ECHTE LINK -->
+
+            <a
+                href="https://www.demorgen.be/snelnieuws/ai-slop-vindt-zijn-weg-naar-databanken-voor-vogelfoto-s-en-dat-heeft-gevolgen-voor-de-wetenschap~bd7ea776/?referrer=https%3A%2F%2Fgo.bsky.app%2F&referrer=https%3A%2F%2Fwww.felienne.nl%2F2026-36%2F&referrer=https%3A%2F%2Fclassroom.google.com%2F"
+                target="_blank"
+                class="artikel-knop">
+
+                📖 Lees het volledige artikel
+
+            </a>
 
         </div>
 
     </section>
 
 
-    <!-- SAMENVATTING -->
+    <!-- =========================
+         SAMENVATTING
+    ========================= -->
 
     <section class="ai-blok">
 
@@ -510,8 +552,8 @@
                 Wetenschappers gebruiken deze databanken om bijvoorbeeld
                 te onderzoeken waar bepaalde vogelsoorten voorkomen en
                 welke leefgebieden ze hebben. Als een foto verkeerde
-                informatie bevat, kan dit dus ook leiden tot verkeerde
-                conclusies in onderzoek.
+                informatie bevat, kan dit leiden tot verkeerde conclusies
+                in onderzoek.
             </p>
 
             <p>
@@ -523,7 +565,7 @@
 
             <p>
                 Onderzoekers waarschuwen daarom dat mensen goed moeten
-                opletten met AI-afbeeldingen. Hoewel er op dit moment maar
+                opletten met AI-afbeeldingen. Hoewel op dit moment maar
                 een klein deel van de foto's als AI-bewerkt wordt herkend,
                 kan het probleem in de toekomst groter worden.
             </p>
@@ -533,7 +575,9 @@
     </section>
 
 
-    <!-- MENING -->
+    <!-- =========================
+         MIJN MENING
+    ========================= -->
 
     <section class="ai-blok">
 
@@ -568,7 +612,9 @@
 
     <footer>
 
-        <p>© 2026 Mijn website</p>
+        <p>
+            © 2026 Mijn website
+        </p>
 
     </footer>
 
