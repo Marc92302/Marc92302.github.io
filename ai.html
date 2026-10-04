@@ -1,111 +1,255 @@
 <!DOCTYPE html>
+
 <html lang="nl">
 
 <head>
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
 
-    <link rel="stylesheet" href="style.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>AI</title>
+<title>AI</title>
+
+<style>
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: white;
+    color: black;
+}
+
+/* HEADER */
+
+.header {
+    background-color: #4CAF50;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+.header h1 {
+    margin: 0;
+    color: black;
+}
+
+/* HOME KNOP */
+
+.home-button {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.home-button:hover {
+    background-color: #555;
+}
+
+/* DROPDOWN */
+
+.dropdown {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.dropdown-button {
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 100%;
+    background-color: #333;
+    min-width: 240px;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.4);
+    z-index: 100;
+}
+
+.dropdown-content a {
+    display: block;
+    padding: 12px 15px;
+    color: white;
+    text-decoration: none;
+    text-align: left;
+}
+
+.dropdown-content a:hover {
+    background-color: #555;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* GROENE BLOKKEN */
+
+.compressie-blok {
+    width: 90%;
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: #4CAF50;
+    color: black;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.45);
+    box-sizing: border-box;
+}
+
+.compressie-blok h2 {
+    font-size: 28px;
+    margin-top: 0;
+}
+
+.compressie-blok p {
+    font-size: 17px;
+    line-height: 1.7;
+}
+
+/* UITLEG */
+
+.uitleg {
+    background-color: rgba(255,255,255,0.25);
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.uitleg h3 {
+    margin-top: 0;
+}
+
+/* FOOTER */
+
+footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+/* MOBIEL */
+
+@media (max-width: 700px) {
+
+    .compressie-blok {
+        width: 90%;
+    }
+
+}
+
+</style>
 
 </head>
 
 <body>
 
-    <!-- Titel bovenaan de pagina -->
-    <div class="header">
+<!-- HEADER -->
 
-        <!-- Home linksboven -->
-        <a href="index.html" class="home-button">
-            Home
-        </a>
+<header class="header">
 
-        <!-- Titel in het midden -->
-        <h1>AI</h1>
+<a href="index.html" class="home-button">
+    Home
+</a>
 
-        <!-- Onderwerpen rechtsboven -->
-        <div class="dropdown">
+<h1>AI</h1>
 
-            <button class="dropdown-button">
-                Onderwerpen ▼
-            </button>
+<div class="dropdown">
 
-            <div class="dropdown-content">
+<button class="dropdown-button">
+    Onderwerpen ▼
+</button>
 
-                <a href="binairstelsel.html">
-                    Binair stelsel
-                </a>
+<div class="dropdown-content">
 
-                <a href="kleurmodellen.html">
-                    Kleurmodellen
-                </a>
+<a href="binairstelsel.html">
+    Binair stelsel
+</a>
 
-                <a href="compressie.html">
-                    Compressie: Bitmap/vector
-                </a>
+<a href="kleurmodellen.html">
+    Kleurmodellen
+</a>
 
-                <a href="ai.html">
-                    AI
-                </a>
+<a href="compressie.html">
+    Compressie: Bitmap/vector
+</a>
 
-                <a href="invoer-verwerking-uitvoer.html">
-                    Invoer - Verwerking - Uitvoer
-                </a>
+<a href="ai.html">
+    AI
+</a>
 
-            </div>
+<a href="invoer-verwerking-uitvoer.html">
+    Invoer - Verwerking - Uitvoer
+</a>
 
-        </div>
+</div>
 
-    </div>
+</div>
+
+</header>
 
 
-    <!-- Eerste groene blok -->
-    <div class="compressie-blok">
+<!-- EERSTE BLOK -->
 
-        <h2>Kunstmatige intelligentie</h2>
+<section class="compressie-blok">
 
-        <p>
-            AI staat voor Artificial Intelligence,
-            oftewel kunstmatige intelligentie.
-        </p>
+<h2>Kunstmatige intelligentie</h2>
 
-        <p>
-            AI is technologie waarmee computers taken kunnen uitvoeren
-            waarvoor normaal gesproken menselijke intelligentie nodig is.
-        </p>
+<p>
+AI staat voor Artificial Intelligence,
+oftewel kunstmatige intelligentie.
+</p>
 
-    </div>
+<p>
+AI is technologie waarmee computers taken kunnen uitvoeren
+waarvoor normaal gesproken menselijke intelligentie nodig is.
+</p>
 
-
-    <!-- Tweede groene blok -->
-    <div class="compressie-blok">
-
-        <h2>Voorbeelden van AI</h2>
-
-        <p>
-            Er zijn veel verschillende toepassingen van kunstmatige
-            intelligentie. AI wordt tegenwoordig gebruikt in allerlei
-            apparaten en programma's.
-        </p>
-
-        <p>
-            Voorbeelden van AI zijn chatbots, spraakassistenten,
-            beeldherkenning en aanbevelingssystemen.
-        </p>
-
-    </div>
+</section>
 
 
-    <!-- Footer -->
-    <footer>
+<!-- TWEEDE BLOK -->
 
-        <p>
-            © Marc
-        </p>
+<section class="compressie-blok">
 
-    </footer>
+<h2>Voorbeelden van AI</h2>
+
+<p>
+Voorbeelden van AI zijn chatbots,
+spraakassistenten, beeldherkenning en aanbevelingssystemen.
+</p>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+<p>
+© Marc
+</p>
+
+</footer>
 
 </body>
 
