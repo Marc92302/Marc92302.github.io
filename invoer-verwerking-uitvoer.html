@@ -9,134 +9,264 @@
     <title>Invoer - Verwerking - Uitvoer</title>
 
     <style>
-        .ivo-blok {
+         body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: white;
+            color: black;
+        }
+
+        /* HEADER */
+        .header {
+            background-color: #4CAF50;
+            height: 150px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            padding: 0 20px;
+            box-sizing: border-box;
+        }
+
+        .header h1 {
+            margin: 0;
+            color: black;
+        }
+
+        /* HOME KNOP */
+        .home-button {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background-color: #333;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+        .home-button:hover {
+            background-color: #555;
+        }
+
+        /* DROPDOWN */
+        .dropdown {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+
+        .dropdown-button {
+            background-color: #333;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            right: 0;
+            top: 100%;
+            background-color: #333;
+            min-width: 240px;
+            border-radius: 5px;
+            overflow: hidden;
+            box-shadow: 0 5px 10px rgba(0,0,0,0.4);
+            z-index: 100;
+        }
+
+        .dropdown-content a {
+            display: block;
+            padding: 12px 15px;
+            color: white;
+            text-decoration: none;
+            text-align: left;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #555;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        /* GROENE BLOKKEN */
+        .binair-blok {
             width: 90%;
             max-width: 1000px;
             margin: 40px auto;
             padding: 30px;
-            background: #4CAF50 !important;
+            background-color: #4CAF50;
             color: black;
             border-radius: 15px;
             box-shadow: 0 10px 20px rgba(0,0,0,0.45);
             box-sizing: border-box;
         }
 
-        .ivo-blok-met-foto {
+        .binair-blok h2 {
+            font-size: 28px;
+            margin-top: 0;
+        }
+
+        .binair-blok p {
+            font-size: 17px;
+            line-height: 1.7;
+        }
+
+        /* BINARIE PLAATSWAARDEN */
+        .plaatswaarden {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            margin: 30px 0;
+            flex-wrap: wrap;
+        }
+
+        .plaatswaarde {
+            background-color: white;
+            border-radius: 12px;
+            width: 120px;
+            padding: 18px 10px;
+            text-align: center;
+            box-shadow: 0 5px 10px rgba(0,0,0,0.25);
+            box-sizing: border-box;
+        }
+
+        .plaatswaarde .getal {
+            font-size: 30px;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .plaatswaarde .macht {
+            font-size: 14px;
+            color: #444;
+        }
+
+        /* VOORBEELD */
+        .binair-voorbeeld {
+            background-color: rgba(255,255,255,0.25);
+            padding: 25px;
+            border-radius: 12px;
+            margin-top: 25px;
+            text-align: center;
+        }
+
+        .binair-voorbeeld h3 {
+            margin-top: 0;
+            font-size: 22px;
+        }
+
+        .binair-getal {
+            font-size: 34px;
+            font-weight: bold;
+            letter-spacing: 8px;
+            margin: 20px 0;
+        }
+
+        .uitleg-voorbeeld {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .uitleg-vak {
+            background-color: white;
+            padding: 12px 18px;
+            border-radius: 8px;
+            font-weight: bold;
+            box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+        }
+
+        /* FOTO */
+        .foto-blok {
             display: flex;
             align-items: center;
             gap: 40px;
         }
 
-        .ivo-tekst {
+        .foto-tekst {
             flex: 1;
         }
 
-        .ivo-tekst h2,
-        .ivo-tekst h3 {
-            color: black;
-        }
-
-        .ivo-tekst h2 {
-            font-size: 28px;
-            margin-top: 0;
-        }
-
-        .ivo-tekst h3 {
-            font-size: 21px;
-            margin-bottom: 5px;
-        }
-
-        .ivo-tekst p {
-            font-size: 17px;
-            line-height: 1.7;
-        }
-
-        .ivo-foto {
+        .foto {
             width: 45%;
             text-align: center;
         }
 
-        .ivo-foto img {
+        .foto img {
             max-width: 100%;
             max-height: 350px;
             border-radius: 10px;
         }
 
-        .ivo-video-blok {
-            width: 90%;
-            max-width: 1000px;
-            margin: 40px auto;
-            padding: 30px;
-            background: #4CAF50 !important;
-            color: black;
-            border-radius: 15px;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.45);
-            box-sizing: border-box;
-        }
-
-        .ivo-video-blok h2 {
-            font-size: 28px;
-        }
-
-        .ivo-video-blok p {
-            font-size: 17px;
-            line-height: 1.7;
-        }
-
-        .ivo-video {
+        /* GAME */
+        .binair-game {
             width: 100%;
-            max-width: 700px;
-            aspect-ratio: 16 / 9;
+            max-width: 800px;
             margin: 25px auto;
         }
 
-        .ivo-video iframe {
+        .binair-game iframe {
             width: 100%;
-            height: 100%;
+            height: 500px;
             border: none;
             border-radius: 10px;
+            background-color: white;
+            display: block;
         }
 
-        .stap {
-            background: rgba(255,255,255,0.25);
-            padding: 15px;
-            margin: 15px 0;
-            border-radius: 10px;
-        }
-
-        .stap h3 {
-            margin-top: 0;
-        }
-
-        .voorbeeld {
-            background: rgba(255,255,255,0.25);
+        /* FOOTER */
+        footer {
+            text-align: center;
             padding: 20px;
-            border-radius: 10px;
-            margin-top: 20px;
+            margin-top: 40px;
         }
 
+        /* MOBIEL */
         @media (max-width: 700px) {
-            .ivo-blok-met-foto {
+
+            .foto-blok {
                 flex-direction: column;
             }
 
-            .ivo-foto {
+            .foto {
                 width: 100%;
+            }
+
+            .plaatswaarden {
+                gap: 8px;
+            }
+
+            .plaatswaarde {
+                width: 100px;
+            }
+
+            .binair-getal {
+                font-size: 28px;
             }
         }
     </style>
 </head>
 
-
 <body>
 
-    <div class="header">
+    <!-- HEADER -->
+    <header class="header">
 
         <a href="index.html" class="home-button">
             Home
         </a>
 
-        <h1>Invoer - Verwerking - Uitvoer</h1>
+        <h1>invoer-verwerking-uitvoer</h1>
 
         <div class="dropdown">
 
@@ -145,7 +275,6 @@
             </button>
 
             <div class="dropdown-content">
-
                 <a href="binairstelsel.html">Binair stelsel</a>
                 <a href="kleurmodellen.html">Kleurmodellen</a>
                 <a href="compressie.html">Compressie: Bitmap/vector</a>
@@ -153,12 +282,11 @@
                 <a href="invoer-verwerking-uitvoer.html">
                     Invoer - Verwerking - Uitvoer
                 </a>
-
             </div>
 
         </div>
 
-    </div>
+    </header>
 
 
     <!-- BLOK 1 -->
