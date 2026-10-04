@@ -2,163 +2,75 @@
 <html lang="nl">
 
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link rel="stylesheet" href="style.css">
 
     <title>Invoer - Verwerking - Uitvoer</title>
 
-    <style>
-        .ivo-blok {
-            width: 90%;
-            max-width: 1000px;
-            margin: 40px auto;
-            padding: 30px;
-            background: #4CAF50 !important;
-            color: black;
-            border-radius: 15px;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.45);
-            box-sizing: border-box;
-        }
-
-        .ivo-blok-met-foto {
-            display: flex;
-            align-items: center;
-            gap: 40px;
-        }
-
-        .ivo-tekst {
-            flex: 1;
-        }
-
-        .ivo-tekst h2,
-        .ivo-tekst h3 {
-            color: black;
-        }
-
-        .ivo-tekst h2 {
-            font-size: 28px;
-            margin-top: 0;
-        }
-
-        .ivo-tekst h3 {
-            font-size: 21px;
-            margin-bottom: 5px;
-        }
-
-        .ivo-tekst p {
-            font-size: 17px;
-            line-height: 1.7;
-        }
-
-        .ivo-foto {
-            width: 45%;
-            text-align: center;
-        }
-
-        .ivo-foto img {
-            max-width: 100%;
-            max-height: 350px;
-            border-radius: 10px;
-        }
-
-        .ivo-video-blok {
-            width: 90%;
-            max-width: 1000px;
-            margin: 40px auto;
-            padding: 30px;
-            background: #4CAF50 !important;
-            color: black;
-            border-radius: 15px;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.45);
-            box-sizing: border-box;
-        }
-
-        .ivo-video-blok h2 {
-            font-size: 28px;
-        }
-
-        .ivo-video-blok p {
-            font-size: 17px;
-            line-height: 1.7;
-        }
-
-        .ivo-video {
-            width: 100%;
-            max-width: 700px;
-            aspect-ratio: 16 / 9;
-            margin: 25px auto;
-        }
-
-        .ivo-video iframe {
-            width: 100%;
-            height: 100%;
-            border: none;
-            border-radius: 10px;
-        }
-
-        .stap {
-            background: rgba(255,255,255,0.25);
-            padding: 15px;
-            margin: 15px 0;
-            border-radius: 10px;
-        }
-
-        .stap h3 {
-            margin-top: 0;
-        }
-
-        .voorbeeld {
-            background: rgba(255,255,255,0.25);
-            padding: 20px;
-            border-radius: 10px;
-            margin-top: 20px;
-        }
-
-        @media (max-width: 700px) {
-            .ivo-blok-met-foto {
-                flex-direction: column;
-            }
-
-            .ivo-foto {
-                width: 100%;
-            }
-        }
-    </style>
 </head>
-
 
 <body>
 
-    <div class="header">
+    <header class="header">
 
-        <a href="index.html" class="home-button">
-            Home
-        </a>
+        <nav class="top-nav">
 
-        <h1>Invoer - Verwerking - Uitvoer</h1>
+            <a href="index.html" class="home-button">
+                ← Home
+            </a>
 
-        <div class="dropdown">
+            <a href="index.html" class="site-name">
+                Marc's website
+            </a>
 
-            <button class="dropdown-button">
-                Onderwerpen ▼
-            </button>
+            <div class="dropdown">
 
-            <div class="dropdown-content">
+                <button class="dropdown-button">
+                    Onderwerpen ⌄
+                </button>
 
-                <a href="binairstelsel.html">Binair stelsel</a>
-                <a href="kleurmodellen.html">Kleurmodellen</a>
-                <a href="compressie.html">Compressie: Bitmap/vector</a>
-                <a href="ai.html">AI</a>
-                <a href="invoer-verwerking-uitvoer.html">
-                    Invoer - Verwerking - Uitvoer
-                </a>
+                <div class="dropdown-content">
+
+                    <a href="invoer-verwerking-uitvoer.html">
+                        Invoer - Verwerking - Uitvoer
+                    </a>
+
+                    <a href="binairstelsel.html">
+                        Binair stelsel
+                    </a>
+
+                    <a href="kleurmodellen.html">
+                        Kleurmodellen
+                    </a>
+
+                    <a href="compressie.html">
+                        Compressie: Bitmap/vector
+                    </a>
+
+                    <a href="ai.html">
+                        AI
+                    </a>
+
+                </div>
 
             </div>
 
+        </nav>
+
+        <div class="hero">
+
+            <h1>Invoer - Verwerking - Uitvoer</h1>
+
+            <p>
+                Ontdek hoe computers informatie ontvangen, verwerken en uitvoeren.
+            </p>
+
         </div>
 
-    </div>
+    </header>
 
 
     <!-- BLOK 1 -->
@@ -220,7 +132,6 @@
 
             </div>
 
-
             <div class="stap">
 
                 <h3>⚙️ 2. Verwerking</h3>
@@ -236,7 +147,6 @@
                 </p>
 
             </div>
-
 
             <div class="stap">
 
@@ -255,7 +165,6 @@
             </div>
 
         </div>
-
 
         <div class="ivo-foto">
 
@@ -337,7 +246,6 @@
 
         </div>
 
-
         <h2>💡 Waarom deze video?</h2>
 
         <p>
@@ -361,7 +269,6 @@
         <p>© Marc</p>
 
     </footer>
-
 
 </body>
 
