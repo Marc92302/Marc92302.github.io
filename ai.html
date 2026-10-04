@@ -2,18 +2,339 @@
 <html lang="nl">
 
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="style.css">
-
     <title>AI</title>
+
+    <style>
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: white;
+            color: black;
+        }
+
+
+        /* =========================
+           HEADER
+        ========================= */
+
+        .header {
+            background-color: #4CAF50;
+            height: 150px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            position: relative;
+
+            padding: 0 20px;
+            box-sizing: border-box;
+        }
+
+        .header h1 {
+            margin: 0;
+            color: black;
+        }
+
+
+        /* =========================
+           HOME KNOP
+        ========================= */
+
+        .home-button {
+            position: absolute;
+
+            top: 20px;
+            left: 20px;
+
+            background-color: #333;
+            color: white;
+
+            padding: 10px 20px;
+
+            border-radius: 5px;
+
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+        .home-button:hover {
+            background-color: #555;
+        }
+
+
+        /* =========================
+           DROPDOWN
+        ========================= */
+
+        .dropdown {
+            position: absolute;
+
+            top: 20px;
+            right: 20px;
+        }
+
+        .dropdown-button {
+            background-color: #333;
+            color: white;
+
+            padding: 10px 20px;
+
+            border: none;
+            border-radius: 5px;
+
+            cursor: pointer;
+
+            font-size: 16px;
+        }
+
+        .dropdown-content {
+            display: none;
+
+            position: absolute;
+
+            right: 0;
+            top: 100%;
+
+            background-color: #333;
+
+            min-width: 240px;
+
+            border-radius: 5px;
+
+            overflow: hidden;
+
+            box-shadow: 0 5px 10px rgba(0,0,0,0.4);
+
+            z-index: 100;
+        }
+
+        .dropdown-content a {
+            display: block;
+
+            padding: 12px 15px;
+
+            color: white;
+
+            text-decoration: none;
+
+            text-align: left;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #555;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+
+        /* =========================
+           GROENE BLOKKEN
+        ========================= */
+
+        .compressie-blok {
+
+            width: 90%;
+            max-width: 1000px;
+
+            margin: 40px auto;
+
+            padding: 30px;
+
+            background-color: #4CAF50;
+
+            color: black;
+
+            border-radius: 15px;
+
+            box-shadow: 0 10px 20px rgba(0,0,0,0.45);
+
+            box-sizing: border-box;
+        }
+
+        .compressie-blok h2 {
+
+            font-size: 28px;
+
+            margin-top: 0;
+        }
+
+        .compressie-blok p {
+
+            font-size: 17px;
+
+            line-height: 1.7;
+        }
+
+
+        /* =========================
+           ARTIKEL
+        ========================= */
+
+        .artikel {
+
+            background-color: rgba(255,255,255,0.3);
+
+            padding: 25px;
+
+            border-radius: 12px;
+
+            margin-top: 25px;
+        }
+
+        .artikel h3 {
+
+            margin-top: 0;
+
+            font-size: 24px;
+        }
+
+        .artikel-info {
+
+            font-size: 14px !important;
+
+            opacity: 0.8;
+        }
+
+
+        /* =========================
+           FOTO BLOK
+        ========================= */
+
+        .foto-blok {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 40px;
+        }
+
+        .foto-tekst {
+
+            flex: 1;
+        }
+
+        .foto {
+
+            width: 45%;
+
+            text-align: center;
+        }
+
+        .foto img {
+
+            max-width: 100%;
+
+            max-height: 350px;
+
+            border-radius: 10px;
+        }
+
+        .foto-bijschrift {
+
+            margin-top: 10px;
+
+            font-size: 14px;
+        }
+
+
+        /* =========================
+           UITLEG BLOKKEN
+        ========================= */
+
+        .uitleg {
+
+            background-color: rgba(255,255,255,0.25);
+
+            padding: 20px;
+
+            border-radius: 10px;
+
+            margin-top: 20px;
+        }
+
+        .uitleg h3 {
+
+            margin-top: 0;
+        }
+
+
+        /* =========================
+           ARTIKEL LINK
+        ========================= */
+
+        .artikel-link {
+
+            background-color: rgba(255,255,255,0.25);
+
+            padding: 20px;
+
+            border-radius: 10px;
+
+            margin-top: 25px;
+        }
+
+        .artikel-link a {
+
+            color: black;
+
+            font-weight: bold;
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+
+            text-align: center;
+
+            padding: 20px;
+
+            margin-top: 40px;
+        }
+
+
+        /* =========================
+           MOBIEL
+        ========================= */
+
+        @media (max-width: 700px) {
+
+            .foto-blok {
+
+                flex-direction: column;
+            }
+
+            .foto {
+
+                width: 100%;
+            }
+
+        }
+
+    </style>
+
 </head>
+
 
 <body>
 
-    <!-- HEADER -->
-    <div class="header">
+
+    <!-- =========================
+         HEADER
+    ========================= -->
+
+    <header class="header">
 
         <a href="index.html" class="home-button">
             Home
@@ -29,13 +350,21 @@
 
             <div class="dropdown-content">
 
-                <a href="binairstelsel.html">Binair stelsel</a>
+                <a href="binairstelsel.html">
+                    Binair stelsel
+                </a>
 
-                <a href="kleurmodellen.html">Kleurmodellen</a>
+                <a href="kleurmodellen.html">
+                    Kleurmodellen
+                </a>
 
-                <a href="compressie.html">Compressie: Bitmap/vector</a>
+                <a href="compressie.html">
+                    Compressie: Bitmap/vector
+                </a>
 
-                <a href="ai.html">AI</a>
+                <a href="ai.html">
+                    AI
+                </a>
 
                 <a href="invoer-verwerking-uitvoer.html">
                     Invoer - Verwerking - Uitvoer
@@ -45,65 +374,78 @@
 
         </div>
 
-    </div>
+    </header>
 
 
-    <!-- BLOK 1 -->
-    <div class="compressie-blok">
+    <!-- =========================
+         BLOK 1
+    ========================= -->
 
-        <h2>Waar gebruik ik AI voor?</h2>
+    <section class="compressie-blok">
+
+        <h2>🤖 Waar gebruik ik AI voor?</h2>
 
         <p>
-            Ik gebruik AI vooral voor school en om snel informatie op te zoeken.
-            Ook gebruik ik AI om uitleg te krijgen over onderwerpen die ik niet
-            helemaal begrijp.
+            Ik gebruik AI vooral voor school. Ik gebruik het bijvoorbeeld
+            om uitleg te krijgen over onderwerpen die ik niet helemaal
+            begrijp of om informatie op een duidelijke manier uitgelegd
+            te krijgen.
         </p>
 
         <p>
-            Daarnaast kan AI helpen bij het bedenken van ideeën en het verbeteren
-            van teksten. Ik leer er ook iets van, omdat AI dingen op een andere
-            manier kan uitleggen en voorbeelden kan geven.
+            Ook gebruik ik AI om ideeën te bedenken en om teksten te
+            verbeteren. Ik leer er daardoor ook van, omdat ik door AI
+            verschillende voorbeelden en uitleg kan krijgen.
         </p>
 
         <p>
-            Ik vind het wel belangrijk om niet alles wat AI zegt zomaar over te
-            nemen. Ik controleer belangrijke informatie zelf, omdat AI ook fouten
-            kan maken.
+            Ik vind het wel belangrijk om niet alles wat AI zegt zomaar
+            over te nemen. AI kan namelijk fouten maken. Daarom controleer
+            ik belangrijke informatie altijd zelf.
         </p>
 
-    </div>
+    </section>
 
 
-    <!-- BLOK 2 -->
-    <div class="compressie-blok">
+    <!-- =========================
+         BLOK 2
+    ========================= -->
 
-        <h2>AI in mijn mobiel</h2>
+    <section class="compressie-blok">
+
+        <h2>📱 AI in mijn mobiel</h2>
 
         <p>
             Ik heb een <strong>[VUL HIER JE TELEFOON IN]</strong>.
-            In deze telefoon is AI op verschillende manieren geïntegreerd.
+            In mijn telefoon is AI op verschillende manieren geïntegreerd.
         </p>
 
         <p>
-            AI kan bijvoorbeeld worden gebruikt voor de camera, om foto's
-            automatisch te verbeteren en onderwerpen in foto's te herkennen.
-            Ook wordt AI gebruikt voor functies zoals spraakherkenning,
-            autocorrectie en persoonlijke aanbevelingen.
+            AI wordt bijvoorbeeld gebruikt bij de camera. De telefoon kan
+            foto's automatisch verbeteren en verschillende onderwerpen
+            herkennen. Ook kunnen functies zoals spraakherkenning,
+            autocorrectie en persoonlijke aanbevelingen gebruikmaken van AI.
         </p>
 
         <p>
             Hierdoor gebruik je AI soms zonder dat je het zelf merkt.
+            AI zit tegenwoordig namelijk in steeds meer functies van
+            smartphones.
         </p>
 
-    </div>
+    </section>
 
 
-    <!-- BLOK 3: ARTIKEL -->
-    <div class="compressie-blok">
+    <!-- =========================
+         BLOK 3: ARTIKEL
+    ========================= -->
 
-        <h2>Artikel over AI en vogelfoto's</h2>
+    <section class="compressie-blok">
 
-        <div class="artikel-kaart">
+        <h2>📰 Artikel over AI</h2>
+
+
+        <div class="artikel">
 
             <h3>
                 AI-slop vindt zijn weg naar databanken voor vogelfoto's,
@@ -114,118 +456,180 @@
                 Door Kasper Goossens — De Morgen — 20 juli 2026
             </p>
 
-            <!-- EIGEN FOTO -->
-            <div class="ai-foto">
 
-                <!-- Verander de bestandsnaam hieronder naar jouw foto -->
-                <img
-                    src="fotos/ai Background Removed.png"
-                    alt="Vogelfoto uit het artikel">
+            <!-- FOTO -->
+
+            <div class="foto-blok">
+
+                <div class="foto-tekst">
+
+                    <p>
+                        Het artikel gaat over het toenemende gebruik van
+                        AI bij natuurfoto's. Met AI kunnen mensen nieuwe
+                        foto's maken of bestaande foto's aanpassen.
+                    </p>
+
+                    <p>
+                        Het probleem is dat zulke foto's terecht kunnen
+                        komen in databanken die wetenschappers gebruiken
+                        voor onderzoek.
+                    </p>
+
+                </div>
+
+
+                <div class="foto">
+
+                    <!--
+                        Zet hier jouw eigen foto.
+                        De foto moet in de map "fotos" staan.
+                    -->
+
+                    <img
+                        src="fotos/ai-vogelfoto.jpg"
+                        alt="Vogelfoto bij het AI-artikel">
+
+                    <div class="foto-bijschrift">
+                        Afbeelding bij het artikel
+                    </div>
+
+                </div>
 
             </div>
 
-            <p>
-                Het artikel gaat over het toenemende gebruik van AI bij
-                natuurfoto's. Met programma's zoals ChatGPT en Gemini kunnen
-                mensen foto's maken of bestaande foto's aanpassen.
-            </p>
 
-            <p>
-                Het probleem is dat zulke foto's vervolgens terecht kunnen
-                komen in databanken die wetenschappers gebruiken voor
-                onderzoek naar dieren en hun leefgebieden.
-            </p>
+            <!-- UITLEG -->
+
+            <div class="uitleg">
+
+                <h3>Waar gaat het artikel over?</h3>
+
+                <p>
+                    In het artikel wordt uitgelegd dat AI-bewerkte foto's
+                    steeds vaker terechtkomen in databanken voor
+                    natuurfotografie. Voorbeelden hiervan zijn iNaturalist
+                    en de Macaulay Library.
+                </p>
+
+                <p>
+                    Wetenschappers gebruiken deze databanken om onderzoek
+                    te doen naar dieren. Ze kunnen bijvoorbeeld onderzoeken
+                    waar bepaalde vogelsoorten leven en hoe hun verspreiding
+                    verandert.
+                </p>
+
+                <p>
+                    Het probleem ontstaat wanneer een foto door AI is
+                    aangepast zonder dat duidelijk is dat dit is gebeurd.
+                    Hierdoor kunnen wetenschappers verkeerde informatie
+                    gebruiken voor hun onderzoek.
+                </p>
+
+            </div>
+
+
+            <!-- SAMENVATTING -->
+
+            <div class="uitleg">
+
+                <h3>📝 Samenvatting</h3>
+
+                <p>
+                    Het artikel gaat over het steeds vaker gebruiken van AI
+                    bij natuurfoto's. Met programma's zoals ChatGPT en Gemini
+                    kunnen mensen foto's maken of bestaande foto's aanpassen.
+                    Sommige van deze foto's komen vervolgens terecht in
+                    databanken die wetenschappers gebruiken.
+                </p>
+
+                <p>
+                    Wetenschappers gebruiken deze foto's om te onderzoeken
+                    waar vogelsoorten voorkomen en hoe hun leefgebieden
+                    veranderen. Een verkeerde AI-bewerkte foto kan er daarom
+                    voor zorgen dat wetenschappers verkeerde conclusies
+                    trekken.
+                </p>
+
+                <p>
+                    In het artikel wordt bijvoorbeeld verteld over een
+                    roodboegtroepiaal. Een fotograaf had AI gebruikt om de
+                    foto mooier te maken. Daarbij werden kenmerken van een
+                    epauletspreeuw toegevoegd. Hierdoor leek het alsof deze
+                    vogelsoort op een verkeerde plek voorkwam.
+                </p>
+
+                <p>
+                    Op iNaturalist zijn ongeveer 1.400 van de meer dan
+                    610 miljoen foto's gemarkeerd als met AI bewerkt.
+                    De onderzoekers vinden daarom dat natuurfotodatabanken
+                    goed moeten controleren of foto's betrouwbaar zijn.
+                </p>
+
+            </div>
+
+
+            <!-- MENING -->
+
+            <div class="uitleg">
+
+                <h3>💭 Mijn mening</h3>
+
+                <p>
+                    Ik vind het een interessant artikel, omdat je normaal
+                    gesproken misschien niet nadenkt over de gevolgen van
+                    een AI-bewerkte foto. Een foto lijkt betrouwbaar, maar
+                    dat hoeft dus niet altijd zo te zijn.
+                </p>
+
+                <p>
+                    Ik vind dat AI best gebruikt mag worden om foto's mooier
+                    te maken. Wel vind ik dat duidelijk moet worden aangegeven
+                    wanneer een foto met AI is aangepast.
+                </p>
+
+                <p>
+                    Vooral bij foto's die voor wetenschappelijk onderzoek
+                    worden gebruikt vind ik dit belangrijk. Anders kunnen
+                    onderzoekers verkeerde informatie gebruiken en daardoor
+                    verkeerde conclusies trekken.
+                </p>
+
+            </div>
+
+
+            <!-- LINK NAAR ARTIKEL -->
+
+            <div class="artikel-link">
+
+                <p>
+                    <strong>Het volledige artikel:</strong>
+                </p>
+
+                <a
+                    href="https://www.demorgen.be/"
+                    target="_blank"
+                    rel="noopener noreferrer">
+
+                    Bekijk het artikel op De Morgen
+                </a>
+
+            </div>
 
         </div>
 
-
-        <h3>Samenvatting</h3>
-
-        <p>
-            Het artikel gaat over het steeds vaker gebruiken van AI bij
-            natuurfoto's. Met programma's zoals ChatGPT en Gemini kunnen mensen
-            foto's maken of bestaande foto's aanpassen. Het probleem is dat
-            zulke foto's terecht kunnen komen in databanken die wetenschappers
-            gebruiken voor onderzoek.
-        </p>
-
-        <p>
-            Wetenschappers gebruiken foto's van vogelspotters bijvoorbeeld om
-            te onderzoeken waar bepaalde vogelsoorten leven en hoe hun
-            verspreiding verandert. Als een foto door AI is aangepast en
-            daardoor een verkeerde vogel of locatie laat zien, kunnen
-            wetenschappers verkeerde conclusies trekken.
-        </p>
-
-        <p>
-            In het artikel wordt een voorbeeld gegeven van een
-            roodboegtroepiaal. Een fotograaf had AI gevraagd om de foto
-            mooier te maken. Daarbij werden kenmerken van een epauletspreeuw
-            toegevoegd. Hierdoor leek het alsof een vogelsoort op een plek
-            voorkwam waar deze normaal niet leeft.
-        </p>
-
-        <p>
-            Op iNaturalist zijn ongeveer 1.400 van de meer dan 610 miljoen
-            foto's gemarkeerd als met AI bewerkt. De onderzoekers vinden
-            daarom dat natuurfotodatabanken goed moeten controleren of foto's
-            betrouwbaar zijn.
-        </p>
-
-
-        <h3>Mijn mening</h3>
-
-        <p>
-            Ik vind het een interessant artikel, omdat je normaal gesproken
-            misschien niet nadenkt over de gevolgen van een AI-bewerkte foto.
-            Een foto lijkt betrouwbaar, maar dat hoeft dus niet altijd zo te
-            zijn.
-        </p>
-
-        <p>
-            Ik vind dat AI best gebruikt mag worden om foto's mooier te maken,
-            maar het moet duidelijk zijn wanneer een foto met AI is aangepast.
-            Vooral bij foto's die voor wetenschappelijk onderzoek worden
-            gebruikt, vind ik dat belangrijk.
-        </p>
-
-        <p>
-            Anders kunnen onderzoekers verkeerde informatie gebruiken en
-            daardoor verkeerde conclusies trekken. Daarom vind ik dat
-            AI-bewerkte foto's duidelijk herkenbaar moeten zijn wanneer ze
-            in wetenschappelijke databanken worden geplaatst.
-        </p>
-
-
-        <!-- LINK NAAR ORIGINELE ARTIKEL -->
-
-        <div class="artikel-link">
-
-            <p>
-                <strong>Origineel artikel:</strong>
-            </p>
-
-            <a
-                href="https://www.demorgen.be/tech-wetenschap/ai-slop-vindt-zijn-weg-naar-databanken-voor-vogelfoto-s-en-dat-heeft-gevolgen-voor-de-wetenschap~"
-                target="_blank"
-                rel="noopener noreferrer">
-
-                Bekijk het originele artikel op De Morgen
-            </a>
-
-        </div>
-
-    </div>
+    </section>
 
 
     <!-- FOOTER -->
+
     <footer>
 
         <p>
-            © Marc
+            © 2026 Mijn website
         </p>
 
     </footer>
+
 
 </body>
 
