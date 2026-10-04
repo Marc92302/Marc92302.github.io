@@ -1,140 +1,100 @@
-/* =========================
+/* ==================================================
    ALGEMENE OPMAAK
-========================= */
+================================================== */
 
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background-color: white;
+    background-color: #f4f4f2; /* Lichte achtergrond zoals in het screenshot */
     color: black;
 }
 
 
-/* =========================
-   GROENE BOVENBALK
-========================= */
+/* ==================================================
+   NAVIGATIEBALK (WITTE BOVENBALK)
+================================================== */
 
-.header {
-    background-color: #4CAF50;
-    height: 150px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    padding: 0 20px;
-    box-sizing: border-box;
+.nav-container {
+    padding: 12px 16px 0 16px;
 }
 
-.header h1 {
-    margin: 0;
-    color: white;
-    font-size: 30px;
-    text-align: center;
-}
-
-
-/* =========================
-   HOME-KNOP
-========================= */
-
-.home-button {
-    position: absolute;
-    top: 20px;
-    left: 20px;
-
-    color: white;
-    background-color: transparent;
-
+.navbar {
+    background-color: white;
+    border-radius: 12px;
     padding: 10px 16px;
-    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
 
+.site-title {
+    font-size: 18px;
+    font-weight: bold;
+    color: #222;
+}
+
+
+/* ==================================================
+   KNOPPEN (HOME & DROPDOWN)
+================================================== */
+
+.home-button, 
+.dropdown-button {
+    background-color: #e8f3e8; /* Lichtgroene achtergrond */
+    color: #2e7d32; /* Donkergroene tekst */
+    padding: 10px 18px;
+    border-radius: 10px;
     text-decoration: none;
     font-size: 15px;
     font-weight: 600;
-
+    border: none;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
     transition: background-color 0.2s ease;
 }
 
-.home-button:hover {
-    background-color: rgba(255, 255, 255, 0.18);
+.home-button:hover, 
+.dropdown-button:hover {
+    background-color: #d8ebd8;
 }
 
 
-/* =========================
-   DROPDOWNMENU
-========================= */
+/* ==================================================
+   DROPDOWN INHOUD
+================================================== */
 
 .dropdown {
-    position: absolute;
-    top: 20px;
-    right: 20px;
+    position: relative;
 }
-
-.dropdown-button {
-    background-color: transparent;
-    color: white;
-
-    padding: 10px 16px;
-
-    border: none;
-    border-radius: 8px;
-
-    cursor: pointer;
-
-    font-size: 15px;
-    font-weight: 600;
-
-    transition: background-color 0.2s ease;
-}
-
-.dropdown-button:hover {
-    background-color: rgba(255, 255, 255, 0.18);
-}
-
-
-/* =========================
-   DROPDOWN INHOUD
-========================= */
 
 .dropdown-content {
     display: none;
-
     position: absolute;
     right: 0;
-    top: calc(100% + 8px);
-
+    top: calc(100% + 10px);
     background-color: white;
-
-    min-width: 240px;
-
+    min-width: 220px;
     border-radius: 12px;
-
     overflow: hidden;
-
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.18);
-
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
     z-index: 100;
 }
 
 .dropdown-content a {
     display: block;
-
-    padding: 13px 16px;
-
+    padding: 12px 16px;
     color: #333;
     text-decoration: none;
-
-    text-align: left;
-
     font-size: 15px;
-
-    transition: background-color 0.2s ease,
-                color 0.2s ease;
+    transition: background-color 0.2s ease, color 0.2s ease;
 }
 
 .dropdown-content a:hover {
-    background-color: #eaf5eb;
-    color: #369b3b;
+    background-color: #e8f3e8;
+    color: #2e7d32;
 }
 
 .dropdown:hover .dropdown-content {
@@ -142,9 +102,34 @@ body {
 }
 
 
-/* =========================
+/* ==================================================
+   GROENE HERO BANNER
+================================================== */
+
+.hero-header {
+    background-color: #4CAF50;
+    padding: 50px 20px;
+    text-align: center;
+    color: white;
+    margin-top: 12px;
+}
+
+.hero-header h1 {
+    margin: 0 0 10px 0;
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.hero-header p {
+    margin: 0;
+    font-size: 18px;
+    opacity: 0.95;
+}
+
+
+/* ==================================================
    HOME PAGINA
-========================= */
+================================================== */
 
 .blokken {
     display: flex;
@@ -188,9 +173,9 @@ body {
 }
 
 
-/* =========================
+/* ==================================================
    ANDERE PAGINA'S
-========================= */
+================================================== */
 
 .content {
     width: 90%;
@@ -212,9 +197,9 @@ body {
 }
 
 
-/* =========================
+/* ==================================================
    BINAIR STELSEL
-========================= */
+================================================== */
 
 .binair-blok {
     display: flex;
@@ -291,11 +276,7 @@ body {
    INVOER - VERWERKING - UITVOER
 ================================================== */
 
-
-/* =========================
-   GROENE TEKSTBLOKKEN
-========================= */
-
+/* Groene tekstblokken */
 .ivo-blok {
     display: flex;
     align-items: center;
@@ -317,11 +298,7 @@ body {
     box-sizing: border-box;
 }
 
-
-/* =========================
-   TEKST IN IVO BLOKKEN
-========================= */
-
+/* Tekst in IVO blokken */
 .ivo-tekst {
     width: 100%;
 }
@@ -341,11 +318,7 @@ body {
     line-height: 1.6;
 }
 
-
-/* =========================
-   IVO BLOK MET FOTO
-========================= */
-
+/* IVO blok met foto */
 .ivo-blok-met-foto {
     display: flex;
     align-items: center;
@@ -371,11 +344,7 @@ body {
     border-radius: 10px;
 }
 
-
-/* =========================
-   VIDEO BLOK
-========================= */
-
+/* Video blok */
 .ivo-video-blok {
     width: 90%;
     max-width: 1000px;
@@ -403,11 +372,7 @@ body {
     line-height: 1.6;
 }
 
-
-/* =========================
-   VIDEO
-========================= */
-
+/* Video */
 .ivo-video {
     width: 100%;
     max-width: 700px;
@@ -426,9 +391,9 @@ body {
 }
 
 
-/* =========================
+/* ==================================================
    FOOTER
-========================= */
+================================================== */
 
 footer {
     text-align: center;
@@ -440,51 +405,43 @@ footer {
 
 
 /* ==================================================
-   TELEFOON
+   TELEFOON / MOBIEL (RESPONSIVE)
 ================================================== */
 
 @media (max-width: 700px) {
 
-    /* Header */
-
-    .header {
-        height: 130px;
+    /* Header & Navigatie mobiel */
+    .nav-container {
+        padding: 8px 10px 0 10px;
     }
 
-    .header h1 {
-        font-size: 23px;
-
-        /* zorgt dat de titel niet tegen de knoppen komt */
-        max-width: 55%;
+    .navbar {
+        padding: 8px 10px;
     }
 
-    .home-button {
-        top: 12px;
-        left: 12px;
-
-        padding: 8px 12px;
-
-        font-size: 14px;
+    .site-title {
+        font-size: 15px;
     }
 
-    .dropdown {
-        top: 12px;
-        right: 12px;
-    }
-
+    .home-button, 
     .dropdown-button {
         padding: 8px 12px;
-
-        font-size: 14px;
+        font-size: 13px;
     }
 
-    .dropdown-content {
-        min-width: 210px;
+    .hero-header {
+        padding: 35px 15px;
     }
 
+    .hero-header h1 {
+        font-size: 24px;
+    }
+
+    .hero-header p {
+        font-size: 15px;
+    }
 
     /* Home */
-
     .blokken {
         flex-direction: column;
     }
@@ -493,9 +450,7 @@ footer {
         width: 100%;
     }
 
-
     /* Binair */
-
     .binair-blok {
         flex-direction: column;
         align-items: stretch;
@@ -511,9 +466,7 @@ footer {
         height: 300px;
     }
 
-
     /* IVO */
-
     .ivo-blok {
         flex-direction: column;
         align-items: stretch;
